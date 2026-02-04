@@ -56,19 +56,25 @@ body {
 }
 
 /* Header/Profile Section */
+.profile-name {
+    margin-bottom: 1px;
+}
+
+.profile-name h1 {
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 1px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding-left: 0;
+}
+
 .profile-header {
     text-align: left;
     margin-bottom: 3px;
     padding-bottom: 5px;
     border-bottom: 2px solid #1a1a1a;
-}
-
-.profile-header h1 {
-    font-size: 20px;
-    color: #1a1a1a;
-    margin-bottom: 1px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
 }
 
 .profile-header .title {
