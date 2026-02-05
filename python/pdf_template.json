@@ -1,0 +1,199 @@
+{
+    "page": {
+        "format": "Letter",
+        "margins": {
+            "left": 15,
+            "top": 15,
+            "right": 15,
+            "bottom": 15
+        }
+    },
+    "styles": {
+        "profile_name": {
+            "font_family": "Helvetica",
+            "font_style": "B",
+            "font_size": 18,
+            "spacing": 6,
+            "indent": 0
+        },
+        "profile_title": {
+            "font_family": "Helvetica",
+            "font_style": "",
+            "font_size": 10,
+            "spacing": 4,
+            "indent": 0
+        },
+        "contact_info": {
+            "font_family": "Helvetica",
+            "font_style": "",
+            "font_size": 9,
+            "spacing": 3,
+            "indent": 0
+        },
+        "section_heading": {
+            "font_family": "Helvetica",
+            "font_style": "B",
+            "font_size": 12,
+            "spacing": 5,
+            "indent": 0
+        },
+        "subsection_heading": {
+            "font_family": "Helvetica",
+            "font_style": "B",
+            "font_size": 10,
+            "spacing": 5,
+            "indent": 0
+        },
+        "subsection_heading_small": {
+            "font_family": "Helvetica",
+            "font_style": "B",
+            "font_size": 9,
+            "spacing": 4,
+            "indent": 0
+        },
+        "body_text": {
+            "font_family": "Helvetica",
+            "font_style": "",
+            "font_size": 9,
+            "spacing": 4,
+            "indent": 0
+        },
+        "body_text_indent": {
+            "font_family": "Helvetica",
+            "font_style": "",
+            "font_size": 9,
+            "spacing": 4,
+            "indent": 2
+        },
+        "bullet_point": {
+            "font_family": "Helvetica",
+            "font_style": "",
+            "font_size": 9,
+            "spacing": 4,
+            "indent": 3
+        }
+    },
+    "sections": [
+        {
+            "id": "profile_name",
+            "type": "text",
+            "data_path": "body.profile-name",
+            "style": "profile_name",
+            "line_break_after": 1
+        },
+        {
+            "id": "profile_title",
+            "type": "text",
+            "data_path": "body.profile-header.title",
+            "style": "profile_title",
+            "line_break_after": 1
+        },
+        {
+            "id": "contact_info",
+            "type": "list",
+            "data_path": "body.profile-header.contact-info",
+            "style": "contact_info",
+            "template": "{{text}}",
+            "line_break_after": 1
+        },
+        {
+            "id": "professional_summary",
+            "type": "section",
+            "line_break_before": 2,
+            "sections": [
+                {
+                    "type": "text",
+                    "data_path": "body.professional-summary.title",
+                    "style": "section_heading",
+                    "line_break_after": 1
+                },
+                {
+                    "type": "text",
+                    "data_path": "body.professional-summary.content",
+                    "style": "body_text",
+                    "line_break_after": 1
+                }
+            ]
+        },
+        {
+            "id": "core_competencies",
+            "type": "section",
+            "line_break_before": 2,
+            "sections": [
+                {
+                    "type": "text",
+                    "data_path": "body.core-competencies.title",
+                    "style": "section_heading",
+                    "line_break_after": 1
+                },
+                {
+                    "type": "list",
+                    "data_path": "body.core-competencies.skills",
+                    "style": "body_text",
+                    "template": "{{category}}: {{items}}",
+                    "line_break_after": 0.5
+                }
+            ]
+        },
+        {
+            "id": "professional_experience",
+            "type": "section",
+            "line_break_before": 2,
+            "sections": [
+                {
+                    "type": "text",
+                    "data_path": "body.professional-experience.title",
+                    "style": "section_heading",
+                    "line_break_after": 1
+                },
+                {
+                    "type": "custom",
+                    "handler": "render_experiences",
+                    "data_path": "body.professional-experience.experiences"
+                }
+            ]
+        },
+        {
+            "id": "education",
+            "type": "section",
+            "line_break_before": 2,
+            "sections": [
+                {
+                    "type": "text",
+                    "data_path": "body.education.title",
+                    "style": "section_heading",
+                    "line_break_after": 1
+                },
+                {
+                    "type": "custom",
+                    "handler": "render_education",
+                    "data_path": "body.education.degrees"
+                }
+            ]
+        },
+        {
+            "id": "awards_recognition",
+            "type": "section",
+            "line_break_before": 2,
+            "sections": [
+                {
+                    "type": "text",
+                    "data_path": "body.awards-recognition.title",
+                    "style": "section_heading",
+                    "line_break_after": 1
+                },
+                {
+                    "type": "list",
+                    "data_path": "body.awards-recognition.awards",
+                    "style": "body_text",
+                    "template": "{{year}} - {{title}}",
+                    "line_break_after": 0.5
+                }
+            ]
+        }
+    ],
+    "output": {
+        "filename_template": "{{profile_name}}_{{date}}.pdf",
+        "profile_name_path": "body.profile-name"
+    }
+}
