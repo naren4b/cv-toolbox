@@ -69,14 +69,15 @@ These rules apply to every CV, summary, and bullet point generated from this pro
 
 ## PERSONAL DETAILS
 
-> All personal details (address, phone, email, education, salary, retention reward) live in the source files under `create-my-cv/email-reply/`. Never hardcode them here.
+> All personal details (address, phone, email, education, salary, retention reward) live in the `data/` directory at the workspace root. Never hardcode them here.
 >
 > | File | What it has |
 > |---|---|
-> | `personal.txt` | DOB, India address, Canada address, phone numbers |
-> | `current-employer.txt` | Employer, job title, notice period, CTC, retention reward, reason for change |
-> | `education.txt` | Degrees, certifications |
-> | `salary.txt` | Remuneration breakdown |
+> | `data/personal.txt` | DOB, India address, Canada address, phone numbers |
+> | `data/current-employer.txt` | Employer, job title, notice period, CTC, retention reward, reason for change |
+> | `create-my-cv/email-reply/education.txt` | Degrees, certifications |
+> | `data/salary.txt` | Remuneration breakdown |
+> | `data/Master-CV.md` | Latest approved CV — canonical baseline for all tailoring |
 >
 > **Default**: Use India address and phone. For Canadian or international roles, use the Canada address and phone.
 

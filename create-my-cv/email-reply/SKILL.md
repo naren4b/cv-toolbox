@@ -6,14 +6,17 @@
 
 ## DATA SOURCES
 
+> All personal input files now live in `data/` at the workspace root. Read them from there before composing any output.
+
 | File | What it has |
 |---|---|
-| `current-employer.txt` | Employer name, job title, start date, notice period, CTC breakdown, retention reward |
-| `education.txt` | Degrees, certifications |
-| `salary.txt` | Raw remuneration numbers (same data as current-employer.txt — kept for backward compat) |
-| `personal.txt` | Basic personal info (legacy — use `current-employer.txt` for employment and salary details) |
+| `data/current-employer.txt` | Employer name, job title, start date, notice period, CTC breakdown, retention reward |
+| `create-my-cv/email-reply/education.txt` | Degrees, certifications |
+| `data/salary.txt` | Raw remuneration numbers (same data as current-employer.txt — kept for backward compat) |
+| `data/personal.txt` | DOB, India address, Canada address, phone numbers |
+| `data/Master-CV.md` | Latest approved CV — canonical baseline |
 
-> When composing any email or cover letter, pull employer details, CTC, and retention reward from **`current-employer.txt`** — not from `personal.txt` or `salary.txt`.
+> When composing any email or cover letter, pull employer details, CTC, and retention reward from **`data/current-employer.txt`** — not from `data/personal.txt` or `data/salary.txt`.
 
 > **Address & phone routing**: Default to India address and +91 phone. For Canadian or international roles, use the Canada address (Scarborough, Toronto) and +1 647 phone.
 

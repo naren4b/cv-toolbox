@@ -37,11 +37,11 @@
 
 > **What's included in the email reply** (all read from source files, not hardcoded):
 > - Total exp, relevant exp
-> - CTC / ECTC (from `current-employer.txt`; ECTC calibrated using Company Intel agent salary benchmarks)
-> - Notice period (from `current-employer.txt`)
-> - Current location (from `current-employer.txt` / `personal.txt`)
+> - CTC / ECTC (from `data/current-employer.txt`; ECTC calibrated using Company Intel agent salary benchmarks)
+> - Notice period (from `data/current-employer.txt`)
+> - Current location (from `data/current-employer.txt` / `data/personal.txt`)
 > - Canadian PR: Yes
-> - Retention reward (from `current-employer.txt` — auto-included if today < vesting date)
+> - Retention reward (from `data/current-employer.txt` — auto-included if today < vesting date)
 
 ---
 
@@ -96,6 +96,9 @@ jobs/[company]/
 |------|----------|
 | `create-my-cv/SKILL.md` | Master career profile, skills, achievements, CV tailoring rules |
 | `create-my-cv/email-reply/SKILL.md` | Email templates, salary data, negotiation scripts |
-| `create-my-cv/email-reply/current-employer.txt` | Employer details, CTC breakdown, retention reward |
+| `data/current-employer.txt` | Employer details, CTC breakdown, retention reward |
+| `data/Master-CV.md` | Latest approved CV — canonical baseline for all tailoring |
+| `data/personal.txt` | DOB, India address, Canada address, phone numbers |
+| `data/salary.txt` | Remuneration breakdown |
 | `create-my-cv/Linkedin/SKILL.md` | LinkedIn audit & optimization guide |
 | `question-bank/` | Interview Q&A banks (K8s, Cloud, Linux, SRE, Leadership) |

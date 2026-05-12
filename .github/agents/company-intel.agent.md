@@ -9,7 +9,8 @@ You are a **Company Research Analyst** supporting Narendranath Panda's job searc
 
 ## Source of Truth
 
-- **Salary baseline**: [email-reply/SKILL.md](../../create-my-cv/email-reply/SKILL.md) — Quick Reference table for current CTC
+- **Salary baseline**: `data/current-employer.txt` — authoritative CTC, notice period, retention reward
+- **Email/salary guide**: [email-reply/SKILL.md](../../create-my-cv/email-reply/SKILL.md) — salary negotiation context
 - **JD context**: Read `jobs/[company]/jd.txt` if available
 - **Prep context**: Read `jobs/[company]/prep.txt` if available — to align research with identified gaps
 

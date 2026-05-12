@@ -1,5 +1,16 @@
 # Project Guidelines — my-cv
 
+## Boot Sequence — Read These First
+
+Before **any** task, load the four input files from `data/`. Full routing rules in [`.github/instructions/data-bootstrap.instructions.md`](.github/instructions/data-bootstrap.instructions.md).
+
+| File | Contains |
+|------|----------|
+| `data/Master-CV.md` | Canonical approved CV — takes precedence over SKILL.md on any fact |
+| `data/current-employer.txt` | Employer, title, notice period, CTC, retention reward, reason for change |
+| `data/personal.txt` | DOB, India + Canada addresses, phone numbers |
+| `data/salary.txt` | Remuneration breakdown |
+
 ## Purpose
 
 This is a personal career management workspace for **Narendranath Panda** — a Senior Platform Engineer / R&D Architect with 19+ years of experience. The workspace is used to:
@@ -13,6 +24,7 @@ This is a personal career management workspace for **Narendranath Panda** — a 
 
 | Directory | Purpose |
 |---|---|
+| `data/` | **Central input data** — `Master-CV.md`, `current-employer.txt`, `salary.txt`, `personal.txt`. Read these before any agent or skill runs. |
 | `create-my-cv/` | SKILL.md guides for CV tailoring, LinkedIn optimization, and email/cover letter templates |
 | `create-my-cv/SKILL.md` | **Master career profile** — single source of truth for all career data, skills, achievements, and CV tailoring instructions |
 | `create-my-cv/Linkedin/` | LinkedIn profile optimization guide |
@@ -47,12 +59,12 @@ jobs/[company]/
 ### Email & Cover Letter Workflow
 When asked to draft emails or cover letters:
 1. **Read** `create-my-cv/email-reply/SKILL.md` — contains templates, salary data, negotiation scripts, and the recruiter questionnaire format
-2. **Read** `create-my-cv/email-reply/current-employer.txt` — employer details, CTC breakdown, retention reward
+2. **Read** `data/current-employer.txt` — employer details, CTC breakdown, retention reward
 3. **Read** the recruiter email from `jobs/[company]/email.txt` if available
 4. **Run Company Intel agent** for the company + role — saves to `jobs/[company]/[company]-info.md` (skip if file already exists). Use salary benchmarks from the report to set Expected CTC range.
 5. **Write** the reply to `jobs/[company]/email-reply.md`
 6. **Write** the cover letter to `jobs/[company]/cover-letter.txt`
-7. **Retention reward** — read amount and vesting date from `current-employer.txt`. Only mention if today's date is before the vesting date.
+7. **Retention reward** — read amount and vesting date from `data/current-employer.txt`. Only mention if today's date is before the vesting date.
 
 ### LinkedIn Optimization
 When asked about LinkedIn:
@@ -69,7 +81,7 @@ When asked about LinkedIn:
 - When creating tailored CVs, always flag **skill gaps** between the candidate's profile and the JD
 - Use quantified metrics from the master SKILL.md (Section C — Impact Library) in every CV and cover letter
 - Target role: primarily **DevOps Lead / Manager**, but also Platform Engineer, SRE, Cloud Architect
-- Notice period, location, Canadian PR status: Read from `create-my-cv/email-reply/current-employer.txt`
+- Notice period, location, Canadian PR status: Read from `data/current-employer.txt`
 
 ## Writing Style — All Outputs Must Sound Human
 

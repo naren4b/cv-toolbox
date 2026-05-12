@@ -9,10 +9,12 @@ Generate a complete job application package for the provided Job Description.
 
 ## Steps
 
-1. **Read** the master career profile at [SKILL.md](../../create-my-cv/SKILL.md)
-2. **Read** the email/cover letter guide at [email-reply/SKILL.md](../../create-my-cv/email-reply/SKILL.md)
-3. **Analyse the JD** and create the job folder at `jobs/[company]/`
-4. **Produce these files**:
+1. **Read** `data/Master-CV.md` — canonical approved CV (baseline for all tailoring)
+2. **Read** the master career profile at [SKILL.md](../../create-my-cv/SKILL.md) — tailoring process, skills index, quantified achievements
+3. **Read** `data/current-employer.txt` — CTC, notice period, retention reward
+4. **Read** the email/cover letter guide at [email-reply/SKILL.md](../../create-my-cv/email-reply/SKILL.md)
+5. **Analyse the JD** and create the job folder at `jobs/[company]/`
+6. **Produce these files**:
 
 ### File 1: `jobs/[company]/cv.md`
 Tailored CV following the Step 1–4 process in the master SKILL.md.
