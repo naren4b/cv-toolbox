@@ -1,0 +1,101 @@
+  
+Contact
+Bangalore | India
+9901244119 (Mobile)
+narendranathpanda@gmail.com
+www.linkedin.com/in/
+narendranathpanda (LinkedIn)
+naren4b.github.io/ (Personal)
+Top Skills
+DevOps Strategy & Governance
+On-prem to Cloud Migrations
+Observability Data Pipelines (Kafka,
+Fluentd)
+Certifications
+CKA: Certified Kubernetes
+Administrator
+Shaping up with Angular.js
+Clean code -1
+M101J: MongoDB for Java
+Developers
+PMP® Certification Training Course
+Narendranath Panda
+Architecting cloud solutions with observability and DevOps
+strategies.
+Bengaluru, Karnataka, India
+Summary
+With over 19 years of experience, I design and implement reliable,
+scalable, and cost-efficient platforms that empower engineering
+teams to deliver software with precision and speed. At Nokia, I have
+driven large-scale modernization efforts, including the migration
+of hundreds of workloads to a unified on-premises and AWS EKS
+platform, achieving significant improvements in availability and
+operational efficiency.  
+Leveraging expertise in DevOps strategy, cloud migrations, and
+observability data pipelines, I have built enterprise-grade GitOps
+and CI/CD platforms, designed observability stacks with automated
+alerting, and led FinOps initiatives to optimize cloud costs. My work
+emphasizes operational excellence, performance optimization, and
+fostering collaboration across teams to align technical execution with
+strategic objectives.
+Experience
+Nokia
+12 years 11 months
+R&D Architect 
+January 2020 - Present (6 years 5 months)
+Bangalore Urban, Karnataka, India- Architected & led migration of 100s of workloads of around 50+ clusters to
+unified on-prem + AWS EKS platform, implementing rolling upgrades + canary
+validation — delivered 99.95% availability and reduced operational incidents
+by 40%.- Built enterprise GitOps & CI/CD platform (ArgoCD + standardized pipelines)
+across 8+ product teams, achieving 100% reproducible deployments and 50%
+faster release cycles.
+ Page 1 of 3
+  - Designed and deployed unified observability stack (Prometheus, Grafana,
+Loki, Thanos, OpenTelemetry), established SLO/SLI frameworks and
+automated alerting — reduced MTTR by 35%.- Led platform FinOps program: introduced rightsizing, tagging, and reserved
+instances — cut cloud spend by ~15% YoY and prevented a potential $500k
+overspend.- Built LLM-based triage (RAG + Llama3) to classify 10k+ issues, automating
+initial responses and reducing manual triage effort 40–50%.(Prototype)
+Lead R&D Engineer
+July 2018 - April 2022 (3 years 10 months)
+Bangalore Urban, Karnataka, India- Automated cluster provisioning & application deployment using Ansible and
+IaC patterns, reducing environment spin-up time from weeks to hours.- Designed monitoring & alerting frameworks for Kubernetes clusters and
+critical business services, improving incident detection and reducing false
+positives by 20% (estimate).- Administered and scaled core platform tooling (Docker, Jenkins, Harbor,
+ArgoCD, Prometheus, Grafana, Loki, VictoriaMetrics), enabling 24×7
+operations for global R&D teams.- Led end-to-end development of OTA provisioning solution for M2M devices
+enabling remote subscription changes (MNO A → MNO B) without physical
+eUICC access — delivered demonstrable interoperability in vendor demos.- Coordinated third-party vendor integration and interoperability testing;
+delivered SDLC artifacts, integration, and demos with a 6-member cross
+functional team.- Built secure REST services using Java 8, Spring Boot, WebSphere; validated
+solution in lab demos and customer trials.
+Specialist, Software Development
+July 2013 - June 2018 (5 years)
+Bengaluru, Karnataka, India- Served as Scrum Master & Senior Developer for NetAct FM (customers:
+KDDI, DTag, T-Mobile); led sprint planning, UCR/LLD creation, POCs and
+integration for OSS/NMS.- Designed core alarm collection, correlation and monitoring features;
+improved fault detection and accelerated maintenance workflows for a 50
+engineer development program.- Implemented REST/SOAP integrations and delivered release/maintenance
+documentation to customer support groups.
+ Page 2 of 3
+  
+Finastra
+Sr Java Developer
+April 2011 - July 2013 (2 years 4 months)- Led development & mentorship for Java microservices, improving code
+quality and reducing defects ~10–15% through test coverage and code
+reviews.- Facilitated Agile delivery as Scrum Master, improving sprint predictability and
+reducing cycle time by ~15%.
+NB: Known as Misys
+CGI
+Sr. Java Developer
+August 2006 - March 2011 (4 years 8 months)- Led module development and delivery, coordinating estimates, QA handoffs,
+and reporting to PMs; mentored junior engineers and improved team
+throughput.- Built reliable Java components and supported integration testing and release
+activities.
+NB: Known as LogicaCMG, Logica
+Education
+Birla Institute of Technology and Science, Pilani
+Master of Technology - MTech, Software Systems · (2015 - 2017)
+Utkal University
+Bachelor of Engineering (B.E.), Information Technology · (2000 - 2004)
+ Page 3 of 3

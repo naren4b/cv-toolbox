@@ -1,0 +1,72 @@
+Senior Manager, Digital Platform Engineering 
+ Summery: 
+The Senior Manager, Digital Platform Engineering is a technical leadership position with the 
+skills and experience to manage our Digital Platform Engineering and Operations charter. 
+This role is responsible for Managing the cloud platform and the roadmap, the devops 
+pipeline and ensuring the availability and reliability of our entire digital ecosystem. You will 
+lead, mentor, and grow a team of technology professionals, influencing the technical 
+direction and ensuring the health and integrity of our systems. You will play a key role in a 
+global organization, impacting business in over 30 countries. 
+ Strategic Execution: You will drive the implementation of our Cloud and DevOps 
+strategy to build the cloud platform features, optimize delivery and enable industry 
+best practices for scalable operations. 
+ Site Reliability Engineering (SRE): You will lead a team of highly skilled 
+engineers and problem solvers focused on creating innovative solutions that exceed 
+customer needs while maintaining robust platform reliability. 
+ Build & Release: You will mature our processes to improve the reliability, 
+execution, and frequency of our build and release pipelines, ensuring new features 
+are deployed securely and without compromising system stability. 
+ Roles & Responsibilities: 
+ Platform & Cloud Engineering: 
+ Lead the design, implementation, and optimization of our cloud 
+solutions, including infrastructure as code (IaC) using tools 
+like Terraform.  
+ Oversee the design and maintenance of automated CI/CD pipelines, 
+focusing on continuous integration, deployment, and testing.  
+ Establish performance monitoring, capacity management, and load 
+testing strategies to maintain high-performance systems and ensure 
+zero downtime.  
+ Digital Platform Operations 
+ Manage and mentor the operations and engineering team to support our 
+high-volume B2B eCommerce websites. 
+ Provide technical leadership, coaching, and direction to the team. 
+ Support an agile work environment to deliver programs while balancing time, 
+cost, and scope. 
+ Support robust change and configuration management practices. 
+ Collaborate with the architecture team to design and implement 
+infrastructure and application architecture with an emphasis on availability, 
+and reliability. 
+ Provide 24x7 technical support for the production environment, participating 
+in an on-call schedule as needed. 
+ Ensure the development and maintenance of comprehensive technical and 
+operational documentation. 
+ Financials and Vendor Management 
+ Assist in managing the department's budget and forecast, ensuring initiatives 
+meet budget guidelines. 
+ Manage third-party vendors and service providers, overseeing performance, 
+SLAs, and incident handling. 
+ People Management 
+ Implement strategies to attract, retain, motivate, and develop talent within 
+the team. 
+ Assess and address team skill and knowledge gaps, particularly in the areas of 
+devops and cloud technologies. 
+ Provide regular feedback, coaching, and mentorship to team members to 
+foster professional growth. 
+ Qualification: 
+ Bachelor’s degree in computer science, information technology, or a related field. 
+ 14+ years' experience in the development and delivery of large-scale eCommerce 
+solutions. 
+ Deep expertise in public cloud platforms like AWS, Azure, or GCP.  
+ Experience with building CI/CD pipelines, deployment automation, configuration 
+management, and build tools (e.g., Jenkins, Puppet, Ansible). 
+ Experience in building and managing container platforms like Docker and 
+Kubernetes. 
+ Proficiency in scripting languages such as Shell, Groovy, or Python. 
+ Experience with cloud-hosted application monitoring and security tools. 
+ Excellent collaboration skills, with the ability to work effectively across development, 
+operations, and business teams. 
+ Experience working in an Agile/Kanban development environment. 
+ Excellent communication skills with the ability to present complex technical 
+information clearly and concisely to diverse audiences. 
+ AWS, Azure, GCP, Cloud, Devops, CI/CD, Jenkins, Ansible, Datadog, Docker and Kubernetes, 
+Shell, Groovy, Python, Terraform. 

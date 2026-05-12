@@ -1,0 +1,218 @@
+{
+    "head": {
+        "title": "Narendranath Panda - Senior Platform Engineer"
+    },
+    "body": {
+        "profile-name": "NARENDRANATH PANDA",
+        "profile-header": {
+            "title": "Senior Platform Engineer | Kubernetes/EKS | AWS | IaC | Observability & Telemetry",
+            "contact-info": [
+                {
+                    "name": "LinkedIn",
+                    "href": "https://www.linkedin.com/in/narendranathpanda/",
+                    "text": "https://www.linkedin.com/in/narendranathpanda/",
+                    "type": "href"
+                },
+                {
+                    "name": "blog",
+                    "href": "https://blog.npanda.online/",
+                    "text": "https://blog.npanda.online/",
+                    "type": "href"
+                },
+                {
+                    "name": "phone",
+                    "text": "+91-9901244119",
+                    "type": "phone"
+                },
+                {
+                    "name": "email",
+                    "text": "narendranathpanda@gmail.com",
+                    "type": "email"
+                },
+                {
+                    "name": "location",
+                    "text": "Bengaluru, India",
+                    "type": "text"
+                }
+            ]
+        },
+        "professional-summary": {
+            "title": "Professional Summary",
+            "content": "Seasoned Senior Platform Engineer / SRE Architect with 19+ years of experience architecting and scaling enterprise-grade distributed systems and over 12 years specializing in SRE and platform engineering. Blends deep hands-on expertise in Kubernetes/EKS, AWS, and Infrastructure as Code (Terraform, Helm, GitOps) with a strong focus on observability, telemetry, and operational excellence to deliver highly reliable, mission-critical systems. Proven track record leading incident management, global on-call rotations, and SLO/SLI-driven reliability programs, driving measurable reductions in downtime, deployment risk, and operational toil. Passionate about building resilient platforms, enabling developer velocity through automation and GitOps, and mentoring teams to adopt SRE best practices in fast-moving, product-centric organizations."
+        },
+        "core-competencies": {
+            "title": "Core Competencies",
+            "skills": [
+                {
+                    "category": "Platform Architecture & Design",
+                    "items": "Cloud-Native Architecture | Microservices | Serverless | Platform Engineering | Scalable Architectures | Resilient Architectures | High Availability Design"
+                },
+                {
+                    "category": "Cloud & Container Technologies",
+                    "items": "Kubernetes & Amazon EKS | AWS Services | Docker & Container Management | Harbor & Vault | Ceph & Rook Storage | Linux Administration"
+                },
+                {
+                    "category": "DevOps & CI/CD",
+                    "items": "GitLab CI & GitHub Actions | ArgoCD & GitOps | Infrastructure as Code (Terraform, Terragrunt) | Helm & Kustomize | Jenkins & Automation | Ansible"
+                },
+                {
+                    "category": "Observability & Monitoring",
+                    "items": "Prometheus & Grafana | Loki & OpenTelemetry | DataDog & Victoria Metrics | Thanos & Distributed Tracing | ELK/OpenSearch Stack | AIOps Strategy"
+                },
+                {
+                    "category": "Data & Messaging Systems",
+                    "items": "Apache Kafka | PostgreSQL & Databases | ETL Processes | FluentD & Log Aggregation | OpenSearch"
+                },
+                {
+                    "category": "Leadership & Emerging Tech",
+                    "items": "Team Leadership & Management | DevSecOps & FinOps | AI Agent Design & RAG | Large Language Models (LLM) | Model Context Protocol (MCP) | Vector Databases"
+                }
+            ]
+        },
+        "professional-experience": {
+            "title": "Professional Experience",
+            "experiences": [
+                {
+                    "position": "Nokia R&D Architect",
+                    "period": "July 2013 - Present",
+                    "location": "Bengaluru, India",
+                    "summary": "Led strategic initiatives across platform modernization, SRE, security, and AIOps within a global R&D organization, delivering foundational improvements that enhanced reliability, accelerated development velocity, and optimized operational costs.",
+                    "sections": [
+                        {
+                            "heading": "Infrastructure as Code",
+                            "bullets": [
+                                "Architected a production-grade \"Registry-as-a-Service\" framework using Terraform and Terragrunt to automate the complete lifecycle of Harbor container registries, enabling declarative project provisioning, robot account management, retention policies, and cross-registry replication at enterprise scale",
+                                "Built a self-service GitLab CI/CD pipeline with automated terraform plan/apply feedback loop, allowing any team to provision compliant, fully configured Harbor projects in minutes while reducing administrative overhead and ensuring consistent governance across the organization"
+                            ]
+                        },
+                        {
+                            "heading": "Kubernetes & Infrastructure Scale",
+                            "bullets": [
+                                "Designed and implemented telemetry pipelines for 1000+ customer edge Kubernetes clusters using Prometheus, Grafana, Loki, OpenTelemetry, VictoriaMetrics, and OpenSearch/Elasticsearch at scale\u2014enhancing incident management, customer reliability, system resilience, and resource efficiency.",
+                                "Managed 15+ Data Center (both on-prem & AWS EKS) Kubernetes clusters across 5 global locations with zero-downtime operations and seamless scaling capabilities"
+                            ]
+                        },
+                        {
+                            "heading": "CI/CD & Deployment Automation",
+                            "bullets": [
+                                "Architected and implemented standardized CI/CD workflow using GitLab CI and GitOps principles (ArgoCD), reducing deployment cycles by 50% and achieving 99.95% platform availability, resolving slow manual deployments across 8 projects",
+                                "Implemented version control systems (GitLab) and configuration management (Helm, Kustomize) across all projects, reducing deployment errors and enabling rapid feature iteration"
+                            ]
+                        },
+                        {
+                            "heading": "Observability & Reliability",
+                            "bullets": [
+                                "Designed and deployed scalable observability and telemetry stack (Prometheus, Grafana, Loki, OpenTelemetry) integrating edge node telemetry and defining SLIs/SLOs, improving system reliability and reducing infrastructure costs by 5%",
+                                "Established SLO/SLI frameworks ensuring 99.95% platform availability across mission-critical systems supporting enterprise customers",
+                                "Led global 24/7 on-call rotation for mission-critical DevOps and platform services, handling incident troubleshooting, multi-team coordination, postmortems, and preventive follow-up actions"
+                            ]
+                        },
+                        {
+                            "heading": "Team Leadership & Cross-Functional Collaboration",
+                            "bullets": [
+                                "Directed 15-engineer DevOps team, implementing structured processes and DevOps best practices (IaC, CI/CD) to resolve inefficiencies and foster culture of proactive problem-solving and automation",
+                                "Led cross-functional teams resolving fragmented modernization efforts through workshops and strategic planning, enabling seamless cloud readiness transitions for 8-9 key projects across stakeholders",
+                                "Established and led cross-team debugging \"war rooms\" and root cause analysis sessions, resolving critical product blockers through permanent fixes and preventive automation"
+                            ]
+                        },
+                        {
+                            "heading": "Cost Optimization & FinOps",
+                            "bullets": [
+                                "Implemented FinOps program addressing escalating cloud costs, reducing spend by 15% year-over-year and avoiding projected $500k overspend through automated policies and provider negotiations",
+                                "Engineered scalability solutions using AWS services incorporating scripting languages (Python, Terraform) for automation, optimizing resource utilization and cost efficiency"
+                            ]
+                        },
+                        {
+                            "heading": "Compliance & Security",
+                            "bullets": [
+                                "Automated and integrated compliance management for 300+ FOSS components, streamlining software releases and mitigating legal/security risks across organization",
+                                "Ensured security best practices integrated into all systems and processes, reducing vulnerabilities and protecting sensitive data"
+                            ]
+                        },
+                        {
+                            "heading": "Data Engineering & Messaging",
+                            "bullets": [
+                                "Designed and implemented robust ETL processes for PostgreSQL databases, ensuring efficient data transformation and loading for internal PMO projects",
+                                "Managed Apache Kafka clusters for high-throughput data streaming, ensuring reliability and supporting 5 teams with real-time data access",
+                                "Developed and maintained Kafka messaging queues and managed application performance using ELK/OpenSearch stack monitoring"
+                            ]
+                        },
+                        {
+                            "heading": "AI & Innovation",
+                            "bullets": [
+                                "Created proof-of-concept AI-driven Git triage agent (RAG + Llama3) to automate issue categorization for 10,000+ items, projecting 40-50% reduction in manual effort and enabling one-click issue creation",
+                                "Leveraged Docker and Linux environments to build and manage containerization technologies at scale"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "position": "Misys Senior Developer",
+                    "period": "April 2011 - July 2013",
+                    "location": "Bengaluru, India",
+                    "bullets": [
+                        "Co-engineered Java-based framework for flagship LoanIQ product, replacing legacy Smalltalk system and boosting system performance by 50% for key clients including Bank of America",
+                        "Developed and delivered robust Java programming applications across education, oil & gas, and banking & finance sectors (University & College Application System, GIT Air Liquide, LanaUt Swedbank)",
+                        "Wrote efficient, maintainable, and scalable Java code adhering to best practices and coding standards",
+                        "Functioned as Scrum Master, optimizing bug triage and development workflows resulting in 70% reduction in defect resolution time",
+                        "Managed B2B integrations and supported software delivery pipelines utilizing Python and Shell scripting for enhanced automation"
+                    ]
+                },
+                {
+                    "position": "Logica CMG IT Consultant",
+                    "period": "July 2006 - March 2011",
+                    "location": "India",
+                    "summary": "Provided strategic IT consulting services across multiple client organizations, driving digital transformation and operational efficiency initiatives."
+                }
+            ]
+        },
+        "education": {
+            "title": "Education",
+            "degrees": [
+                {
+                    "degree": "Master of Technology (MTech) \u2013 WILP",
+                    "institution": "Birla Institute of Technology and Science, Pilani",
+                    "period": "2015 - 2017"
+                },
+                {
+                    "degree": "Bachelor of Engineering – Information Technology",
+                    "institution": "Utkal University",
+                    "period": "2000 - 2004"
+                }
+            ]
+        },
+        "awards-recognition": {
+            "title": "Awards & Recognition",
+            "awards": [
+                {
+                    "year": "2025",
+                    "title": "Exceptional Achievement \u2013 Thanks for your Contribution and Mentorship"
+                },
+                {
+                    "year": "2025",
+                    "title": "Strategic Impact \u2013 Successful NDAC DC Migration"
+                },
+                {
+                    "year": "2025",
+                    "title": "Collaborative Excellence \u2013 Excellence in Collaboration for MX Grid"
+                },
+                {
+                    "year": "2024",
+                    "title": "Nokia Excellency Award \u2013 Delivering Software with Quality"
+                },
+                {
+                    "year": "2023",
+                    "title": "Security Leadership \u2013 Security Supporter for SRE Systems"
+                },
+                {
+                    "year": "2023",
+                    "title": "Operational Excellence \u2013 Exceptional Work for China Setup Data Centre"
+                },
+                {
+                    "year": "2010",
+                    "title": "Logica Diamond Award"
+                }
+            ]
+        }
+    }
+}
