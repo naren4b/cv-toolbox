@@ -35,13 +35,13 @@
 | 2a | **Draft email reply** | `Draft the email reply for [company]` | `jobs/[company]/email-reply.md` | `create-my-cv/email-reply/SKILL.md` |
 | 2b | **Write cover letter** | `Write a cover letter for [company]` | `jobs/[company]/cover-letter.txt` | `create-my-cv/email-reply/SKILL.md` |
 
-> **What's included in the email reply**:
-> - Total exp (19+ yrs), relevant exp (12+ yrs)
-> - CTC / ECTC (pulled from `create-my-cv/email-reply/current-employer.txt`; ECTC calibrated using Company Intel agent salary benchmarks)
-> - Notice period: 60 days (negotiable)
-> - Current location: Bangalore
+> **What's included in the email reply** (all read from source files, not hardcoded):
+> - Total exp, relevant exp
+> - CTC / ECTC (from `current-employer.txt`; ECTC calibrated using Company Intel agent salary benchmarks)
+> - Notice period (from `current-employer.txt`)
+> - Current location (from `current-employer.txt` / `personal.txt`)
 > - Canadian PR: Yes
-> - Retention reward (₹11.94L vesting 1 Nov 2026 — auto-included if date < Nov 2026)
+> - Retention reward (from `current-employer.txt` — auto-included if today < vesting date)
 
 ---
 
@@ -61,10 +61,7 @@
 
 | Step | Action | How |
 |------|--------|-----|
-| 4a | **Generate PDF resume** | Pick one pipeline: |
-|    | _Option A — Python (fpdf2)_ | Update `code/python/data.json` → `cd code/python && source .venv/bin/activate && python app.py` |
-|    | _Option B — Docker (reportlab)_ | Update data → `cd code/resume-generator && docker build -t resume-gen . && docker run -v $(pwd)/data:/app/data resume-gen` |
-|    | _Option C — HTML print_ | Update `code/html/cv_data.json` → open `code/html/index.html` in browser → Print to PDF |
+| 4a | **Generate PDF resume** | Export `cv.md` to PDF using a markdown-to-PDF tool or browser print |
 | 4b | **Final review** | Proofread CV PDF + cover letter + email reply |
 | 4c | **Send** | Reply to recruiter with: CV (PDF) + cover letter + filled questionnaire |
 

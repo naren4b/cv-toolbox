@@ -15,6 +15,8 @@
 
 > When composing any email or cover letter, pull employer details, CTC, and retention reward from **`current-employer.txt`** — not from `personal.txt` or `salary.txt`.
 
+> **Address & phone routing**: Default to India address and +91 phone. For Canadian or international roles, use the Canada address (Scarborough, Toronto) and +1 647 phone.
+
 ## WRITING RULES — SOUND HUMAN, NOT AI
 
 These rules apply to every email, cover letter, and reply generated from this guide:
@@ -33,25 +35,30 @@ These rules apply to every email, cover letter, and reply generated from this gu
 
 ## QUICK REFERENCE — YOUR DETAILS
 
-| Field | Value |
+> **Do not hardcode personal details here.** Read them at runtime from the source files listed in DATA SOURCES above.
+>
+> When composing emails/cover letters, read these files and fill in:
+> - Name, role, employer, Nokia ID, start date → `current-employer.txt`
+> - Address, phone (India and Canada) → `current-employer.txt` or `personal.txt`
+> - CTC, retention reward, notice period → `current-employer.txt`
+> - Education, certifications → `education.txt`
+> - Reason for change → `current-employer.txt`
+>
+> **Address routing**: Default to India. Use Canada address + phone for Canadian/international roles.
+
+| Field | Source |
 |---|---|
 | Full Name | Narendranath Panda |
-| Current Role | R&D Architect, Nokia Solutions and Networks India Pvt. Ltd. |
-| Business Unit | ECE (Enterprise Campus Edge) — private wireless business |
-| Nokia ID | 61460688 |
-| Employment Start | 08 July 2013 |
+| Current Role, Business Unit, Nokia ID | Read from `current-employer.txt` |
 | Total Experience | 19+ years |
 | Relevant Experience (Platform/DevOps/SRE) | 12+ years |
-| Current Location | Bangalore, Karnataka, India |
-| Notice Period | 60 days |
-| Negotiable Notice Period | No |
+| Location, Address, Phone | Read from `current-employer.txt` / `personal.txt` |
+| Notice Period | Read from `current-employer.txt` |
 | Canadian PR | Yes — Relocation-Ready Canadian Permanent Resident |
-| Phone | +91-9901244119 |
 | Email | narendranathpanda@gmail.com |
 | LinkedIn | https://www.linkedin.com/in/narendranathpanda/ |
 | Blog | https://blog.npanda.online/ |
-| Education | MTech (WILP), BITS Pilani (2015–2017); BE IT, Synergy Institute of Engineering & Technology (BPUT), Utkal University (2000–2004, 1st Class) |
-| Certification | CKA (Certified Kubernetes Administrator) — CNCF, November 2020 |
+| Education, Certification | Read from `education.txt` |
 
 ---
 
@@ -77,13 +84,13 @@ Quick background:
   operate Kubernetes platforms across 15+ data centres and 1000+ edge clusters
 • Hands-on with [2–3 keywords from their message, e.g., AWS EKS,
   Terraform, CI/CD, Observability]
-• CKA-certified | MTech, BITS Pilani
+• [certification + education from education.txt]
 
 I've attached my CV. Happy to jump on a call whenever works for you.
 
 Best regards,
 Narendranath Panda
-+91-9901244119
+[phone from current-employer.txt]
 https://www.linkedin.com/in/narendranathpanda/
 ```
 
@@ -123,7 +130,7 @@ CV is attached. Would be great to discuss how my background fits your team.
 
 Best regards,
 Narendranath Panda
-+91-9901244119 | narendranathpanda@gmail.com
+[phone] | narendranathpanda@gmail.com
 https://www.linkedin.com/in/narendranathpanda/
 ```
 
@@ -149,8 +156,8 @@ Thanks for considering my profile. Here are the details:
 • Relevant Experience (DevOps / SRE / Platform Engineering): 12+ years
 • Current CTC: [See note below]
 • Expected CTC: [See note below]
-• Notice Period: 60 days (non-negotiable)
-• Current Location: Bangalore, Karnataka, India
+• Notice Period: [from current-employer.txt]
+• Current Location: [from current-employer.txt / personal.txt]
 • Open to Relocation: Yes (Canadian Permanent Resident)
 • Holding Any Offer: [Yes/No — update at time of sending]
 • If Yes, Company & DOJ: [Update if applicable]
@@ -161,17 +168,17 @@ CV is attached. Happy to get on a call to discuss.
 
 Best regards,
 Narendranath Panda
-+91-9901244119
+[phone]
 ```
 
 #### CTC Guidance
 
 | Field | Strategy |
 |---|---|
-| **Current CTC** | Your total target cash is ~₹61.5L. You can state "₹61.5 LPA (fixed + variable)" or round to "~₹62 LPA all-inclusive" |
-| **Expected CTC** | Default: CTC + 30–40% = ₹80L–86L range. For senior/manager roles: ₹85L–95L+. **Better approach**: Run the **Company Intel** agent (`company-intel.agent.md`) for the target company + role — it pulls salary benchmarks from Glassdoor, AmbitionBox, Levels.fyi, and PayScale. Use the market data to set a smarter range instead of a flat percentage. Always state as a range, never a single number. |
+| **Current CTC** | Read from `current-employer.txt`. State as "₹[Total Target Cash] LPA (fixed + variable)" or round to nearest lakh. |
+| **Expected CTC** | Default: CTC + 30–40%. For senior/manager roles: CTC + 40–55%. **Better approach**: Run the **Company Intel** agent (`company-intel.agent.md`) for the target company + role — it pulls salary benchmarks from Glassdoor, AmbitionBox, Levels.fyi, and PayScale. Use the market data to set a smarter range instead of a flat percentage. Always state as a range, never a single number. |
 | **If pressed for exact number** | "My expectation is in the range of ₹[X]–₹[Y] LPA depending on the role scope, team size, and total compensation structure. I'm flexible for the right opportunity." |
-| **For international roles** | Convert to USD/EUR. ₹62L ≈ ~$73K USD. Target: $100K–$130K+ depending on location and cost of living. |
+| **For international roles** | Convert CTC from `current-employer.txt` to USD/EUR at current rates. Target: +30-50% over converted CTC depending on location and cost of living. |
 
 #### "Reason for Change" — Ready Options
 
@@ -202,7 +209,7 @@ Do you have a few minutes this week for a quick call?
 
 Best regards,
 Narendranath Panda
-+91-9901244119
+[phone]
 ```
 
 **Timing**: Send exactly 5–7 business days after first email. One follow-up only — never send more than two.
@@ -229,7 +236,7 @@ Looking forward to next steps. Let me know if you need anything else.
 
 Best regards,
 Narendranath Panda
-+91-9901244119
+[phone]
 ```
 
 **Tips**:
@@ -304,7 +311,7 @@ available whenever works.
 
 Warm regards,
 Narendranath Panda
-+91-9901244119 | narendranathpanda@gmail.com
+[phone] | narendranathpanda@gmail.com
 https://www.linkedin.com/in/narendranathpanda/
 ```
 
@@ -373,30 +380,26 @@ Examples:
 
 ### Your Baseline
 
-| Component | Amount |
-|---|---|
-| Annual Base Salary | ₹53,49,662 (₹53.5L) |
-| Target Incentive (15%) | ₹8,02,449 (₹8.0L) |
-| Total Target Cash | ₹61,52,111 (₹61.5L) |
-| Retention Reward | ₹11,94,121 (one-time, vesting 1 Nov 2026) |
-| Job Grade | 10 |
-
-> **Retention Reward Note**: Only relevant if leaving **before 1 Nov 2026**. After that date the reward is paid and no longer a negotiation factor. If leaving before vesting, use as leverage: "I'm walking away from a ₹12L retention bonus to make this move, which reflects my conviction about this opportunity."
+> **Do not hardcode salary numbers here.** Read from `current-employer.txt` at runtime.
+>
+> Pull: Annual Base Salary, Target Incentive, Total Target Cash, Retention Reward (amount + vesting date), Job Grade.
+>
+> **Retention Reward Note**: Only relevant if leaving **before the vesting date** in `current-employer.txt`. After that date, the reward is paid and no longer a negotiation factor. If leaving before vesting, use as leverage: "I'm walking away from a retention bonus to make this move."
 
 ### Negotiation Ranges
 
 | Scenario | Target Range | Notes |
 |---|---|---|
-| **Lateral move (similar scope)** | ₹80L–90L | CTC + 30–45% (add retention forfeiture if before 1 Nov 2026) |
-| **Step-up (larger team/scope)** | ₹90L–₹1Cr+ | Justified by broader ownership (add retention forfeiture if before 1 Nov 2026) |
-| **International (USD)** | $100K–$140K+ | Adjust for city cost of living |
-| **International (EUR)** | €85K–€120K+ | Adjust for country norms |
-| **International (CAD)** | CAD $110K–$150K+ | You have PR — no visa cost to employer |
+| **Lateral move (similar scope)** | CTC + 30–45% | Add retention forfeiture if before vesting date |
+| **Step-up (larger team/scope)** | CTC + 45–65%+ | Justified by broader ownership (add retention forfeiture if before vesting date) |
+| **International (USD)** | Convert CTC to USD + 30–50% | Adjust for city cost of living |
+| **International (EUR)** | Convert CTC to EUR + 30–50% | Adjust for country norms |
+| **International (CAD)** | Convert CTC to CAD + 30–50% | You have PR — no visa cost to employer |
 
 ### Negotiation Scripts
 
 **When asked early (screening stage):**
-> "My current total comp is around ₹62 LPA. I'm looking at the ₹[X]–₹[Y] range depending on the role scope, team size, and overall package. Happy to be flexible for the right fit."
+> "My current total comp is around [Total Target Cash from current-employer.txt]. I'm looking at the ₹[X]–₹[Y] range depending on the role scope, team size, and overall package. Happy to be flexible for the right fit."
 
 **When asked to share exact number first:**
 > "I'd rather understand the full scope of the role and team first. Could you share the budget range for this position?"
@@ -404,8 +407,8 @@ Examples:
 **When they lowball:**
 > "Thanks for the offer. Given my 19+ years, CKA, and the scale of work I've done (1000+ clusters, $500K in savings), I was expecting something closer to ₹[X]–₹[Y]. Is there room to move?"
 
-**When leveraging the retention bonus (only if before 1 Nov 2026):**
-> "One thing I should mention—I have a ~₹12L retention reward vesting in November 2026 that I'd be walking away from. It would help if the offer could account for that, either as a signing bonus or adjusted base."
+**When leveraging the retention bonus (only if before vesting date in current-employer.txt):**
+> "One thing I should mention—I have a retention reward vesting in [vesting date] that I'd be walking away from. It would help if the offer could account for that, either as a signing bonus or adjusted base."
 
 **For international roles — highlight Canadian PR:**
 > "I'm a Canadian Permanent Resident, so no visa sponsorship costs or timeline risk for your team."

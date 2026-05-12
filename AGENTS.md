@@ -19,9 +19,6 @@ This is a personal career management workspace for **Narendranath Panda** — a 
 | `create-my-cv/email-reply/` | Email reply templates, cover letter framework, salary negotiation data |
 | `jobs/` | Job-specific folders — each contains JD, tailored CV, prep, cover letter, and email replies |
 | `personal/` | Raw personal data files (cv.txt, profile.txt, salary.txt, education.txt) |
-| `code/python/` | Python-based PDF CV generator (fpdf2). See [TEMPLATE_README.md](code/python/TEMPLATE_README.md) |
-| `code/resume-generator/` | Docker-based PDF resume generator (reportlab). See [README.md](code/resume-generator/README.md) |
-| `code/html/` | HTML/CSS CV with browser print-to-PDF |
 | `question-bank/` | Interview prep questions (K8s, Cloud, Linux, SRE, Leadership) |
 | `devops-qb.md` | DevOps question bank |
 
@@ -55,21 +52,14 @@ When asked to draft emails or cover letters:
 4. **Run Company Intel agent** for the company + role — saves to `jobs/[company]/[company]-info.md` (skip if file already exists). Use salary benchmarks from the report to set Expected CTC range.
 5. **Write** the reply to `jobs/[company]/email-reply.md`
 6. **Write** the cover letter to `jobs/[company]/cover-letter.txt`
-7. **Retention reward** (₹11.94L vesting 1 Nov 2026) — only mention if the date is before 1 Nov 2026
+7. **Retention reward** — read amount and vesting date from `current-employer.txt`. Only mention if today's date is before the vesting date.
 
 ### LinkedIn Optimization
 When asked about LinkedIn:
 1. **Read** `create-my-cv/Linkedin/SKILL.md` — contains current vs recommended audit, headline options, about section rewrite, skills strategy
 2. Current LinkedIn export is in `create-my-cv/Linkedin/profile.txt`
 
-### PDF Generation
-Two PDF pipelines exist:
-- **Python (fpdf2)**: `cd code/python && source .venv/bin/activate && pip install -r requirements.txt && python app.py` — reads `data.json`
-- **Docker (reportlab)**: `cd code/resume-generator && docker build -t resume-gen . && docker run -v $(pwd)/data:/app/data resume-gen data.json`
-- **HTML**: Open `code/html/index.html` in browser, use print-to-PDF
-
 ### Data Files
-- `code/python/data.json` and `code/html/cv_data.json` — structured CV data in JSON (schema: `code/resume-generator/template/schema_v1.json`)
 - `personal/cv.txt` — plain-text master CV
 - `personal/profile.txt` — LinkedIn profile export
 
@@ -79,7 +69,7 @@ Two PDF pipelines exist:
 - When creating tailored CVs, always flag **skill gaps** between the candidate's profile and the JD
 - Use quantified metrics from the master SKILL.md (Section C — Impact Library) in every CV and cover letter
 - Target role: primarily **DevOps Lead / Manager**, but also Platform Engineer, SRE, Cloud Architect
-- Current notice period: **60 days** | Location: **Bangalore** | Canadian PR: **Yes**
+- Notice period, location, Canadian PR status: Read from `create-my-cv/email-reply/current-employer.txt`
 
 ## Writing Style — All Outputs Must Sound Human
 

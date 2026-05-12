@@ -69,14 +69,20 @@ These rules apply to every CV, summary, and bullet point generated from this pro
 
 ## PERSONAL DETAILS
 
+> All personal details (address, phone, email, education, salary, retention reward) live in the source files under `create-my-cv/email-reply/`. Never hardcode them here.
+>
+> | File | What it has |
+> |---|---|
+> | `personal.txt` | DOB, India address, Canada address, phone numbers |
+> | `current-employer.txt` | Employer, job title, notice period, CTC, retention reward, reason for change |
+> | `education.txt` | Degrees, certifications |
+> | `salary.txt` | Remuneration breakdown |
+>
+> **Default**: Use India address and phone. For Canadian or international roles, use the Canada address and phone.
+
 - **Full Name**: Narendranath Panda
-- **Location**: Bangalore, Karnataka, India
-- **Relocation**: Relocation-Ready Canadian Permanent Resident
-- **Phone**: +91-9901244119
-- **Email**: narendranathpanda@gmail.com
 - **LinkedIn**: https://www.linkedin.com/in/narendranathpanda/
-- **Blog**: https://blog.npanda.online/
-- **GitHub Pages**: https://naren4b.github.io/
+- **Location, phone, email, education, CTC**: Read from source files above — do not duplicate here
 
 ---
 
@@ -277,18 +283,13 @@ These rules apply to every CV, summary, and bullet point generated from this pro
 
 ## SECTION E — EDUCATION
 
-| Degree | Institution | Year |
-|---|---|---|
-| Master of Technology (MTech) – WILP, Software Systems | BITS Pilani | 2015–2017 |
-| Bachelor of Engineering – Information Technology | Utkal University | 2000–2004 |
+> Read from `create-my-cv/email-reply/education.txt` — do not duplicate here.
 
 ---
 
 ## SECTION F — CERTIFICATION
 
-| Certification | Issuer | Year |
-|---|---|---|
-| Certified Kubernetes Administrator (CKA) | CNCF | November 2020 |
+> Read from `create-my-cv/email-reply/education.txt` — certifications are listed there.
 
 ---
 

@@ -8,6 +8,20 @@ Place of Work: Bangalore
 Notice Period: 60 days (non-negotiable, but can discuss early release for the right role)
 Unit: ECE(Enterprise Campus Edge) - private wireless business
 
+# Contact Details
+
+India Address:
+#40801 Bhuvana Greens Apartments, Kasavanahalli, Hosa Road,
+Next to BRS Global School, Bengaluru 560035
+Phone: +91-9901244119
+
+Canada Address:
+Unit 503, 10 Carabob Court, Scarborough,
+Toronto, Ontario M1T 3N5
+Phone: +1 647-524-8180
+
+Default: India (use Canada address only for Canadian/international roles)
+
 # Remuneration
 Annual Base Salary: ₹53,49,662
 Target Incentive (15%): ₹8,02,449

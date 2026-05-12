@@ -10,9 +10,7 @@ Personal career management workspace — CV tailoring, resume generation, job ap
 | **Research a company** | Use the **Company Intel** agent with the company name and job title |
 | **Reply to a recruiter** | Save email to `jobs/[company]/email.txt`, then use `/email-reply` prompt |
 | **Prepare for interview** | Use `/interview-prep` prompt with the company name |
-| **Generate PDF (Python)** | `cd code/python && pip install -r requirements.txt && python app.py` |
-| **Generate PDF (Docker)** | `cd code/resume-generator && docker build -t resume-gen . && docker run -v $(pwd)/data:/app/data resume-gen data.json` |
-| **HTML CV** | Open `code/html/index.html` in browser → Print to PDF |
+| **Generate PDF** | Export `cv.md` to PDF using a markdown-to-PDF tool or browser print |
 
 ## Agents
 
@@ -74,9 +72,6 @@ jobs/[company]/
 | `create-my-cv/` | Master career profile (SKILL.md), LinkedIn guide, email/cover letter templates |
 | `jobs/` | Per-company folders: JD, tailored CV, prep, cover letter, email replies |
 | `personal/` | Raw personal data (CV, profile, salary, education) |
-| `code/python/` | fpdf2-based PDF generator |
-| `code/resume-generator/` | Docker + reportlab PDF generator |
-| `code/html/` | HTML/CSS CV with print-to-PDF |
 | `question-bank/` | Interview prep question banks |
 | `.github/agents/` | Custom Copilot agents (CV Tailor, Company Intel) |
 | `.github/prompts/` | Copilot prompts (apply-to-job, email-reply, interview-prep) |

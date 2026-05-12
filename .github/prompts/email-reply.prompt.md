@@ -26,8 +26,8 @@ Draft a professional email reply based on the recruiter message or scenario prov
 
 - Keep recruiter replies under **150 words**
 - Mirror 2–3 keywords from the recruiter's message or JD
-- Use the Quick Reference table in email-reply/SKILL.md for CTC, notice period, and personal details
-- **Retention reward** (₹11.94L) — only mention if today's date is before 1 Nov 2026
+- Use the Quick Reference in email-reply/SKILL.md and read `current-employer.txt` for CTC, notice period, and personal details
+- **Retention reward** — read amount and vesting date from `current-employer.txt`. Only mention if today's date is before the vesting date.
 - CTC and salary expectations must use a **range**, never a single number
 - "Reason for change" must be positive and forward-looking — use one of the 4 ready options from the guide
 - For international roles, mention **Canadian PR** status
