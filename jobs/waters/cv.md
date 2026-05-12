@@ -8,7 +8,7 @@ Bangalore, India | Canadian Permanent Resident
 
 ---
 
-Cloud platform engineering leader with 19+ years in software engineering, 12+ of those building and running enterprise-grade platforms at scale. I've led a 15-engineer team across 5 global locations, run 24x7 on-call for mission-critical systems, and built CI/CD pipelines (Jenkins, GitLab CI, ArgoCD) that cut deployment cycles in half. Deep hands-on work with AWS (EKS, EC2, VPC, IAM), Kubernetes, Terraform, Ansible, and monitoring stacks including Datadog and Prometheus. Ran a FinOps program that saved $500K and cut cloud spend 15% year-over-year. Led large-scale platform consolidation — migrated 100s of workloads across 50+ clusters to a unified platform while keeping 99.95% availability.
+Cloud platform engineering leader with 19+ years in software engineering, 12+ of those building and running enterprise-grade platforms at scale. I've led a 15-engineer team across 5 global locations, run 24x7 on-call for mission-critical systems, and built CI/CD pipelines (Jenkins, GitLab CI, ArgoCD) that cut deployment cycles in half. Deep hands-on work with AWS (EKS, EC2, VPC, IAM), Kubernetes, Terraform, and monitoring stacks including Prometheus and Grafana. Ran a FinOps program that saved $500K and cut cloud spend 15% year-over-year. Led large-scale platform consolidation — migrated 100s of workloads across 50+ clusters to a unified platform while keeping 99.95% availability.
 
 ---
 
