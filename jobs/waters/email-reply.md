@@ -16,7 +16,7 @@ Thanks for the call — good talking to you. I went through the JD and it lines 
 Quick background:
 
 • I run a 15-person DevOps & CloudOps team at Nokia. We look after Kubernetes clusters across 15+ data centres and 1000+ edge sites, keeping things at 99.95% uptime.
-• Hands-on with AWS, Kubernetes, Terraform, Jenkins, GitLab CI, ArgoCD, and monitoring tools like Datadog, Prometheus, Grafana.
+• Hands-on with AWS, Kubernetes, Terraform, Jenkins, GitLab CI, ArgoCD, and monitoring tools like Prometheus, Grafana, and OpenTelemetry.
 • Set up a FinOps program that cut ~$500K in cloud spend. I handle vendor SLAs and budgets too.
 • Built CI/CD pipelines for 8+ product teams and run 24×7 on-call for production.
 • CKA certified, MTech from BITS Pilani.

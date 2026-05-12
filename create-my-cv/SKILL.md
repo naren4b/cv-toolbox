@@ -114,7 +114,7 @@ These rules apply to every CV, summary, and bullet point generated from this pro
 
 ### 5. Observability, Monitoring & Telemetry
 - Prometheus, Grafana, Loki, OpenTelemetry, VictoriaMetrics, Thanos
-- DataDog, ELK / OpenSearch stack
+- ELK / OpenSearch stack
 - Distributed tracing, logging and metrics pipelines
 - Alerting, dashboards, golden signals, MTTR reduction
 - Telemetry pipelines for 1000+ edge clusters
@@ -330,7 +330,7 @@ Use these keywords when the JD mentions related concepts:
 | Cloud Platform Engineering | Kubernetes, EKS, AWS, Docker, Platform Architecture |
 | Infrastructure as Code / IaC | Terraform, Terragrunt, OpenTofu, Helm, Kustomize, Ansible |
 | GitOps | ArgoCD, GitLab CI, configuration-as-code, declarative deployments |
-| Observability / Monitoring | Prometheus, Grafana, Loki, OpenTelemetry, VictoriaMetrics, Thanos, DataDog |
+| Observability / Monitoring | Prometheus, Grafana, Loki, OpenTelemetry, VictoriaMetrics, Thanos |
 | Reliability / SRE | SLO, SLI, golden signals, incident management, on-call, MTTR, postmortems |
 | CI/CD | GitLab CI, GitHub Actions, Jenkins, ArgoCD, Helm, Kustomize |
 | Cost Optimization / FinOps | Rightsizing, tagging, reserved instances, $500K savings, 15% YoY reduction |

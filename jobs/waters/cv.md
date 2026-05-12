@@ -22,7 +22,7 @@ Cloud platform engineering leader with 19+ years in software engineering, 12+ of
 
 **SRE & Operations:** Incident Management | 24x7 On-Call | Root Cause Analysis | SLO/SLI Frameworks | Runbooks | Change & Configuration Management
 
-**Monitoring & Observability:** Datadog | Prometheus | Grafana | OpenTelemetry | Loki | ELK/OpenSearch | Alerting & Dashboards
+**Monitoring & Observability:** Prometheus | Grafana | OpenTelemetry | Loki | ELK/OpenSearch | Alerting & Dashboards
 
 **FinOps & Vendor Management:** Cloud Cost Optimization | Budgeting & Forecasting | Vendor SLA Management | Reserved Instances | Rightsizing
 
@@ -63,7 +63,7 @@ Cloud platform engineering leader with 19+ years in software engineering, 12+ of
 - Maintained comprehensive technical and operational documentation — runbooks, playbooks, architecture diagrams.
 
 **Monitoring & Observability**
-- Designed observability stack using Prometheus, Grafana, Datadog, Loki, OpenTelemetry, and ELK/OpenSearch. Unified metrics, logs, and traces across 1,000+ edge clusters.
+- Designed observability stack using Prometheus, Grafana, Loki, OpenTelemetry, and ELK/OpenSearch. Unified metrics, logs, and traces across 1,000+ edge clusters.
 - Set up performance monitoring, capacity management, and alerting standards. Cut false positive alerts by ~20%.
 
 **FinOps & Vendor Management**
