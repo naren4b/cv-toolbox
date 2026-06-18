@@ -1,0 +1,5 @@
+CIBC BRAND NEW Group SRE Application Reliability Group
+I just wanted to connect as CIBC is opening a brand new group and is looking for Senior Consultants with Grafana experience! This can be a Contract to Full Time either.
+hands-on SRE people who know what SLO's and SLI's are; and how to integrate API's.
+Building from ground up. They are consolidating everything on Grafana, which is pulling from Loki and Prometheus; which are installed on OpenShift.
+Experience with those tools is mandatory. Hiring 20-30 people!
