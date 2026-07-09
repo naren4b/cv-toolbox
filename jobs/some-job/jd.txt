@@ -1,0 +1,43 @@
+Observability Engineer — Job Description (Grafana Suite + OpenTelemetry)  
+Role purpose  
+Build and run a modern observability platform onprem and in cloud that helps engineering teams detect 
+issues early, troubleshoot quickly, and improve reliability. You’ll standardise telemetry (metrics, logs, 
+traces) using OpenTelemetry and deliver actionable dashboards, alerts, and investigations using the 
+Grafana suite.  
+Key responsibilities  
+Platform engineering (Grafana stack)  
+In conjunction with architect - design, deploy, and operate Grafana components (as applicable): Grafana, 
+Loki, Tempo, Mimir, Alerting, Synthetic Monitoring.  
+Build and maintain multi-tenant observability patterns (folders, datasources, RBAC, naming conventions, 
+retention).  
+Create reusable dashboards, alert rules, and SLO views aligned to service ownership.  
+Migrate and improve existing dashboards , with drilldown.  
+Instrumentation & telemetry standards (OpenTelemetry)  
+Define and roll out OpenTelemetry standards for:  
+Tracing (context propagation, sampling strategies)  
+Metrics (naming, labels, cardinality controls)  
+Logs (structured logging, correlation IDs, trace-log linking)  
+Provide and maintain OTel collectors (agent/gateway), pipelines, processors, exporters, and secure 
+transport.  
+Define details of auto-instrumentation where appropriate and support manual instrumentation for 
+critical paths.  
+Reliability & operations  
+Partner with SRE/engineering teams to implement:  - SLIs/SLOs, error budgets, and alert tuning (reduce noise, improve signal)  - Incident response improvements (runbooks, post-incident actions, “golden signals”)  
+Perform capacity planning and cost optimisation (retention, sampling, label cardinality, storage tiers).  
+Security, governance, and compliance  
+Implement access controls, auditability, and data handling controls for telemetry.  
+Ensure platform resilience (HA, backups, DR) and safe change management.  
+Enablement & collaboration  
+Create onboarding guides, templates, and “paved road” tooling for teams.  
+Coach engineers on observability best practice and troubleshooting workflows.  
+Required skills & experience  
+Strong experience with Grafana with Loki, Tempo, Mimir.  
+Hands-on OpenTelemetry experience (Collector and agent configuration, SDKs, context propagation).  
+Solid understanding of distributed systems and observability concepts   
+Infrastructure skills: Kubernetes/Helm and Linux with S3 and networking basics.  
+Query proficiency: PromQL, LogQL, TraceQL (or equivalent).  
+Practical incident management and alerting experience.  
+Nice-to-have  
+Familiarity with cloud-managed observability services and hybrid connectivity patterns.  
+FinOps-style telemetry cost management.  
+Experience integrating AI/ML into observability solutions  
