@@ -1,0 +1,9 @@
+# Remuneration details
+Annual Base Salary: [Amount + currency]
+Target Incentive Amount: [Amount + currency and %]
+Total Target Cash: [Amount + currency]
+Job Grade: [Optional]
+
+# Retention Reward
+Amount: [Amount + currency or N/A]
+Vested Date: [DD Mon YYYY or N/A]

@@ -1,0 +1,23 @@
+{
+    "hooks": {
+        "UserPromptSubmit": [
+            {
+                "type": "command",
+                "linux": ".github/hooks/check-data-inputs.sh",
+                "timeout": 10
+            }
+        ],
+        "PreToolUse": [
+            {
+                "type": "command",
+                "linux": ".github/hooks/check-data-inputs.sh",
+                "timeout": 10
+            },
+            {
+                "type": "command",
+                "linux": ".github/hooks/check-job-inputs.sh",
+                "timeout": 10
+            }
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+Name: [Full Name]
+Date of Birth: [DD-MM-YYYY]
+
+Primary Address:
+[Address lines]
+Phone: [Phone with country code]
+
+Alternate Address:
+[Address lines]
+Phone: [Phone with country code]
+
+Primary Contact Preference: [Primary/Alternate]
+Email: [Primary email]
+LinkedIn: [LinkedIn URL]

@@ -1,0 +1,38 @@
+# Current Employer Details
+
+Employer: [Company Legal Name]
+Employee ID: [Optional]
+Job Title: [Current Role]
+Employment Start Date: [DD Month YYYY]
+Place of Work: [City]
+Notice Period: [e.g., 60 days]
+Unit/Department: [Optional]
+
+# Contact Details
+
+Primary Address:
+[Address line 1]
+[Address line 2]
+[City, State/Province, Postal Code, Country]
+Phone: [Primary phone with country code]
+
+Alternate Address:
+[Optional second address]
+Phone: [Optional second phone]
+
+Default Location: [Primary or Alternate]
+
+# Remuneration
+Annual Base Salary: [Amount + currency]
+Target Incentive: [Amount + currency and % if applicable]
+Total Target Cash: [Amount + currency]
+Job Grade: [Optional]
+
+# Retention Reward
+Amount: [Amount + currency or N/A]
+Vesting Date: [DD Mon YYYY or N/A]
+Note: Mention only if leaving before vesting date.
+
+# Reason for Change
+1. [Short positive reason]
+2. [Optional second reason]
