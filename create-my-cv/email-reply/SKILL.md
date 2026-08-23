@@ -1,4 +1,4 @@
-# Email Reply & Cover Letter Guide — Narendranath Panda
+# Email Reply & Cover Letter Guide — Candidate
 
 > **Purpose**: Ready-to-use email templates, recruiter reply strategies, and cover letter framework for job applications.
 > **Tone**: Professional but natural — confident, direct, sounds like a real person typed it.
@@ -18,7 +18,7 @@
 
 > When composing any email or cover letter, pull employer details, CTC, and retention reward from **`data/current-employer.txt`** — not from `data/personal.txt` or `data/salary.txt`.
 
-> **Address & phone routing**: Default to India address and +91 phone. For Canadian or international roles, use the Canada address (Scarborough, Toronto) and +1 647 phone.
+> **Address & phone routing**: Default to India address and India phone. For Canadian or international roles, use the Canada address and Canada phone.
 
 ## WRITING RULES — SOUND HUMAN, NOT AI
 
@@ -41,27 +41,27 @@ These rules apply to every email, cover letter, and reply generated from this gu
 > **Do not hardcode personal details here.** Read them at runtime from the source files listed in DATA SOURCES above.
 >
 > When composing emails/cover letters, read these files and fill in:
-> - Name, role, employer, Nokia ID, start date → `current-employer.txt`
-> - Address, phone (India and Canada) → `current-employer.txt` or `personal.txt`
-> - CTC, retention reward, notice period → `current-employer.txt`
-> - Education, certifications → `education.txt`
-> - Reason for change → `current-employer.txt`
+> - Name, role, employer, employee ID, start date → `data/current-employer.txt` and `data/Master-CV.md`
+> - Address, phone (India and Canada) → `data/current-employer.txt` or `data/personal.txt`
+> - CTC, retention reward, notice period → `data/current-employer.txt`
+> - Education, certifications → `create-my-cv/email-reply/education.txt`
+> - Reason for change → `data/current-employer.txt`
 >
 > **Address routing**: Default to India. Use Canada address + phone for Canadian/international roles.
 
 | Field | Source |
 |---|---|
-| Full Name | Narendranath Panda |
-| Current Role, Business Unit, Nokia ID | Read from `current-employer.txt` |
-| Total Experience | 19+ years |
-| Relevant Experience (Platform/DevOps/SRE) | 12+ years |
-| Location, Address, Phone | Read from `current-employer.txt` / `personal.txt` |
-| Notice Period | Read from `current-employer.txt` |
-| Canadian PR | Yes — Relocation-Ready Canadian Permanent Resident |
-| Email | narendranathpanda@gmail.com |
-| LinkedIn | https://www.linkedin.com/in/narendranathpanda/ |
-| Blog | https://blog.npanda.online/ |
-| Education, Certification | Read from `education.txt` |
+| Full Name | Read from `data/Master-CV.md` |
+| Current Role, Business Unit, Employee ID | Read from `data/current-employer.txt` |
+| Total Experience | Read from `data/Master-CV.md` |
+| Relevant Experience (Platform/DevOps/SRE) | Read from `data/Master-CV.md` |
+| Location, Address, Phone | Read from `data/current-employer.txt` / `data/personal.txt` |
+| Notice Period | Read from `data/current-employer.txt` |
+| Canadian PR | Read from `data/current-employer.txt` |
+| Email | Read from `data/Master-CV.md` or `data/personal.txt` |
+| LinkedIn | Read from `data/Master-CV.md` |
+| Blog | Read from `data/Master-CV.md` |
+| Education, Certification | Read from `create-my-cv/email-reply/education.txt` |
 
 ---
 
@@ -71,7 +71,7 @@ These rules apply to every email, cover letter, and reply generated from this gu
 
 **When to use**: A recruiter reaches out about a role. You're interested.
 
-**Subject**: Re: [Original Subject] — Narendranath Panda | Platform Engineer & DevOps Leader
+**Subject**: Re: [Original Subject] — [Candidate Name] | Platform Engineer & DevOps Leader
 
 ```
 Hi [Recruiter Name],
@@ -92,9 +92,9 @@ Quick background:
 I've attached my CV. Happy to jump on a call whenever works for you.
 
 Best regards,
-Narendranath Panda
-[phone from current-employer.txt]
-https://www.linkedin.com/in/narendranathpanda/
+[Candidate Name from data/Master-CV.md]
+[phone from data/current-employer.txt]
+[LinkedIn from data/Master-CV.md]
 ```
 
 **Tips**:
@@ -108,7 +108,7 @@ https://www.linkedin.com/in/narendranathpanda/
 
 **When to use**: You're proactively applying via email to a posted role.
 
-**Subject**: Application: [Job Title] — Narendranath Panda | 19+ Yrs | Kubernetes, AWS, IaC
+**Subject**: Application: [Job Title] — [Candidate Name] | [Years] | Kubernetes, AWS, IaC
 
 ```
 Hi [Hiring Manager / Recruiting Team],
@@ -132,9 +132,9 @@ I'm a Canadian Permanent Resident and open to relocation.
 CV is attached. Would be great to discuss how my background fits your team.
 
 Best regards,
-Narendranath Panda
-[phone] | narendranathpanda@gmail.com
-https://www.linkedin.com/in/narendranathpanda/
+[Candidate Name from data/Master-CV.md]
+[phone from data/current-employer.txt] | [email from data/Master-CV.md]
+[LinkedIn from data/Master-CV.md]
 ```
 
 **Tips**:
@@ -159,8 +159,8 @@ Thanks for considering my profile. Here are the details:
 • Relevant Experience (DevOps / SRE / Platform Engineering): 12+ years
 • Current CTC: [See note below]
 • Expected CTC: [See note below]
-• Notice Period: [from current-employer.txt]
-• Current Location: [from current-employer.txt / personal.txt]
+• Notice Period: [from data/current-employer.txt]
+• Current Location: [from data/current-employer.txt / data/personal.txt]
 • Open to Relocation: Yes (Canadian Permanent Resident)
 • Holding Any Offer: [Yes/No — update at time of sending]
 • If Yes, Company & DOJ: [Update if applicable]
@@ -170,8 +170,8 @@ Thanks for considering my profile. Here are the details:
 CV is attached. Happy to get on a call to discuss.
 
 Best regards,
-Narendranath Panda
-[phone]
+[Candidate Name from data/Master-CV.md]
+[phone from data/current-employer.txt]
 ```
 
 #### CTC Guidance
@@ -199,7 +199,7 @@ Pick the one that fits the role best:
 
 ### TEMPLATE 4: Follow-Up After No Response (1 Week)
 
-**Subject**: Following up: [Job Title] — Narendranath Panda
+**Subject**: Following up: [Job Title] — [Candidate Name]
 
 ```
 Hi [Recruiter Name],
@@ -211,7 +211,7 @@ from [date]. Still very interested — I think my background in
 Do you have a few minutes this week for a quick call?
 
 Best regards,
-Narendranath Panda
+[Candidate Name from data/Master-CV.md]
 [phone]
 ```
 
@@ -238,8 +238,8 @@ at Nokia maps directly to that.
 Looking forward to next steps. Let me know if you need anything else.
 
 Best regards,
-Narendranath Panda
-[phone]
+[Candidate Name from data/Master-CV.md]
+[phone from data/current-employer.txt]
 ```
 
 **Tips**:
@@ -262,7 +262,7 @@ I appreciate your time and how smoothly the process went. Happy
 to stay in touch for anything down the line.
 
 Best regards,
-Narendranath Panda
+[Candidate Name from data/Master-CV.md]
 ```
 
 **Tips**: Never burn bridges. The same recruiter may have a better role in 6 months.
@@ -312,10 +312,10 @@ CV is attached. Would be happy to talk about how my experience in
 [top 2 JD keywords] fits with what [Company] is building. I'm
 available whenever works.
 
-Warm regards,
-Narendranath Panda
-[phone] | narendranathpanda@gmail.com
-https://www.linkedin.com/in/narendranathpanda/
+Best regards,
+[Candidate Name from data/Master-CV.md]
+[phone from data/current-employer.txt] | [email from data/Master-CV.md]
+[LinkedIn from data/Master-CV.md]
 ```
 
 ### Cover Letter Tailoring Rules
@@ -348,8 +348,8 @@ https://www.linkedin.com/in/narendranathpanda/
 
 | Formula | Example |
 |---|---|
-| `Application: [Title] — [Name] \| [Yrs] \| [Top 3 Skills]` | Application: Sr Platform Engineer — Narendranath Panda \| 19+ Yrs \| Kubernetes, AWS, Terraform |
-| `Re: [Title] — Interested \| [Name]` | Re: DevOps Lead — Interested \| Narendranath Panda |
+| `Application: [Title] — [Name] \| [Yrs] \| [Top 3 Skills]` | Application: Sr Platform Engineer — [Candidate Name] \| [Years] \| Kubernetes, AWS, Terraform |
+| `Re: [Title] — Interested \| [Name]` | Re: DevOps Lead — Interested \| [Candidate Name] |
 | `Referred by [Name] — [Title] Application` | Referred by Rajesh Kumar — Cloud Architect Application |
 
 ### Do's and Don'ts
@@ -358,7 +358,7 @@ https://www.linkedin.com/in/narendranathpanda/
 |---|---|
 | Mirror 2–3 keywords from the JD | Use generic "I'm a passionate engineer" openers |
 | Include numbers: clusters, team size, %, $ | Write more than 150 words for recruiter replies |
-| Attach CV as PDF (not .docx) | Name your file "CV.pdf" — use "Narendranath_Panda_CV_[Company].pdf" |
+| Attach CV as PDF (not .docx) | Name your file "CV.pdf" — use "Candidate_CV_[Company].pdf" |
 | Reply within 24 hours to recruiter messages | Negotiate salary in the first email |
 | Use their name (check LinkedIn if unsure) | Start with "Dear Sir/Madam" |
 | Proofread — one typo kills credibility | Send the same CV for every role |
@@ -367,11 +367,11 @@ https://www.linkedin.com/in/narendranathpanda/
 ### CV File Naming Convention
 
 ```
-Narendranath_Panda_CV_[Company]_[Role_Short].pdf
+Candidate_CV_[Company]_[Role_Short].pdf
 ```
 Examples:
-- `Narendranath_Panda_CV_Waters_Sr_Manager_Cloud.pdf`
-- `Narendranath_Panda_CV_Amadeus_Principal_Cloud_Eng.pdf`
+- `Candidate_CV_Waters_Sr_Manager_Cloud.pdf`
+- `Candidate_CV_Amadeus_Principal_Cloud_Eng.pdf`
 
 ### Best Time to Send Emails
 - **Tuesday–Thursday, 8:00–10:00 AM** in the recruiter's timezone
@@ -383,11 +383,11 @@ Examples:
 
 ### Your Baseline
 
-> **Do not hardcode salary numbers here.** Read from `current-employer.txt` at runtime.
+> **Do not hardcode salary numbers here.** Read from `data/current-employer.txt` at runtime.
 >
 > Pull: Annual Base Salary, Target Incentive, Total Target Cash, Retention Reward (amount + vesting date), Job Grade.
 >
-> **Retention Reward Note**: Only relevant if leaving **before the vesting date** in `current-employer.txt`. After that date, the reward is paid and no longer a negotiation factor. If leaving before vesting, use as leverage: "I'm walking away from a retention bonus to make this move."
+> **Retention Reward Note**: Only relevant if leaving **before the vesting date** in `data/current-employer.txt`. After that date, the reward is paid and no longer a negotiation factor. If leaving before vesting, use as leverage: "I'm walking away from a retention bonus to make this move."
 
 ### Negotiation Ranges
 
@@ -444,7 +444,7 @@ When drafting an email reply or cover letter for a specific company:
 **Formatting**
 - [ ] Subject line includes role title, your name, and 2–3 keywords
 - [ ] Email body is under 150 words (for recruiter replies) or 300 words (cover letters)
-- [ ] CV file is named `Narendranath_Panda_CV_[Company]_[Role].pdf`
+- [ ] CV file is named `Candidate_CV_[Company]_[Role].pdf`
 - [ ] CV is the tailored version for this specific JD (not the generic master)
 
 **Final Review**

@@ -10,17 +10,18 @@ Draft a professional email reply based on the recruiter message or scenario prov
 ## Steps
 
 1. **Read** the email reply guide at [email-reply/SKILL.md](../../create-my-cv/email-reply/SKILL.md) — contains templates, salary data, negotiation scripts, and the recruiter questionnaire format
-2. **Identify the scenario** from the user's input and match to the correct template:
+2. **Read** `data/current-employer.txt`, `data/personal.txt`, and `data/Master-CV.md` for runtime candidate details
+3. **Identify the scenario** from the user's input and match to the correct template:
    - Template 1: Cold inbound from recruiter
    - Template 2: Applying to a job posting
    - Template 3: Recruiter questionnaire (CTC, notice, etc.)
    - Template 4: Follow-up after no response
    - Template 5: Post-interview thank you
    - Template 6: Declining an opportunity
-3. **Personalise** the template using the recruiter's name, company, and role title
-4. If a tailored CV exists in `jobs/[company]/`, reference its key points in the reply
-5. **Read** the recruiter email from `jobs/[company]/email.txt` if provided
-6. **Write** the reply to `jobs/[company]/email-reply.md`
+4. **Personalise** the template using the recruiter's name, company, role title, and candidate details from `data/`
+5. If a tailored CV exists in `jobs/[company]/`, reference its key points in the reply
+6. **Read** the recruiter email from `jobs/[company]/email.txt` if provided
+7. **Write** the reply to `jobs/[company]/email-reply.md`
 
 ## Rules
 
@@ -31,7 +32,7 @@ Draft a professional email reply based on the recruiter message or scenario prov
 - CTC and salary expectations must use a **range**, never a single number
 - "Reason for change" must be positive and forward-looking — use one of the 4 ready options from the guide
 - For international roles, mention **Canadian PR** status
-- Suggest the CV filename as `Narendranath_Panda_CV_[Company]_[Role].pdf`
+- Suggest the CV filename as `Candidate_CV_[Company]_[Role].pdf`
 
 ## Output Format
 

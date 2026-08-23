@@ -1,0 +1,22 @@
+# Ignore generated HTML and PDF outputs
+*.pdf
+*.html
+build/
+# Runtime candidate data (local only)
+/data/
+/jobs/
+/code/inputs/user/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.vscode/
+**/.idea/
+data/personal.txt

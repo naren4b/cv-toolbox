@@ -1,0 +1,8 @@
+pypdf
+reportlab
+weasyprint>=68.1
+# Core CV generator uses Python standard library only.
+# No external packages required for HTML generation.
+
+# Optional future PDF export support:
+# playwright>=1.45.0

@@ -1,4 +1,4 @@
-# LinkedIn Profile Optimization — Narendranath Panda
+# LinkedIn Profile Optimization — Candidate
 
 > **Purpose**: Actionable guide to upgrade every LinkedIn section for recruiter visibility and inbound leads.
 > **Tone**: Professional but natural — sounds like you wrote it yourself, not like a branding agency did.
@@ -8,7 +8,7 @@
 - Write LinkedIn sections the way a real engineer would. Not a motivational speaker.
 - **BANNED phrases**: "passionate about", "thought leader", "proven track record", "cutting-edge", "synergy", "holistic", "results-driven professional", "seasoned", "dynamic", "leveraging"
 - Don't stuff every bullet with buzzwords. One or two keywords per line is enough.
-- Use "I" naturally. Don't write in third person ("Narendranath is a...").
+- Use "I" naturally. Don't write in third person ("the candidate is a...").
 - About section should read like you explaining what you do to a smart friend, not a press release.
 - Short sentences. No walls of text. Break things up.
 - If a sentence sounds like something a LinkedIn influencer would post, rewrite it.
@@ -103,9 +103,9 @@ Certifications: CKA (Certified Kubernetes Administrator) | MTech, BITS Pilani
 
 Tech: Kubernetes · AWS EKS · Terraform · Terragrunt · ArgoCD · Prometheus · Grafana · OpenTelemetry · Helm · Python · Kafka · Docker
 
-I write about platform engineering and DevOps at: https://blog.npanda.online/
+I write about platform engineering and DevOps at: [blog link from data/Master-CV.md].
 
-Open to connecting with fellow platform engineers, SREs, and engineering leaders. Reach me at narendranathpanda@gmail.com.
+Open to connecting with fellow platform engineers, SREs, and engineering leaders. Reach me at [email from data/Master-CV.md or data/personal.txt].
 ```
 
 ### Why This Works
@@ -171,7 +171,7 @@ This is **prime real estate** — the first visual block visitors see below your
 
 | Slot | What to Pin | Why |
 |---|---|---|
-| 1 | **Blog post**: A popular article from blog.npanda.online | Establishes thought leadership, shows you write |
+| 1 | **Blog post**: A popular article from the blog URL in `data/Master-CV.md` | Establishes thought leadership, shows you write |
 | 2 | **Architecture diagram or infographic**: "How We Run 1000+ K8s Clusters at Nokia" (create as a LinkedIn post or image) | Visual proof of scale — recruiters remember images |
 | 3 | **GitHub Pages**: Link to naren4b.github.io | Shows open-source / side projects |
 | 4 | **LinkedIn post**: Write a post about your FinOps journey ($500K saved) or your AI triage agent prototype | High-engagement content that proves innovation |
@@ -271,7 +271,7 @@ Create a simple banner (1584 × 396 px) using Canva or Figma with:
 - Your name + title
 - 2–3 key stats: `1000+ K8s Clusters | 15+ Data Centres | 99.95% Availability`
 - Subtle tech icons (Kubernetes wheel, AWS logo, Terraform)
-- Your blog URL: `blog.npanda.online`
+- Your blog URL: read from `data/Master-CV.md`
 
 This turns your profile into a **landing page** rather than a default template.
 
@@ -279,7 +279,7 @@ This turns your profile into a **landing page** rather than a default template.
 
 ## 9. PROFILE URL
 
-### Current: `linkedin.com/in/narendranathpanda`
+### Current: `[LinkedIn profile from data/Master-CV.md]`
 
 This is already clean — good. No action needed.
 

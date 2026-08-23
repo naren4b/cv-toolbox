@@ -1,0 +1,17 @@
+<work_experience version="v1">
+  <company name="Your Company Name">
+    <role title="Your Role" start="YYYY-MM" end="Present" location="City, Country">
+      <subsection title="Key Initiative">
+        <bullet>Describe your impact with measurable outcomes.</bullet>
+        <bullet>Add one more bullet about platform, reliability, or delivery improvements.</bullet>
+      </subsection>
+    </role>
+  </company>
+
+  <company name="Previous Company Name">
+    <role title="Previous Role" start="YYYY-MM" end="YYYY-MM" location="City, Country">
+      <bullet>Highlight one major technical achievement.</bullet>
+      <bullet>Highlight collaboration or leadership impact.</bullet>
+    </role>
+  </company>
+</work_experience>

@@ -6,6 +6,8 @@ applyTo: "**"
 
 Every agent, skill, and prompt in this workspace must load these files **before** producing any output. They are the authoritative source for all personal, employment, and career data.
 
+If `data/` is empty in a fresh clone, initialize it from `data-template/` first (`mkdir -p data && cp data-template/* data/`).
+
 | File | Read for |
 |------|----------|
 | [`data/Master-CV.md`](../../data/Master-CV.md) | Canonical approved CV — baseline for all tailoring; takes precedence over SKILL.md on any fact |

@@ -1,0 +1,7 @@
+<education version="v1">
+  <item degree="Your Degree" institution="Your Institution" year_start="YYYY" year_end="YYYY" />
+  <item certification="Your Certification" issuer="Issuer Name" date="Month YYYY" />
+  <awards>
+    <item>Your Award Name – Short context (YYYY)</item>
+  </awards>
+</education>

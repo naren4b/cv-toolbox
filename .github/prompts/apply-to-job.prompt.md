@@ -16,8 +16,8 @@ Generate a complete job application package for the provided Job Description.
 5. **Analyse the JD** and create the job folder at `jobs/[company]/`
 6. **Produce these files**:
 
-### File 1: `jobs/[company]/cv-DD-MM-YYYY.md`
-Tailored CV following the Step 1–4 process in the master SKILL.md. Use today's actual date for the filename (e.g. `cv-12-05-2026.md`).
+### File 1: `jobs/[company]/cv-${date}.md`
+Tailored CV following the Step 1–4 process in the master SKILL.md. Use today's actual date in `DD-MM-YYYY` format (e.g. `cv-12-05-2026.md`).
 
 ### File 2: `jobs/[company]/prep.txt`
 Gap analysis with skill match matrix, talking points, risk assessment, and interviewer questions.

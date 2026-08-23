@@ -4,6 +4,9 @@
 
 Before **any** task, load the four input files from `data/`. Full routing rules in [`.github/instructions/data-bootstrap.instructions.md`](.github/instructions/data-bootstrap.instructions.md).
 
+If `data/` is missing in a new setup, initialize from templates:
+`mkdir -p data && cp data-template/* data/`
+
 | File | Contains |
 |------|----------|
 | `data/Master-CV.md` | Canonical approved CV — takes precedence over SKILL.md on any fact |
@@ -11,9 +14,14 @@ Before **any** task, load the four input files from `data/`. Full routing rules 
 | `data/personal.txt` | DOB, India + Canada addresses, phone numbers |
 | `data/salary.txt` | Remuneration breakdown |
 
+Any new candidate input gathered during workflows must be written under `data/` only, not inside agents/prompts/skills or job output files.
+
+If required `data/` files are missing, the workspace hook in `.github/hooks/data-input-guard.json` blocks prompt/tool execution until inputs are restored.
+If job inputs are missing, the same hook chain blocks generation: `jobs/[company]/cv-${date}.md`, `prep.txt`, and `cover-letter.txt` require `jobs/[company]/jd.txt`; `email-reply.md` requires both `jobs/[company]/jd.txt` and `jobs/[company]/email.txt`.
+
 ## Purpose
 
-This is a personal career management workspace for **Narendranath Panda** — a Senior Platform Engineer / R&D Architect with 19+ years of experience. The workspace is used to:
+This is a personal career management workspace for a senior platform engineering candidate. The workspace is used to:
 
 1. Maintain a master career profile and tailor CVs for specific job applications
 2. Generate PDF resumes from JSON data
@@ -25,11 +33,13 @@ This is a personal career management workspace for **Narendranath Panda** — a 
 | Directory | Purpose |
 |---|---|
 | `data/` | **Central input data** — `Master-CV.md`, `current-employer.txt`, `salary.txt`, `personal.txt`. Read these before any agent or skill runs. |
+| `data-template/` | Reusable, non-personal templates to bootstrap `data/` for any candidate and any role. |
 | `create-my-cv/` | SKILL.md guides for CV tailoring, LinkedIn optimization, and email/cover letter templates |
 | `create-my-cv/SKILL.md` | **Master career profile** — single source of truth for all career data, skills, achievements, and CV tailoring instructions |
 | `create-my-cv/Linkedin/` | LinkedIn profile optimization guide |
 | `create-my-cv/email-reply/` | Email reply templates, cover letter framework, salary negotiation data |
 | `jobs/` | Job-specific folders — each contains JD, tailored CV, prep, cover letter, and email replies |
+| `.github/hooks/` | Runtime guardrails for agent sessions (for example: required `data/` inputs check) |
 | `personal/` | Raw personal data files (cv.txt, profile.txt, salary.txt, education.txt) |
 | `question-bank/` | Interview prep questions (K8s, Cloud, Linux, SRE, Leadership) |
 | `devops-qb.md` | DevOps question bank |
@@ -48,7 +58,7 @@ Each job application folder under `jobs/` follows this pattern:
 ```
 jobs/[company]/
   jd.txt              # INPUT:  Original job description
-  cv.md               # OUTPUT: Tailored CV
+  cv-${date}.md       # OUTPUT: Tailored CV (date in DD-MM-YYYY)
   prep.txt            # OUTPUT: Gap analysis, talking points, interview prep
   cover-letter.txt    # OUTPUT: Cover letter
   email.txt           # INPUT:  Recruiter/HR email

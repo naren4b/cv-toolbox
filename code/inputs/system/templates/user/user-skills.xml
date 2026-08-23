@@ -1,0 +1,19 @@
+<skills version="v1">
+  <category name="Platform and Cloud">
+    <item>AWS</item>
+    <item>Kubernetes</item>
+    <item>Docker</item>
+  </category>
+
+  <category name="Infrastructure as Code and Automation">
+    <item>Terraform</item>
+    <item>Helm</item>
+    <item>GitHub Actions</item>
+  </category>
+
+  <category name="Observability and Reliability">
+    <item>Prometheus</item>
+    <item>Grafana</item>
+    <item>SLO/SLI</item>
+  </category>
+</skills>

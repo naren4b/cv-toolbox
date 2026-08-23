@@ -1,4 +1,4 @@
-# Career Profile — Narendranath Panda
+# Career Profile — Candidate
 
 > **Purpose**: Master career profile and CV tailoring guide.
 > When given a new Job Description (JD), use this file as the single source of truth to generate a targeted CV.
@@ -81,9 +81,7 @@ These rules apply to every CV, summary, and bullet point generated from this pro
 >
 > **Default**: Use India address and phone. For Canadian or international roles, use the Canada address and phone.
 
-- **Full Name**: Narendranath Panda
-- **LinkedIn**: https://www.linkedin.com/in/narendranathpanda/
-- **Location, phone, email, education, CTC**: Read from source files above — do not duplicate here
+- **Candidate name, LinkedIn, location, phone, email, education, CTC**: Read from source files above — do not duplicate here
 
 ---
 

@@ -19,7 +19,7 @@
 
 | Step | Action | Prompt to give | Output file | Source |
 |------|--------|----------------|-------------|--------|
-| 1a | **Tailor CV** | `@CV Tailor — [company], [job title]` | `jobs/[company]/cv.md` | `create-my-cv/SKILL.md` |
+| 1a | **Tailor CV** | `@CV Tailor — [company], [job title]` | `jobs/[company]/cv-${date}.md` | `create-my-cv/SKILL.md` |
 | 1b | **Gap analysis & interview prep** | _(produced automatically with 1a)_ | `jobs/[company]/prep.txt` | JD vs SKILL.md |
 
 > **What happens**: The CV Tailor agent reads your master SKILL.md, analyses the JD,
@@ -49,7 +49,7 @@
 
 | Step | Action | Prompt to give | Output file |
 |------|--------|----------------|-------------|
-| 3a | **Company intel** | `@Company Intel — [company], [job title]` | `jobs/[company]/company-intel.txt` |
+| 3a | **Company intel** | `@Company Intel — [company], [job title]` | `jobs/[company]/[company]-info.md` |
 | 3b | **Deep interview prep** | `Help me prep for the [company] interview` | Review `prep.txt` + `question-bank/` |
 
 > **Company intel covers**: Revenue, headcount, tech stack, Glassdoor ratings,
@@ -61,7 +61,7 @@
 
 | Step | Action | How |
 |------|--------|-----|
-| 4a | **Generate PDF resume** | Export `cv.md` to PDF using a markdown-to-PDF tool or browser print |
+| 4a | **Generate PDF resume** | Export `cv-${date}.md` to PDF using a markdown-to-PDF tool or browser print |
 | 4b | **Final review** | Proofread CV PDF + cover letter + email reply |
 | 4c | **Send** | Reply to recruiter with: CV (PDF) + cover letter + filled questionnaire |
 
@@ -83,7 +83,7 @@
 jobs/[company]/
   jd.txt              # INPUT   — Original job description
   email.txt           # INPUT   — Recruiter/HR email
-  cv.md               # OUTPUT  — Tailored CV (markdown)
+  cv-${date}.md       # OUTPUT  — Tailored CV (markdown, DD-MM-YYYY date)
   prep.txt            # OUTPUT  — Gap analysis + interview prep
   email-reply.md     # OUTPUT  — Reply to recruiter
   cover-letter.txt    # OUTPUT  — Cover letter
