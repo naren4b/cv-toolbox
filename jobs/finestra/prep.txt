@@ -1,0 +1,125 @@
+# Finastra — Director, Head of DevOps / Platform Engineering
+## Interview Prep & Gap Analysis
+
+## 1. JD ANALYSIS SUMMARY
+
+| Field | Detail |
+|---|---|
+| Company | Finastra |
+| Role | Director, Head of DevOps |
+| Function | Corporate Lending Technology |
+| Location | Bengaluru |
+| Domain | Financial-services software, lending platforms |
+| Seniority | Director; strategic owner and hands-on technical authority |
+| Core mandate | Define the Target Operating Platform, build a centralized DevOps team, introduce SRE, standardize client deployment, and extend practices into Retail Lending |
+| Candidate baseline | 19+ years in software, systems, and infrastructure; 12+ years in platform/SRE; 15-engineer team led |
+
+### Highest-priority JD themes
+
+1. Target Operating Platform strategy and cloud-native, cloud-agnostic modernization.
+2. Centralized DevOps organization with self-service CI/CD and reusable platform components.
+3. SRE practices: SLOs, error budgets, observability, incident response, and reliability improvement.
+4. Standardized deployment patterns for multiple products and clients.
+5. Team growth, stakeholder alignment, platform product thinking, and developer experience.
+6. Kubernetes, EKS/OpenShift/AKS, GitOps, Terraform, Helm, Kustomize, and secure delivery.
+
+## 2. SKILL MATCH MATRIX
+
+### Strong matches
+
+| Requirement | Evidence | Match |
+|---|---|---|
+| 15–20 years of engineering and technical leadership | 19+ years across software, systems, infrastructure, platform, and SRE work | ★★★★★ |
+| Cloud-native and container modernization | Modernized 8–9 products; containerization and migration across 50+ clusters | ★★★★★ |
+| Kubernetes and enterprise platform engineering | 15+ data-centre clusters plus 1,000+ customer edge clusters; on-prem and AWS EKS | ★★★★★ |
+| AWS EKS | EKS Auto Mode, VPC, subnets, security groups, S3, worker lifecycle, scaling, upgrades | ★★★★★ |
+| Centralized DevOps leadership | Directed a 15-engineer DevOps and platform team; ran a DevOps Center of Excellence | ★★★★★ |
+| Self-service CI/CD | Built compliant Terraform plan/apply pipelines and standardized CI/CD for 8+ product teams | ★★★★★ |
+| GitOps and modern delivery tooling | GitLab CI, GitHub Actions, Jenkins, ArgoCD, Helm, Kustomize, blue/green and canary releases | ★★★★★ |
+| SRE practices | SLO/SLI frameworks, golden signals, 99.95% availability, on-call, RCA, preventive automation | ★★★★★ |
+| Observability | Prometheus, Grafana, Loki, OpenTelemetry, VictoriaMetrics, OpenSearch; telemetry for 1,000+ clusters | ★★★★★ |
+| Reliability outcomes | MTTR improved 35%; operational incidents cut 40%; false-positive alerts cut about 20% | ★★★★★ |
+| Infrastructure as Code | Terraform, Terragrunt, OpenTofu, Ansible; reusable infrastructure automation | ★★★★★ |
+| Secure software supply chain | Harbor, Vault, IAM least privilege, admission controls, image management, 300+ FOSS compliance checks | ★★★★☆ |
+| FinOps and cost governance | About 15% YoY cloud-spend reduction; $500K estimated overspend avoided | ★★★★☆ |
+| Financial-services product knowledge | Built LoanIQ framework at Misys, now Finastra; banking clients | ★★★★★ |
+| Senior stakeholder and team enablement | Cross-functional platform adoption, training, standards, mentorship, global collaboration | ★★★★☆ |
+
+### Gaps and risks
+
+| JD requirement | Current evidence | Risk | Mitigation |
+|---|---|---|---|
+| OpenShift or AKS, plus another Kubernetes platform | Deep production experience is AWS EKS and on-prem Kubernetes; no approved OpenShift/AKS evidence | 🟡 MEDIUM | Position EKS and on-prem Kubernetes as the primary depth. Explain that the platform concerns are portable: cluster lifecycle, policy, GitOps, observability, security, and upgrades. Do not claim OpenShift or AKS hands-on work. |
+| Tekton | GitLab CI, GitHub Actions, Jenkins, and ArgoCD are documented; Tekton is not | 🟢 LOW | Emphasize pipeline design, reusable templates, GitOps, and governance rather than a single engine. |
+| Backstage or Internal Developer Portal | Self-service pipelines and platform product practices are documented; Backstage is not | 🟡 MEDIUM | Describe the existing self-service experience and explain how you would assess whether Backstage adds value. Avoid claiming Backstage implementation. |
+| Standardized client deployment patterns | Standardized deployments across products, 1,000+ customer edge clusters, and configuration-as-code are documented; a named client deployment framework is not | 🟡 MEDIUM | Use the edge-cluster and repeatable deployment evidence. In the interview, ask how Finastra defines client reference architectures, onboarding, and contractual uptime commitments. |
+| Explicit error-budget ownership | SLO/SLI, golden signals, availability, and incident management are documented; error budgets are not stated as an implemented practice | 🟡 MEDIUM | Discuss how you would connect SLOs to release decisions and reliability investment, while being clear about the documented SLO/SLI experience. |
+| Direct lending-platform leadership at director level | Direct LoanIQ engineering experience and current platform leadership; no prior director title in the approved CV | 🟡 MEDIUM | Lead with the combination of LoanIQ domain context, 15-engineer leadership, platform scale, and roadmap-level modernization. |
+
+## 3. KEY TALKING POINTS
+
+### Opening positioning
+
+"I have spent the last 12 years building and running platforms at Nokia, with responsibility across Kubernetes, AWS, CI/CD, observability, reliability, and team leadership. I have led a 15-engineer DevOps and platform team and supported 8–9 products through cloud-native modernization. Earlier, at Misys, I worked directly on LoanIQ, so I understand both the lending-product context and the platform problems this role is meant to solve."
+
+### Target Operating Platform roadmap
+
+"I would start with a product and portfolio view: understand the deployment paths, reliability measures, platform constraints, and developer pain points for each lending product. Then I would define a small number of reference patterns for cluster operations, CI/CD, security, observability, and client deployment. The roadmap should deliver usable self-service capabilities incrementally, with adoption and reliability measures rather than only platform milestones."
+
+### Building a centralized DevOps team
+
+"At Nokia, I directed a 15-engineer DevOps and platform team and set standards across IaC, CI/CD, observability, and SRE. The centralized team should own the paved road, documentation, support model, and feedback loop. Product teams should consume reusable capabilities without creating a ticket for every environment or release."
+
+### SRE and reliability
+
+"I established SLO/SLI and golden-signal practices for mission-critical services, ran a global 24/7 on-call rotation, and led incident response and root-cause analysis. The result was 99.95% platform availability, a 35% MTTR improvement, and 40% fewer operational incidents. At Finastra, I would connect SLOs to error-budget decisions, release readiness, incident learning, and roadmap priorities."
+
+### Client deployment standards
+
+"I have operated platforms that included more than 1,000 customer edge Kubernetes clusters. That work required repeatable automation, environment standards, telemetry, upgrade discipline, and clear operational ownership. I would apply the same principles to client deployment patterns: validated reference architectures, versioned deployment blueprints, documented prerequisites, automated checks, and a predictable rollback path."
+
+### Finastra and LoanIQ context
+
+"I worked on the LoanIQ product at Misys, replacing a legacy Smalltalk implementation with a Java framework that improved performance by about 50% for banking clients. That gives me useful product context, while my later platform work gives me the operating and modernization perspective needed for a portfolio-level DevOps role."
+
+### OpenShift, AKS, and cloud-agnostic design
+
+"My deepest production experience is AWS EKS and on-premise Kubernetes. I would be direct about that. The operating model I use is cloud-agnostic: Terraform, Helm, Kustomize, GitOps, policy, observability, security, and automated lifecycle management. I would learn the platform-specific controls for OpenShift or AKS as part of the target-platform assessment rather than pretend the products are identical."
+
+### Why move now
+
+"I've spent 12 years building and running cloud platforms at Nokia. I now want a role where I own the full platform roadmap, build the operating model, and grow a team in a product company. Finastra is especially relevant because I have prior LoanIQ experience and can connect that product context with modern platform engineering."
+
+## 4. QUESTIONS TO ASK THE INTERVIEWER
+
+1. What is the current Target Operating Platform, and which parts are still being defined?
+2. How are Lending product teams deploying today, and where is the most visible outer-loop friction?
+3. Is the centralized DevOps team being built from zero, or is there an existing group to reshape?
+4. Which Kubernetes platforms are in production today: EKS, OpenShift, AKS, on-premise Kubernetes, or a mix?
+5. What client deployment patterns are already standardized, and where do onboarding or upgrades vary most?
+6. Which SLOs and uptime commitments matter most to Corporate Lending customers?
+7. How are error budgets, incident reviews, and reliability investment handled today?
+8. What would success look like after six and twelve months in this role?
+9. How will this platform model extend into Retail Lending?
+10. What authority will this role have over hiring, tooling standards, and product-team adoption?
+
+## 5. RISK ASSESSMENT
+
+| Factor | Assessment |
+|---|---|
+| Overall fit | 85–90%. Very strong on platform scale, EKS/Kubernetes, CI/CD, SRE, FinOps, leadership, and LoanIQ domain context. |
+| Biggest risk | The role may expect proven OpenShift or AKS depth and a previously implemented internal developer portal. Neither is supported by the approved profile. |
+| Secondary risk | Client deployment standardization and error-budget ownership are strongly adjacent but not explicitly named as delivered programs in the CV. |
+| Key differentiator | Direct LoanIQ experience combined with 1,000+ edge clusters, 15+ data-centre clusters, 8–9 modernized products, a 15-engineer team, and measurable reliability and cost outcomes. |
+| Recommendation | Strong apply. Be precise about EKS depth and frame the first 90 days around platform assessment, reference patterns, self-service adoption, and SRE baselines. |
+
+## 6. QUICK-WIN ACTIONS BEFORE INTERVIEW
+
+- Prepare a 30/60/90-day plan for assessing Lending products, forming the platform roadmap, and choosing the first self-service capabilities.
+- Review OpenShift concepts, especially Routes, Operators, Security Context Constraints, and differences from EKS.
+- Review Backstage basics and be ready to discuss when an internal developer portal is useful versus when a focused self-service pipeline is enough.
+- Prepare one concrete story about standardizing a deployment or upgrade across many customer environments.
+- Prepare a simple SLO and error-budget example for a lending service, including what happens when the budget is exhausted.
+- Revisit LoanIQ product context and the Misys-to-Finastra connection.
+- Keep the FinOps result ready: about 15% YoY cloud-spend reduction and an estimated $500K overspend avoided.
+- Keep notice-period details for recruiter discussions: 60 days, with early release open for discussion for the right role.

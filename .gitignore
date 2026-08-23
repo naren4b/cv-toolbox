@@ -2,9 +2,9 @@
 *.pdf
 *.html
 build/
-# Runtime candidate data (local only)
-/data/
-/jobs/
+# # Runtime candidate data (local only)
+# /data/
+# /jobs/
 /code/inputs/user/
 
 # OS/editor noise

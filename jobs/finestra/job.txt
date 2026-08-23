@@ -1,0 +1,84 @@
+Director Head of DevOps/Platform Engineering
+locations: Bengaluru
+time type: Full time
+Posted 24 Days Ago
+End Date: August 28, 2026 (4 days left to apply)
+
+job requisition id: REQ0326_0036690
+
+Who are we?
+At Finastra, we’re a global leader in financial services software, dedicated to expanding access to financial services and shaping what’s next for the industry. Our technology powers mission‑critical solutions across Lending, Payments and Universal Banking, supporting over 7,000 customers, including 80% of the world’s top 50 banks, in more than 110 countries. 
+
+About the Role
+Corporate Lending Technology is seeking an experienced and strategic Director, Head of DevOps, to lead the modernization of our engineering platform across flagship products. This is a high-impact leadership role responsible for defining and executing the Target Operating Platform roadmap, building and scaling a centralized DevOps organization, establishing SRE practices, and delivering self-service CI/CD capabilities and standardized client deployment patterns across the portfolio.
+
+The Director, Head of DevOps, will own the DevOps function end-to-end, building the team, tooling, and culture necessary to accelerate delivery velocity, improve operational reliability, and position Corporate Lending Technology on a modern, cloud-native, cloud-agnostic foundation.
+
+Key Responsibilities: DevOps Strategy & Target Operating Platform
+
+Define and own the DevOps strategy and Target Operating Platform roadmap across all Lending Products
+Drive the organization's strategic shift to containerization, cloud-native, and cloud-agnostic architectures as the standard engineering baseline
+Partner with engineering leadership, architecture, and executive stakeholders to align the DevOps roadmap with business and technology strategy
+Champion a platform product mindset, treating internal engineering teams as customers, and continuously improving developer experience
+Centralized DevOps Organization & Self-Service CI/CD
+
+Build, lead, and scale a centralized shared DevOps team responsible for delivering self-service CI/CD frameworks to all product engineering teams
+Define and enforce standardized CI/CD pipelines, toolchains, and governance practices across all Corporate Lending products
+Develop reusable pipeline templates, infrastructure modules, and deployment blueprints that enable product teams to operate with speed and consistency
+Reduce outer-loop friction and drive automation across build, test, release, and deployment workflows
+SRE & Operational Excellence
+
+Build and mature Site Reliability Engineering (SRE) practices from the ground up across the product portfolio
+Establish Service Level Objectives (SLOs), error budgets, observability standards, and incident response frameworks
+Drive a culture of operational excellence, proactive monitoring, and continuous reliability improvement
+Balance delivery velocity with system stability and client uptime commitments
+Client Deployment Standards
+
+Design and publish standardized deployment patterns for clients, ensuring consistent, repeatable, and well-documented onboarding and release processes
+Reduce client-facing delivery risk and variability through structured deployment frameworks and validated reference architectures
+Collaborate with client-facing and product teams to align deployment standards with client expectations and contractual obligations
+Team Leadership & Organizational Development
+
+Recruit, mentor, and develop a high-performing centralized DevOps engineering team
+Serve as a hands-on technical authority and trusted advisor for product teams navigating the cloud-native modernization journey
+Establish communities of practice and engineering guilds to drive knowledge sharing and standards adoption across product lines
+Own the roadmap for extending DevOps standards and platform practices into Retail Lending
+Required Qualifications
+15–20 years of overall software engineering and technical leadership experience, with a strong and consistent focus on DevOps, platform engineering, infrastructure modernization, and cloud-native delivery
+10+ years of hands-on experience in containerization, Kubernetes, and cloud-native platform engineering
+Deep expertise with at least one enterprise Kubernetes platform: Red Hat OpenShift, AWS EKS, or Azure AKS, with working knowledge of at least one additional platform strongly preferred
+Proven track record of building, leading, and scaling centralized DevOps or platform engineering teams that deliver shared, self-service CI/CD capabilities to multiple product teams
+Strong platform product mindset demonstrated ability to treat internal engineering teams as customers and drive developer experience as a first-class outcome
+Proven strategic thinking and roadmap ownership — ability to define a multi-year DevOps and platform vision, secure organizational buy-in, and execute incrementally
+Hands-on experience building and institutionalizing SRE practices, including SLOs, observability pipelines, error budgets, and incident management frameworks
+Experience defining and scaling standardized client deployment patterns in complex, multi-product or multi-client enterprise environments
+Deep expertise with modern CI/CD tooling (e.g., GitHub Actions, Tekton, ArgoCD, Jenkins, GitLab CI) and GitOps workflows
+Strong command of cloud-agnostic infrastructure principles, IaC tooling (Terraform, Helm, Kustomize), and secure software supply chain practices
+Demonstrated ability to influence and align senior stakeholders, architecture teams, and product engineering organizations in a large, matrixed enterprise
+Preferred Qualifications
+Experience in Financial Services or a regulated industry environment
+Familiarity with enterprise lending platforms such as LoanIQ or comparable financial systems
+Background in Internal Developer Portal (IDP) tooling (e.g., Backstage) and platform engineering capability maturity models
+Knowledge of FinOps principles and cloud cost governance strategies
+Experience driving DevOps and platform standardization across multiple business lines
+We are proud to offer a range of incentives to our employees worldwide. These benefits are available to everyone, regardless of grade, and reflect the values we stand for:
+
+Flexibility: Enjoy unlimited vacation, subject to local regulations and business priorities. Benefit from hybrid working arrangements and inclusive policies such as paid time off for voting, bereavement, and sick leave.
+
+Well‑being: Access confidential one‑to‑one support through our Employee Assistance Program, connect with our network of Wellbeing Champions and Gather Groups, and take part in monthly events and initiatives designed to help you thrive—inside and outside of work.
+
+Health & Financial Security: Medical, life and disability insurance, retirement plans, lifestyle, and other benefits.*
+
+Sustainability: Paid time off for volunteering and donation‑matching opportunities to support causes that matter to you.
+
+Inclusion: Get involved in our inclusion communities, such as Count Me In, Culture@Finastra, Proud@Finastra, Disabilities@Finastra, and Women@Finastra—open to everyone who wants to participate and contribute.
+
+Career Development: Access online learning and accredited courses through our Skills & Career Navigator tool.
+
+Recognition: Take part in our global recognition program, Finastra Celebrates, and share your voice through regular employee surveys that help shape our culture and ways of working.
+
+*Specific benefits may vary by location.
+
+At Finastra, each individual is unique—bringing their own ideas, perspectives, cultural backgrounds, and experiences. We learn from one another, value what makes us different, and create an environment where everyone feels included, supported, and able to be their authentic selves.
+
+Be unique. Be exceptional. Help us make a difference at Finastra.
