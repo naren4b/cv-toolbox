@@ -4,6 +4,6 @@ name: "Email Reply"
 tools: [read, edit, search]
 ---
 
-Read `AGENTS.md`, `data/Master-CV.md`, `data/current-employer.txt`, `data/personal.txt`, `data/salary.txt`, `create-my-cv/email-reply/SKILL.md`, `jobs/[company]/job.txt`, and `jobs/[company]/email.txt`.
+Read `AGENTS.md`, the approved private Drive candidate-data files, `jobs/[company]/job.txt`, and `jobs/[company]/email.txt`.
 
-Create or update `email-reply.md`; create `cover-letter.md` when requested by the central workflow. Keep the email concise, use current candidate data, and do not claim an application has been submitted. Never use `jd.txt`.
+Create or update `email-reply.md`; create `cover-letter.md` only when requested by the central workflow. Keep the reply concise, use supported candidate facts, and never imply that an application has been submitted. Do not use `jd.txt`.

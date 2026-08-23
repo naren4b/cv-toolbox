@@ -2,58 +2,24 @@
 set -euo pipefail
 
 payload="$(cat)"
-
-# This guard only applies to PreToolUse events.
-if ! echo "$payload" | grep -qi '"hookEventName"[[:space:]]*:[[:space:]]*"PreToolUse"'; then
-  exit 0
-fi
-
-# Try to find any jobs/<company>/<file> path from payload.
+if ! echo "$payload" | grep -qi '"hookEventName"[[:space:]]*:[[:space:]]*"PreToolUse"'; then exit 0; fi
 job_path="$(echo "$payload" | grep -Eo '(/[^"[:space:]]*)?jobs/[^"[:space:]]+' | head -n1 || true)"
-
-if [[ -z "$job_path" ]]; then
-  exit 0
-fi
-
+[[ -n "$job_path" ]] || exit 0
 company="$(echo "$job_path" | sed -E 's#.*jobs/([^/]+)/.*#\1#')"
 target_file="$(basename "$job_path")"
+[[ -n "$company" && "$company" != "$job_path" ]] || exit 0
 
-if [[ -z "$company" || "$company" == "$job_path" ]]; then
-  exit 0
-fi
-
-jd_file="jobs/${company}/jd.txt"
+job_file="jobs/${company}/job.txt"
 email_file="jobs/${company}/email.txt"
-
 missing=()
-
 case "$target_file" in
-  cv-*.md|prep.txt|cover-letter.txt)
-    [[ -f "$jd_file" ]] || missing+=("$jd_file")
-    ;;
-  email-reply.md)
-    [[ -f "$jd_file" ]] || missing+=("$jd_file")
-    [[ -f "$email_file" ]] || missing+=("$email_file")
-    ;;
-  *)
-    exit 0
-    ;;
+  cv-*.md|prep.md|cover-letter.md|analysis.md|company-info.md|status.md) [[ -f "$job_file" ]] || missing+=("$job_file") ;;
+  email-reply.md) [[ -f "$job_file" ]] || missing+=("$job_file"); [[ -f "$email_file" ]] || missing+=("$email_file") ;;
+  *) exit 0 ;;
 esac
-
-if [[ ${#missing[@]} -eq 0 ]]; then
-  exit 0
-fi
-
+[[ ${#missing[@]} -eq 0 ]] && exit 0
 missing_msg="$(IFS=', '; echo "${missing[*]}")"
-
 cat <<EOF
-{
-  "hookSpecificOutput": {
-    "hookEventName": "PreToolUse",
-    "permissionDecision": "deny",
-    "permissionDecisionReason": "Missing required job input files: ${missing_msg}"
-  },
-  "systemMessage": "Blocked: missing required job input files: ${missing_msg}. Add the files before generating artifacts for jobs/${company}/."
-}
+{"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny","permissionDecisionReason":"Missing required job input files: ${missing_msg}"},"systemMessage":"Blocked: missing required job input files: ${missing_msg}."}
 EOF
 exit 2

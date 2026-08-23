@@ -2,19 +2,19 @@
 
 ## Scope
 
-This repository is a reusable toolbox only. It contains prompts, agents, skills, templates, and process documentation. It must not be used to store active job applications, candidate data, recruiter emails, or application status records.
+This is a reusable toolbox only. It must not contain active job applications, candidate data, recruiter emails, or application-status records.
 
-## Single working location
+## Private working location
 
-Google Drive is the only active workspace. The user keeps:
+Google Drive is the only active workspace. It owns:
 
-- Canonical profile information in Google Drive `data/`.
-- Every lead and application package in Google Drive `jobs/[company]/`.
-- The live portfolio view in Google Drive `jobs/STATUS.md`.
+- canonical profile information in `data/`;
+- leads and packages in `jobs/[company]/`;
+- the live portfolio view in `Job Search 2026 — Master Tracker`.
 
-The GitHub toolbox may guide generation, but all output is created, reviewed, and tracked in the corresponding Google Drive job folder.
+All output is created, reviewed, and tracked in the corresponding Drive job folder.
 
-## Job package contract in Google Drive
+## Job package contract
 
 ```text
 jobs/[company]/
@@ -33,9 +33,9 @@ jobs/[company]/
 
 ## Operating rules
 
-- Leads may come from email, phone calls, referrals, LinkedIn, or job portals. Record the source link or contact in the Drive job folder.
-- Review all application packages in Google Drive only.
+- Capture the lead source in the Drive job folder.
+- Review application packages in Google Drive only.
 - Do not submit an application or send a message without the user's direction.
-- Mark an application `Submitted` only after the user confirms it or evidence is saved.
-- Never permanently delete material. Archive first and obtain the user's approval before deletion.
-- Commit major changes to this reusable toolbox with a concise changelog entry.
+- Mark an application submitted only after the user confirms it or evidence is saved.
+- Archive before permanent deletion, which also needs user approval.
+- Use Git commit history as the change record for this reusable toolbox.
