@@ -1,5 +1,19 @@
+"""
+CV Utility Script
+-----------------
+This script provides utilities for generating, filling, and rendering CVs in PDF and HTML formats.
+It supports merging JSON data into PDF forms, rendering HTML from XML, and generating fillable PDF templates.
 
-# Standard library imports
+Main Features:
+- Fill PDF forms from JSON data
+- Render HTML and export PDF from XML inputs
+- Generate fillable PDF templates
+
+Author: [Your Name]
+Date: [Update as needed]
+"""
+
+# --- Imports ---
 import argparse
 import json
 import re
@@ -14,7 +28,6 @@ from pypdf.errors import EmptyFileError
 from pypdf.generic import NameObject
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
-
 
 # --- Project Constants ---
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -49,10 +62,12 @@ THEMES = {
 }
 
 
-
 # --- PDF/JSON utilities ---
 def load_json_file(file_path: Path) -> dict[str, Any]:
-    """Load a JSON file and return its contents as a dictionary. Returns empty dict if file is empty."""
+    """
+    Load a JSON file and return its contents as a dictionary.
+    Returns empty dict if file is empty.
+    """
     raw = file_path.read_text(encoding="utf-8").strip()
     if not raw:
         return {}
@@ -63,7 +78,9 @@ def load_json_file(file_path: Path) -> dict[str, Any]:
 
 
 def deep_merge(base: dict[str, Any], override: dict[str, Any]) -> dict[str, Any]:
-    """Recursively merge two dictionaries, with override taking precedence."""
+    """
+    Recursively merge two dictionaries, with override taking precedence.
+    """
     merged = dict(base)
     for key, value in override.items():
         existing = merged.get(key)
@@ -75,7 +92,9 @@ def deep_merge(base: dict[str, Any], override: dict[str, Any]) -> dict[str, Any]
 
 
 def merge_json_files(json_files: list[Path]) -> dict[str, Any]:
-    """Merge a list of JSON files, requiring version 'v1' if present. Later files override earlier ones."""
+    """
+    Merge a list of JSON files, requiring version 'v1' if present. Later files override earlier ones.
+    """
     merged: dict[str, Any] = {}
     for file_path in json_files:
         if not file_path.exists():
@@ -92,7 +111,9 @@ def merge_json_files(json_files: list[Path]) -> dict[str, Any]:
 
 
 def flatten_data(data: Any, parent_key: str = "") -> dict[str, str]:
-    """Flatten nested dictionaries/lists into a single-level dict with dot-separated keys."""
+    """
+    Flatten nested dictionaries/lists into a single-level dict with dot-separated keys.
+    """
     flat: dict[str, str] = {}
     if isinstance(data, dict):
         for key, value in data.items():
@@ -109,12 +130,16 @@ def flatten_data(data: Any, parent_key: str = "") -> dict[str, str]:
 
 
 def normalize_key(key: str) -> str:
-    """Normalize a string key: lowercase and remove non-alphanumeric characters."""
+    """
+    Normalize a string key: lowercase and remove non-alphanumeric characters.
+    """
     return re.sub(r"[^a-z0-9]", "", key.lower())
 
 
 def build_candidate_lookup(flat_data: dict[str, str]) -> dict[str, str]:
-    """Build a lookup table for flattened data, mapping normalized key variants to values."""
+    """
+    Build a lookup table for flattened data, mapping normalized key variants to values.
+    """
     lookup: dict[str, str] = {}
     for key, value in flat_data.items():
         if not key:
@@ -137,7 +162,9 @@ def build_candidate_lookup(flat_data: dict[str, str]) -> dict[str, str]:
 def map_data_to_pdf_fields(
     merged_data: dict[str, Any], pdf_fields: list[str]
 ) -> dict[str, str]:
-    """Map merged JSON data to PDF form fields by normalized key matching."""
+    """
+    Map merged JSON data to PDF form fields by normalized key matching.
+    """
     flat_data = flatten_data(merged_data)
     lookup = build_candidate_lookup(flat_data)
     mapped: dict[str, str] = {}
@@ -149,7 +176,9 @@ def map_data_to_pdf_fields(
 
 
 def read_pdf_field_names(template_path: Path) -> list[str]:
-    """Read all form field names from a fillable PDF template."""
+    """
+    Read all form field names from a fillable PDF template.
+    """
     try:
         reader = PdfReader(str(template_path))
     except EmptyFileError as exc:
@@ -161,7 +190,9 @@ def read_pdf_field_names(template_path: Path) -> list[str]:
 def fill_pdf_form(
     template_path: Path, output_path: Path, data_dict: dict[str, str]
 ) -> None:
-    """Fill a PDF form template with data and save as a non-editable PDF."""
+    """
+    Fill a PDF form template with data and save as a non-editable PDF.
+    """
     try:
         reader = PdfReader(str(template_path))
     except EmptyFileError as exc:
@@ -191,43 +222,14 @@ def fill_pdf_form(
         writer.write(output_file)
 
 
-def parse_args() -> argparse.Namespace:
-    """Parse command-line arguments for the PDF fill utility (legacy, not used in unified CLI)."""
-    parser = argparse.ArgumentParser(
-        description="Fill CV PDF form using merged JSON data files."
-    )
-    parser.add_argument(
-        "--template",
-        type=Path,
-        default=DEFAULT_TEMPLATE,
-        help="Path to source PDF template",
-    )
-    parser.add_argument(
-        "--output", type=Path, default=DEFAULT_OUTPUT, help="Path for generated PDF"
-    )
-    parser.add_argument(
-        "--data-files",
-        type=Path,
-        nargs="+",
-        default=DEFAULT_DATA_FILES,
-        help="JSON files to merge in order; later files override earlier values",
-    )
-    parser.add_argument(
-        "--list-fields",
-        action="store_true",
-        help="List all PDF form field names and exit",
-    )
-    parser.add_argument(
-        "--strict",
-        action="store_true",
-        help="Fail if no merged values could be mapped to PDF form fields",
-    )
-    return parser.parse_args()
+# parse_args is unused and can be removed
 
 
 # --- PDF Template Generation ---
 def draw_section_title(c: canvas.Canvas, title: str, y: int) -> None:
-    """Draw a section title with underline on the PDF canvas."""
+    """
+    Draw a section title with underline on the PDF canvas.
+    """
     c.setFont("Helvetica-Bold", 14)
     c.drawString(40, y, title)
     c.line(40, y - 4, 570, y - 4)
@@ -243,7 +245,9 @@ def add_field(
     height: int = 20,
     multiline: bool = False,
 ) -> None:
-    """Add a text field to the PDF canvas at the specified position."""
+    """
+    Add a text field to the PDF canvas at the specified position.
+    """
     c.setFont("Helvetica", 10)
     c.drawString(x, y + height + 4, label)
     flags = 4096 if multiline else 0
@@ -260,7 +264,9 @@ def add_field(
 
 
 def create_fillable_cv(filename: Path) -> None:
-    """Generate a fillable PDF CV template with standard fields."""
+    """
+    Generate a fillable PDF CV template with standard fields.
+    """
     filename.parent.mkdir(parents=True, exist_ok=True)
     c = canvas.Canvas(str(filename), pagesize=letter)
     c.setTitle("CV Template")
@@ -324,22 +330,30 @@ def create_fillable_cv(filename: Path) -> None:
 
 # --- HTML/CV Rendering ---
 def load_xml(path: Path):
-    """Load and parse an XML file, returning the root element."""
+    """
+    Load and parse an XML file, returning the root element.
+    """
     return ET.parse(path).getroot()
 
 
 def t(node, default=""):
-    """Return the text of an XML node, or a default if node is None."""
+    """
+    Return the text of an XML node, or a default if node is None.
+    """
     return (node.text or default).strip() if node is not None else default
 
 
 def esc(s):
-    """HTML-escape a string, treating None as empty."""
+    """
+    HTML-escape a string, treating None as empty.
+    """
     return html.escape(s or "")
 
 
 def split_summary(summary):
-    """Split a summary into lead sentence and the rest."""
+    """
+    Split a summary into lead sentence and the rest.
+    """
     parts = summary.split(".", 1)
     if len(parts) == 2:
         return parts[0].strip() + ".", parts[1].strip()
@@ -347,7 +361,9 @@ def split_summary(summary):
 
 
 def render_skills(root):
-    """Render skills XML as HTML chunks grouped by category."""
+    """
+    Render skills XML as HTML chunks grouped by category.
+    """
     chunks = []
     for cat in root.findall("category"):
         name = esc(cat.attrib.get("name", ""))
@@ -360,7 +376,9 @@ def render_skills(root):
 
 
 def render_work(root):
-    """Render work experience XML as HTML."""
+    """
+    Render work experience XML as HTML.
+    """
     out = []
     for company in root.findall("company"):
         out.append(f'<div class="company">{esc(company.attrib.get("name", ""))}</div>')
@@ -386,7 +404,9 @@ def render_work(root):
 
 
 def render_education(root):
-    """Render education and certifications XML as HTML."""
+    """
+    Render education and certifications XML as HTML.
+    """
     out = []
     for item in root.findall("item"):
         if "degree" in item.attrib:
@@ -401,7 +421,9 @@ def render_education(root):
 
 
 def render_awards(root):
-    """Render awards section from XML as HTML."""
+    """
+    Render awards section from XML as HTML.
+    """
     awards = root.find("awards")
     if awards is None:
         return ""
@@ -418,14 +440,18 @@ def render_awards(root):
 
 
 def replace_all(template, mapping):
-    """Replace all {{key}} in template with values from mapping."""
+    """
+    Replace all {{key}} in template with values from mapping.
+    """
     for k, v in mapping.items():
         template = template.replace("{{" + k + "}}", v)
     return template
 
 
 def add_theme(template: str, theme_name: str, base_css: str = "") -> str:
-    """Inject theme CSS and class into HTML template."""
+    """
+    Inject theme CSS and class into HTML template.
+    """
     theme = THEMES.get(theme_name, THEMES["clean"])
     theme_css = (
         "<style>\n"
@@ -451,7 +477,9 @@ def add_theme(template: str, theme_name: str, base_css: str = "") -> str:
 
 
 def export_pdf_from_html(html_path: Path, pdf_path: Path) -> None:
-    """Export a PDF from an HTML file using WeasyPrint."""
+    """
+    Export a PDF from an HTML file using WeasyPrint.
+    """
     try:
         from weasyprint import HTML  # type: ignore
     except ImportError as exc:
@@ -464,6 +492,10 @@ def export_pdf_from_html(html_path: Path, pdf_path: Path) -> None:
 
 # --- Unified CLI ---
 def main() -> int:
+    """
+    Main entry point for the CV utility CLI.
+    Supports subcommands for PDF fill, HTML render, and template generation.
+    """
     parser = argparse.ArgumentParser(
         description="CV Utility: PDF fill, HTML render, or template generation."
     )
@@ -583,6 +615,7 @@ def main() -> int:
         system_input_dir = args.system_input_dir
 
         def require_version_v1(root, fname):
+            """Raise error if XML root does not have version='v1'."""
             v = root.attrib.get("version")
             if v != "v1":
                 raise ValueError(
