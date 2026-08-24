@@ -1,4 +1,5 @@
-![cv-toolbox workflow design](https://raw.githubusercontent.com/naren4b/draw.io/main/designs/images/ai-2026-cv-toolbox.jpg)
+<img width="1758" height="836" alt="image" src="https://github.com/user-attachments/assets/9d9a412c-1316-4830-8f70-78ae0bb0bf9f" />
+
 
 # Job Search Toolbox
 
