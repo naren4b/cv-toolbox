@@ -2,55 +2,64 @@
 
 ## Purpose
 
-This is a reusable public-safe toolbox. Private candidate information and application packages exist only in the local checkout (or an accessible private store), never in Git.
+`naren4b/my-cv` is a public, reusable AI toolbox. It contains only generic agents, prompts, skills, templates, and safeguards. A separate private workspace repository is the single source of truth for candidate information and generated job-application packages.
 
 ## Workflow design
 
 ```mermaid
 flowchart TD
-    A[Clone naren4b/my-cv locally] --> B[Add private AboutMe.md]
-    B --> C[Create one or more Job-Applications/company/job.txt files]
-    C --> D[Run Local Job Package agent or prompt]
-    D --> E{For each company}
-    E --> F[Read AboutMe.md and job.txt]
-    F --> G[Select profile category: SRE, AWS Architect, or Engineering Manager]
-    G --> H[Create local cv.md, prep.md, thinking.md]
-    H --> I[Create email.md or cover-letter.md when relevant]
-    I --> J[User reviews package]
-    J --> K[User manually sends or submits]
-
-    B -. ignored by Git .-> L[Private local workspace]
-    C -. ignored by Git .-> L
-    H -. ignored by Git .-> L
-    I -. ignored by Git .-> L
-    D -. reusable tracked workflow .-> M[Public-safe Git repository]
+    A[Public naren4b/my-cv toolbox] --> B[Private workspace imports toolbox/ via git subtree]
+    B --> C[Private origin repository]
+    C --> D[Add AboutMe.md]
+    D --> E[Create one or more Job-Applications/company/job.txt files]
+    E --> F[Run agent locally using toolbox instructions]
+    F --> G{For each company}
+    G --> H[Read private AboutMe.md and job.txt]
+    H --> I[Select SRE, AWS Architect, or Engineering Manager category]
+    I --> J[Create cv.md, prep.md, thinking.md]
+    J --> K[Create email.md or cover-letter.md when relevant]
+    K --> L[User reviews and manually submits]
+    J --> M[Commit private package to private origin]
+    K --> M
+    A -. update .-> N[git subtree pull]
+    N --> B
 ```
 
-## Private local contract
+## Repository responsibilities
+
+| Location | Contains | Must not contain |
+| --- | --- | --- |
+| Public `naren4b/my-cv` | Generic AI artifacts and documentation | Candidate data, job packages, recruiter correspondence, application history |
+| Private workspace `origin` | `AboutMe.md`, `Job-Applications/`, generated outputs, private history | Pushes to the public toolbox remote |
+| Local checkout | The private workspace plus imported `toolbox/` | Unreviewed automatic submission actions |
+
+## Private workspace contract
 
 ```text
-AboutMe.md                              # single private candidate source of truth
-Job-Applications/[company]/
-  job.txt                               # input: role description and source
-  cv.md                                 # generated tailored CV
-  prep.md                               # generated preparation and gap analysis
-  thinking.md                           # generated concise decision record
-  email.md                              # generated recruiter email, when relevant
-  cover-letter.md                       # generated application letter, when relevant
+private-workspace/
+  toolbox/                              # imported public AI toolbox
+  AboutMe.md                            # private, versioned in private origin
+  Job-Applications/[company]/
+    job.txt                             # private job input
+    cv.md                               # generated tailored CV
+    prep.md                             # preparation and gap analysis
+    thinking.md                         # concise decision record
+    email.md                            # recruiter email when relevant
+    cover-letter.md                     # application letter when relevant
 ```
 
-`AboutMe.md` and `Job-Applications/` are ignored by Git. A Drive, S3, or other private-store link can be used only if the local agent can read it; outputs remain local and ignored.
+Use `origin` only for the private workspace repository. Add the public repository as a read-only `toolbox` remote and update the imported code with `git subtree pull --prefix=toolbox toolbox main --squash`.
 
 ## Job-package process
 
-1. Read `AboutMe.md` and the company’s `job.txt`.
+1. Read private `AboutMe.md` and the company `job.txt`.
 2. Select exactly one profile category: Senior SRE Engineer, AWS Solutions Architect, or Engineering Manager.
 3. Create or refresh the package files in the company folder.
 4. Use supported facts only and state genuine gaps in `prep.md`.
 5. Keep `thinking.md` as a short decision record—not hidden chain-of-thought.
 6. The user alone sends messages, submits applications, and confirms status.
 
-## Toolbox layout
+## Public toolbox layout
 
 ```text
 .github/       agents, prompts, instructions, and safety hooks
@@ -63,7 +72,6 @@ README.md      quick setup and use
 
 ## Agent safeguards
 
-- Never change `AboutMe.md` or `job.txt` while generating a package.
+- Never place private material in the public toolbox repository.
 - Never invent achievements, qualifications, compensation, or submission status.
-- Never commit private inputs or generated packages.
 - Never submit an application or send a message without the user.

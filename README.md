@@ -1,29 +1,21 @@
 # Job Search Toolbox
 
-**Objective:** provide a reusable local workflow for producing private, tailored job-application packages without committing personal information to Git.
+**Objective:** provide reusable AI instructions, prompts, agents, and skills for creating tailored job-application packages while keeping all personal data in a private repository.
 
-Create a local checkout of this repository, then open it in Codex, VS Code, or Cursor.
+This public repository is the toolbox. Import it into your private workspace as `toolbox/`; do not add private files here.
 
 ## Setup
 
-1. Create a private `AboutMe.md` in the repository root.
-2. Create `Job-Applications/[company]/job.txt` for each role.
-3. Keep both local: they are ignored by Git.
+1. Create and clone a private workspace repository.
+2. Import this repository at `toolbox/` using the subtree steps in [Architecture.md](Architecture.md).
+3. In the private workspace root, add `AboutMe.md` and `Job-Applications/[company]/job.txt`.
 
 ## Use
 
-Run this prompt once for a single company, replacing `[company]` with its folder name:
+In the private workspace, type:
 
 ```text
-Generate the local job package for Job-Applications/[company]. Read AboutMe.md and job.txt, select the best profile category, and create cv.md, prep.md, thinking.md, and email.md or cover-letter.md. Do not modify the inputs, submit an application, send email, or commit private files.
+Read toolbox/AGENTS.md and toolbox/Architecture.md. Generate the job package for Job-Applications/[company] using AboutMe.md and that company’s job.txt. Create cv.md, prep.md, thinking.md, and email.md or cover-letter.md. Do not submit or send anything.
 ```
 
-For multiple companies, type:
-
-```text
-For every Job-Applications/[company] folder that contains job.txt, generate or refresh the local job package. Read AboutMe.md and each job.txt, select the best profile category for each role, and create cv.md, prep.md, thinking.md, and email.md or cover-letter.md. Do not modify inputs, submit applications, send email, or commit private files.
-```
-
-You can also run the **Local Job Package** agent or **Generate Local Job Package** prompt for the company folder.
-
-See [Architecture.md](Architecture.md) for the workflow, privacy rules, profile categories, and internal toolbox layout.
+Commit generated files to the private workspace repository only.
