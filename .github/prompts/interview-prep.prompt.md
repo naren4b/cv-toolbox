@@ -9,8 +9,8 @@ Generate a targeted interview preparation guide for the provided Job Description
 
 ## Steps
 
-1. **Read** `data/Master-CV.md`, `data/current-employer.txt`, and `data/personal.txt` for runtime candidate context
-2. **Read** the master career profile at [SKILL.md](../../create-my-cv/SKILL.md) — Sections A, B, C, D
+1. **Read** the approved private Drive `data/about.md` master file for candidate context
+2. **Use** the supported facts and achievement library in the private Drive `data/about.md` master file
 3. **Read** the interview question bank at [question-bank/README.md](../../question-bank/README.md)
 4. **Analyse the JD** to identify the top 10 technical and behavioural topics likely to be tested
 5. If a `prep.txt` already exists in `jobs/[company]/`, read it for gap context

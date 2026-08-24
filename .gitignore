@@ -20,3 +20,6 @@ Thumbs.db
 **/.vscode/
 **/.idea/
 data/personal.txt
+
+# Private candidate master file
+data/about.md

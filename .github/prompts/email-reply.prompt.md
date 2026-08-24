@@ -9,8 +9,8 @@ Draft a professional email reply based on the recruiter message or scenario prov
 
 ## Steps
 
-1. **Read** the email reply guide at [email-reply/SKILL.md](../../create-my-cv/email-reply/SKILL.md) — contains templates, salary data, negotiation scripts, and the recruiter questionnaire format
-2. **Read** `data/current-employer.txt`, `data/personal.txt`, and `data/Master-CV.md` for runtime candidate details
+1. **Read** the approved private Drive `data/about.md` master file and the recruiter message before drafting
+2. **Read** the approved private Drive `data/about.md` master file for runtime candidate details
 3. **Identify the scenario** from the user's input and match to the correct template:
    - Template 1: Cold inbound from recruiter
    - Template 2: Applying to a job posting
@@ -27,8 +27,8 @@ Draft a professional email reply based on the recruiter message or scenario prov
 
 - Keep recruiter replies under **150 words**
 - Mirror 2–3 keywords from the recruiter's message or JD
-- Use the Quick Reference in email-reply/SKILL.md and read `data/current-employer.txt` for CTC, notice period, and personal details
-- **Retention reward** — read amount and vesting date from `data/current-employer.txt`. Only mention if today's date is before the vesting date.
+- Read approved compensation, notice-period, and personal details only from private Drive `data/about.md`
+- **Retention reward** — read the amount and vesting date from private Drive `data/about.md`; mention it only when relevant.
 - CTC and salary expectations must use a **range**, never a single number
 - "Reason for change" must be positive and forward-looking — use one of the 4 ready options from the guide
 - For international roles, mention **Canadian PR** status
