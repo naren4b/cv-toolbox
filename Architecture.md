@@ -2,129 +2,73 @@
 
 ## Purpose
 
-`naren4b/cv-toolbox` is a public, reusable AI toolbox. It contains only generic agents, prompts, skills, templates, and safeguards. A separate private workspace repository is the single source of truth for candidate information and generated job-application packages.
-
-## Workflow design
+`naren4b/cv-toolbox` is a public, reusable AI toolbox. The private `my-cv` repository is the only versioned location for candidate information and generated job-application packages. The toolbox is downloaded locally from a fixed public release and is ignored by the private repository.
 
 ```mermaid
 flowchart TD
-    A[Public naren4b/cv-toolbox] --> B[Private workspace imports toolbox/ via git subtree]
-    B --> C[Private origin repository]
-    C --> D[Add AboutMe.md]
-    D --> E[Create one or more Job-Applications/company/job.txt files]
-    E --> F[Run agent locally using toolbox instructions]
-    F --> G{For each company}
-    G --> H[Read private AboutMe.md and job.txt]
-    H --> I[Select SRE, AWS Architect, or Engineering Manager category]
-    I --> J[Create cv.md, prep.md, thinking.md]
-    J --> K[Create email.md or cover-letter.md when relevant]
-    K --> L[User reviews and manually submits]
-    J --> M[Commit private package to private origin]
-    K --> M
-    A -. update .-> N[git subtree pull]
-    N --> B
+    A[Public cv-toolbox release] --> B[curl download to local toolbox/]
+    B --> C[Private my-cv workspace]
+    C --> D[AboutMe.md and Job-Applications/company/job.txt]
+    D --> E[Run local agent]
+    E --> F[Create private cv, prep, thinking and email or cover-letter]
+    F --> G[Update README.md tracker table]
+    G --> H[User reviews, commits and manually submits]
 ```
 
 ## Create the private workspace
 
-Create an empty private GitHub repository such as `my-cv`, with an initial README. Then clone it and import the public toolbox:
+Create and clone a private repository. `toolbox/` is local-only and ignored:
 
 ```bash
-git clone https://github.com/<your-account>/my-cv.git my-job-search
-cd my-job-search
-git remote add toolbox https://github.com/naren4b/cv-toolbox.git
-git subtree add --prefix=toolbox toolbox main --squash
+git clone https://github.com/<your-account>/my-cv.git my-cv
+cd my-cv
+printf '/toolbox/\n' >> .gitignore
+git add .gitignore
+git commit -m "Ignore local toolbox"
 git push origin main
+
+mkdir -p toolbox
+curl -fsSL https://github.com/naren4b/cv-toolbox/archive/refs/tags/v0.0.2.tar.gz \
+  | tar -xz --strip-components=1 -C toolbox
 ```
 
-Use `origin` only for the private repository. The `toolbox` remote is read-only; never push the private workspace to it.
+The download is intentionally pinned to `v0.0.2`. It is not committed and it must not contain private files.
 
-## Daily operation for each job
+## Daily operation
 
-1. Start with the private workspace and synchronise it:
-
-   ```bash
-   git pull origin main
-   ```
-
-2. Create or update one folder and its original role description:
-
-   ```text
-   Job-Applications/[company]/job.txt
-   ```
-
-   Keep the application-tracker table in root `README.md` as the versioned application dashboard. The agent creates a missing row after package artifacts are generated; the user controls all status changes.
-
+1. Add or update `Job-Applications/[company]/job.txt`.
+2. Keep the application-tracker table in root `README.md` as the versioned dashboard.
 3. Run this prompt in Codex, VS Code, or Cursor:
 
    ```text
    Read toolbox/AGENTS.md and toolbox/Architecture.md. Generate the job package for Job-Applications/[company] using AboutMe.md and that company’s job.txt. Create cv.md, prep.md, thinking.md, and email.md or cover-letter.md. Do not submit or send anything.
    ```
 
-4. Review the generated files. The user manually sends email or submits an application.
+4. Review generated files. The user alone sends email or submits applications.
+5. Commit only private data and package files to `origin`.
 
-5. Version the complete private package:
+## Upgrade the toolbox
 
-   ```bash
-   git add AboutMe.md Job-Applications
-   git commit -m "Add or update [company] job package"
-   git push origin main
-   ```
-
-## Update the public toolbox
-
-Pull public AI-artifact updates only when wanted, then record the imported version in the private repository:
+Choose a newer release tag deliberately. Replace only the ignored local directory, then verify the new instructions:
 
 ```bash
-git subtree pull --prefix=toolbox toolbox main --squash
-git push origin main
+mv toolbox toolbox.previous
+mkdir toolbox
+curl -fsSL https://github.com/naren4b/cv-toolbox/archive/refs/tags/<release-tag>.tar.gz \
+  | tar -xz --strip-components=1 -C toolbox
 ```
+
+After verification, remove `toolbox.previous` manually. Do not commit either directory.
 
 ## Repository responsibilities
 
 | Location | Contains | Must not contain |
 | --- | --- | --- |
 | Public `naren4b/cv-toolbox` | Generic AI artifacts and documentation | Candidate data, job packages, recruiter correspondence, application history |
-| Private workspace `origin` | `AboutMe.md`, `Job-Applications/`, generated outputs, private history | Pushes to the public toolbox remote |
-| Local checkout | The private workspace plus imported `toolbox/` | Unreviewed automatic submission actions |
+| Private `naren4b/my-cv` | `AboutMe.md`, root tracker table, `Job-Applications/`, generated outputs and history | Public toolbox files |
+| Local `toolbox/` | Downloaded public release | Private data or Git-tracked files |
 
-## Private workspace contract
-
-```text
-private-workspace/
-  toolbox/                              # imported public AI toolbox
-  AboutMe.md                            # private, versioned in private origin
-  Job-Applications/[company]/
-    job.txt                             # private job input
-    cv.md                               # generated tailored CV
-    prep.md                             # preparation and gap analysis
-    thinking.md                         # concise decision record
-    email.md                            # recruiter email when relevant
-    cover-letter.md                     # application letter when relevant
-  README.md                              # private, versioned application dashboard table
-```
-
-## Job-package process
-
-1. Read private `AboutMe.md` and the company `job.txt`.
-2. Select exactly one profile category: Senior SRE Engineer, AWS Solutions Architect, or Engineering Manager.
-3. Create or refresh the package files in the company folder.
-4. Use supported facts only and state genuine gaps in `prep.md`.
-5. Keep `thinking.md` as a short decision record—not hidden chain-of-thought.
-6. The user alone sends messages, submits applications, and confirms status.
-
-## Public toolbox layout
-
-```text
-.github/       agents, prompts, instructions, and safety hooks
-.job-search/   reusable skills, templates, and portal research
-.archive/      preserved historical generic material
-AGENTS.md      compact agent entry contract
-Architecture.md detailed operating design
-README.md      quick setup and use
-```
-
-## Agent safeguards
+## Safeguards
 
 - Never place private material in the public toolbox repository.
 - Never invent achievements, qualifications, compensation, or submission status.
