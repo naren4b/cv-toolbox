@@ -1,3 +1,5 @@
+<img width="1758" height="836" alt="image" src="https://github.com/user-attachments/assets/0a310ca4-60b7-4749-9659-e03339e27311" />
+
 # Job Search Toolbox
 
 **Objective:** provide reusable AI instructions, prompts, agents, and skills for creating tailored job-application packages while keeping all personal data in a private repository.
