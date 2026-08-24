@@ -1,28 +1,31 @@
-# Local CV Package Skill
+# Private CV Package Skill
 
 ## Inputs
 
-- Private local `AboutMe.md`.
-- Private local `Job-Applications/[company]/job.txt`.
+- Private workspace `AboutMe.md`.
+- Private workspace `Job-Applications/[company]/job.txt`.
 
 ## Profile selection
 
-Choose one category based on the role’s primary responsibility:
-
-- **Senior SRE Engineer** — reliability, observability, incident management, SLOs, and platform operations.
-- **AWS Solutions Architect** — cloud strategy, architecture, modernization, AWS, and solution design.
-- **Engineering Manager** — team leadership, delivery, roadmap ownership, stakeholder management, and organizational scale.
+Choose one: Senior SRE Engineer, AWS Solutions Architect, or Engineering Manager.
 
 ## Outputs
 
 - `cv.md`: role-specific CV using supported facts only.
-- `prep.md`: requirement mapping, gaps, mitigation, likely interview questions, and preparation checklist.
-- `thinking.md`: transparent decision record with category, requirements, selected facts, gaps, and output plan; no hidden reasoning.
-- `email.md` or `cover-letter.md`: concise role-specific communication when applicable.
+- `prep.md`: requirement mapping, genuine gaps, mitigation, likely questions, and preparation checklist.
+- `thinking.md`: concise decision record; no hidden reasoning.
+- `email.md` or `cover-letter.md`: role-specific communication when applicable.
+
+## Private tracker
+
+After package artifacts exist, maintain `Job-Applications/Tracker.csv` in the private workspace:
+
+- Add one row for a previously untracked company with `Prepared — review required`, role brief, current date, and package path.
+- Preserve existing user-managed status values; update only package metadata when artifacts change.
+- The user alone changes the application status, sends messages, submits applications, and commits files.
 
 ## Rules
 
 - Preserve `job.txt` unchanged.
 - Do not invent achievements, qualifications, compensation, or submission status.
-- Call out genuine gaps clearly.
-- Do not submit, send, or update external systems.
+- Do not submit or send external communications.

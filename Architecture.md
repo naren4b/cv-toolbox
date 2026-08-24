@@ -53,6 +53,8 @@ Use `origin` only for the private repository. The `toolbox` remote is read-only;
    Job-Applications/[company]/job.txt
    ```
 
+   Keep `Job-Applications/Tracker.csv` as the private, versioned application dashboard. The agent creates a missing row after package artifacts are generated; the user controls all status changes.
+
 3. Run this prompt in Codex, VS Code, or Cursor:
 
    ```text
@@ -99,6 +101,7 @@ private-workspace/
     thinking.md                         # concise decision record
     email.md                            # recruiter email when relevant
     cover-letter.md                     # application letter when relevant
+  Job-Applications/Tracker.csv          # private, versioned application dashboard
 ```
 
 ## Job-package process
