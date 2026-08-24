@@ -10,5 +10,6 @@ build/
 # OS/editor files
 .DS_Store
 Thumbs.db
+*Zone.Identifier
 .vscode/
 .idea/
