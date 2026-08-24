@@ -1,26 +1,17 @@
 # Job Search Toolbox
 
-This repository stores reusable agents, prompts, skills, and templates. It supports a local private workspace in a checkout, but private inputs and generated packages are ignored and must never be committed.
+**Objective:** provide a reusable local workflow for producing private, tailored job-application packages without committing personal information to Git.
 
-The root stays intentionally small: this guide, `AGENTS.md`, and `.gitignore`. The reusable supporting material lives in hidden `.github/` and `.job-search/` directories; preserved historical material is in `.archive/`.
+Create a local checkout of this repository, then open it in Codex, VS Code, or Cursor.
 
-## Local private workflow
+## Setup
 
-```text
-AboutMe.md                              # private master candidate file
-Job-Applications/[company]/
-  job.txt                               # required input: original role and source
-  cv.md                                 # generated tailored CV
-  prep.md                               # generated preparation and gap analysis
-  thinking.md                           # generated decision record and output plan
-  email.md                              # generated recruiter email, when relevant
-  cover-letter.md                       # generated application letter, when relevant
-```
+1. Create a private `AboutMe.md` in the repository root.
+2. Create `Job-Applications/[company]/job.txt` for each role.
+3. Keep both local: they are ignored by Git.
 
-Open the checkout in Codex, VS Code, or Cursor. Run the **Local Job Package** agent or the **Generate Local Job Package** prompt from the company directory.
+## Use
 
-The workflow selects one profile category: **Senior SRE Engineer**, **AWS Solutions Architect**, or **Engineering Manager**. It uses only supported facts from `AboutMe.md`; it never submits applications or sends email.
+Run the **Local Job Package** agent or **Generate Local Job Package** prompt for the company folder. It creates local, ignored `cv.md`, `prep.md`, `thinking.md`, plus `email.md` or `cover-letter.md` when relevant.
 
-## Privacy
-
-`AboutMe.md` and `Job-Applications/` are intentionally ignored by Git. A Drive, S3, or other private-storage link may be used only when the local workspace can read it; generated outputs still remain local and ignored.
+See [Architecture.md](Architecture.md) for the workflow, privacy rules, profile categories, and internal toolbox layout.
