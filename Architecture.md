@@ -25,6 +25,59 @@ flowchart TD
     N --> B
 ```
 
+## Create the private workspace
+
+Create an empty private GitHub repository such as `my-cv-private`, with an initial README. Then clone it and import the public toolbox:
+
+```bash
+git clone https://github.com/<your-account>/my-cv-private.git my-job-search
+cd my-job-search
+git remote add toolbox https://github.com/naren4b/my-cv.git
+git subtree add --prefix=toolbox toolbox main --squash
+git push origin main
+```
+
+Use `origin` only for the private repository. The `toolbox` remote is read-only; never push the private workspace to it.
+
+## Daily operation for each job
+
+1. Start with the private workspace and synchronise it:
+
+   ```bash
+   git pull origin main
+   ```
+
+2. Create or update one folder and its original role description:
+
+   ```text
+   Job-Applications/[company]/job.txt
+   ```
+
+3. Run this prompt in Codex, VS Code, or Cursor:
+
+   ```text
+   Read toolbox/AGENTS.md and toolbox/Architecture.md. Generate the job package for Job-Applications/[company] using AboutMe.md and that company’s job.txt. Create cv.md, prep.md, thinking.md, and email.md or cover-letter.md. Do not submit or send anything.
+   ```
+
+4. Review the generated files. The user manually sends email or submits an application.
+
+5. Version the complete private package:
+
+   ```bash
+   git add AboutMe.md Job-Applications
+   git commit -m "Add or update [company] job package"
+   git push origin main
+   ```
+
+## Update the public toolbox
+
+Pull public AI-artifact updates only when wanted, then record the imported version in the private repository:
+
+```bash
+git subtree pull --prefix=toolbox toolbox main --squash
+git push origin main
+```
+
 ## Repository responsibilities
 
 | Location | Contains | Must not contain |
@@ -47,8 +100,6 @@ private-workspace/
     email.md                            # recruiter email when relevant
     cover-letter.md                     # application letter when relevant
 ```
-
-Use `origin` only for the private workspace repository. Add the public repository as a read-only `toolbox` remote and update the imported code with `git subtree pull --prefix=toolbox toolbox main --squash`.
 
 ## Job-package process
 
