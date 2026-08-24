@@ -12,6 +12,18 @@ Create a local checkout of this repository, then open it in Codex, VS Code, or C
 
 ## Use
 
-Run the **Local Job Package** agent or **Generate Local Job Package** prompt for the company folder. It creates local, ignored `cv.md`, `prep.md`, `thinking.md`, plus `email.md` or `cover-letter.md` when relevant.
+Run this prompt once for a single company, replacing `[company]` with its folder name:
+
+```text
+Generate the local job package for Job-Applications/[company]. Read AboutMe.md and job.txt, select the best profile category, and create cv.md, prep.md, thinking.md, and email.md or cover-letter.md. Do not modify the inputs, submit an application, send email, or commit private files.
+```
+
+For multiple companies, type:
+
+```text
+For every Job-Applications/[company] folder that contains job.txt, generate or refresh the local job package. Read AboutMe.md and each job.txt, select the best profile category for each role, and create cv.md, prep.md, thinking.md, and email.md or cover-letter.md. Do not modify inputs, submit applications, send email, or commit private files.
+```
+
+You can also run the **Local Job Package** agent or **Generate Local Job Package** prompt for the company folder.
 
 See [Architecture.md](Architecture.md) for the workflow, privacy rules, profile categories, and internal toolbox layout.
