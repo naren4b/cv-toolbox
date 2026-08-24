@@ -27,10 +27,10 @@ flowchart TD
 
 ## Create the private workspace
 
-Create an empty private GitHub repository such as `my-cv-private`, with an initial README. Then clone it and import the public toolbox:
+Create an empty private GitHub repository such as `my-cv`, with an initial README. Then clone it and import the public toolbox:
 
 ```bash
-git clone https://github.com/<your-account>/my-cv-private.git my-job-search
+git clone https://github.com/<your-account>/my-cv.git my-job-search
 cd my-job-search
 git remote add toolbox https://github.com/naren4b/cv-toolbox.git
 git subtree add --prefix=toolbox toolbox main --squash
