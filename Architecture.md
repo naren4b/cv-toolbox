@@ -2,13 +2,13 @@
 
 ## Purpose
 
-`naren4b/my-cv` is a public, reusable AI toolbox. It contains only generic agents, prompts, skills, templates, and safeguards. A separate private workspace repository is the single source of truth for candidate information and generated job-application packages.
+`naren4b/cv-toolbox` is a public, reusable AI toolbox. It contains only generic agents, prompts, skills, templates, and safeguards. A separate private workspace repository is the single source of truth for candidate information and generated job-application packages.
 
 ## Workflow design
 
 ```mermaid
 flowchart TD
-    A[Public naren4b/my-cv toolbox] --> B[Private workspace imports toolbox/ via git subtree]
+    A[Public naren4b/cv-toolbox] --> B[Private workspace imports toolbox/ via git subtree]
     B --> C[Private origin repository]
     C --> D[Add AboutMe.md]
     D --> E[Create one or more Job-Applications/company/job.txt files]
@@ -32,7 +32,7 @@ Create an empty private GitHub repository such as `my-cv-private`, with an initi
 ```bash
 git clone https://github.com/<your-account>/my-cv-private.git my-job-search
 cd my-job-search
-git remote add toolbox https://github.com/naren4b/my-cv.git
+git remote add toolbox https://github.com/naren4b/cv-toolbox.git
 git subtree add --prefix=toolbox toolbox main --squash
 git push origin main
 ```
@@ -53,7 +53,7 @@ Use `origin` only for the private repository. The `toolbox` remote is read-only;
    Job-Applications/[company]/job.txt
    ```
 
-   Keep `Job-tracker.csv` at the private workspace root as the versioned application dashboard. The agent creates a missing row after package artifacts are generated; the user controls all status changes.
+   Keep the application-tracker table in root `README.md` as the versioned application dashboard. The agent creates a missing row after package artifacts are generated; the user controls all status changes.
 
 3. Run this prompt in Codex, VS Code, or Cursor:
 
@@ -84,7 +84,7 @@ git push origin main
 
 | Location | Contains | Must not contain |
 | --- | --- | --- |
-| Public `naren4b/my-cv` | Generic AI artifacts and documentation | Candidate data, job packages, recruiter correspondence, application history |
+| Public `naren4b/cv-toolbox` | Generic AI artifacts and documentation | Candidate data, job packages, recruiter correspondence, application history |
 | Private workspace `origin` | `AboutMe.md`, `Job-Applications/`, generated outputs, private history | Pushes to the public toolbox remote |
 | Local checkout | The private workspace plus imported `toolbox/` | Unreviewed automatic submission actions |
 
@@ -101,7 +101,7 @@ private-workspace/
     thinking.md                         # concise decision record
     email.md                            # recruiter email when relevant
     cover-letter.md                     # application letter when relevant
-  Job-tracker.csv                       # private, versioned application dashboard
+  README.md                              # private, versioned application dashboard table
 ```
 
 ## Job-package process
