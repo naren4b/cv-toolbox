@@ -1,26 +1,28 @@
-# CV Package Skill
-
-## Purpose
-
-Create accurate, role-specific application material from the candidate information held in the active Google Drive workspace.
+# Local CV Package Skill
 
 ## Inputs
 
-- Google Drive `data/` profile files.
-- Google Drive `Job-Applications/[company]/job.txt`.
-- Any documented recruiter message or referral context.
+- Private local `AboutMe.md`.
+- Private local `Job-Applications/[company]/job.txt`.
 
-## Rules
+## Profile selection
 
-- Use only facts supported by the Drive profile records.
-- Select the CV style that best fits the role: engineering, architecture, or leadership.
-- Preserve the original job description.
-- Create drafts in the matching Google Drive job folder; never store personal material in this repository.
-- Flag genuine gaps rather than inventing qualifications or metrics.
+Choose one category based on the role’s primary responsibility:
+
+- **Senior SRE Engineer** — reliability, observability, incident management, SLOs, and platform operations.
+- **AWS Solutions Architect** — cloud strategy, architecture, modernization, AWS, and solution design.
+- **Engineering Manager** — team leadership, delivery, roadmap ownership, stakeholder management, and organizational scale.
 
 ## Outputs
 
-- Fit analysis.
-- Tailored CV.
-- Interview preparation.
-- Concise, role-specific cover letter when required.
+- `cv.md`: role-specific CV using supported facts only.
+- `prep.md`: requirement mapping, gaps, mitigation, likely interview questions, and preparation checklist.
+- `thinking.md`: transparent decision record with category, requirements, selected facts, gaps, and output plan; no hidden reasoning.
+- `email.md` or `cover-letter.md`: concise role-specific communication when applicable.
+
+## Rules
+
+- Preserve `job.txt` unchanged.
+- Do not invent achievements, qualifications, compensation, or submission status.
+- Call out genuine gaps clearly.
+- Do not submit, send, or update external systems.

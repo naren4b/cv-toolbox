@@ -1,9 +1,22 @@
-# Job Search Toolbox — Operating Rules
+# Local Job Package Contract
 
-This repository is a public-safe reusable toolbox. It must not contain candidate data, active applications, recruiter messages, or status records.
+This repository is a generic toolbox. Private candidate material and generated job packages stay local and are ignored by Git.
 
-## Private workspace contract
+## Required private inputs
 
-Google Drive is the active workspace. Before creating application output, read its private `AboutMe.md` master file. Keep all job-specific inputs and generated material in `Job-Applications/[company]/`; use `job.txt` as the only job-description input.
+- `AboutMe.md` — the single private source of truth for candidate information.
+- `Job-Applications/[company]/job.txt` — the original job description and source reference.
 
-The user alone confirms application submission and permanent deletion. Git history is the change record for this toolbox.
+## Required generated outputs
+
+- `cv.md` — customized CV for the selected role.
+- `prep.md` — requirements match, genuine gaps, mitigation, likely questions, and preparation plan.
+- `thinking.md` — concise decision record: selected profile category, role requirements, source facts selected, gaps, and output plan. Never include hidden chain-of-thought or unsupported claims.
+- `email.md` — recruiter email when outreach or reply is needed.
+- `cover-letter.md` — application letter when requested or more appropriate than an email.
+
+## Profile categories
+
+Select exactly one: Senior SRE Engineer, AWS Solutions Architect, or Engineering Manager. State the selection and rationale in `thinking.md`.
+
+The user alone submits applications, sends messages, or confirms application status.

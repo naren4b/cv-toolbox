@@ -1,25 +1,14 @@
-# Ignore generated HTML and PDF outputs
+# Private inputs and generated local job packages
+/AboutMe.md
+/Job-Applications/
+
+# Generated local artifacts
 *.pdf
 *.html
 build/
-# # Runtime candidate data (local only)
-# /data/
-# /Job-Applications/
-/code/inputs/user/
 
-# OS/editor noise
+# OS/editor files
 .DS_Store
 Thumbs.db
-*.swp
-*.swo
-**/.venv/
-**/venv/
-**/__pycache__/
-**/.pytest_cache/
-**/.mypy_cache/
-**/.vscode/
-**/.idea/
-data/personal.txt
-
-# Private candidate master file
-AboutMe.md
+.vscode/
+.idea/

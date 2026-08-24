@@ -38,10 +38,3 @@ Page
 | Motion Recruitment | https://motionrecruitment.com/tech-jobs | Technology recruitment board with dedicated DevOps and SRE listings, mainly in the United States; includes permanent and contract roles. |
 | ZipRecruiter | https://www.ziprecruiter.com/ | Broad US-focused marketplace with significant DevOps Architect, cloud architect and SRE coverage; verify recruiter and duplicate listings carefully. |
 | Ladders | https://www.theladders.com/jobs | Senior and higher-compensation US roles, including SRE leadership, cloud architecture and DevOps Architect positions; some features require membership. |
-You're currently signed in as
-Panda.Narendra@gmail.com
-
-Narendranath Panda
-Change account
-OK
-Displaying job-portal.md.

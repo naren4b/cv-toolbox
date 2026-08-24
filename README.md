@@ -1,47 +1,24 @@
-# Job Search Toolbox — Public-Safe Workflow Assets
+# Job Search Toolbox
 
-This repository contains reusable prompts, agents, skills, and templates only. Google Drive is the sole private working location for candidate information, leads, job descriptions, application packages, recruiter messages, and status tracking. Never add candidate-specific or application-specific material here.
+This repository stores reusable agents, prompts, skills, and templates. It supports a local private workspace in a checkout, but private inputs and generated packages are ignored and must never be committed.
 
-## Operating model
+## Local private workflow
 
-```mermaid
-flowchart LR
-    subgraph L[Lead sources]
-      P[Phone calls]
-      Rf[Referrals and references]
-      E[Email]
-      LI[LinkedIn job posts]
-      JP[Job portals: Naukri, Monster, Indeed, Glassdoor, Wellfound, Jobgether, company careers pages, and user-added portals]
-    end
-    L --> J[Drive job folder with job.txt]
-    D[Drive data folder] --> W[Application workflow]
-    T[GitHub toolbox] --> W
-    J --> W
-    W --> P[Drive package: analysis, CV, prep, letter, research, status]
-    P --> R[User reviews in Google Drive]
-    R -->|Manual submission| M[User confirms submitted]
-    M --> S[Update status.md and Job-Application-Tracker]
+```text
+AboutMe.md                              # private master candidate file
+Job-Applications/[company]/
+  job.txt                               # required input: original role and source
+  cv.md                                 # generated tailored CV
+  prep.md                               # generated preparation and gap analysis
+  thinking.md                           # generated decision record and output plan
+  email.md                              # generated recruiter email, when relevant
+  cover-letter.md                       # generated application letter, when relevant
 ```
 
-| System | Responsibility |
-| --- | --- |
-| Google Drive `data/` | Canonical profile and personal information |
-| Google Drive `Job-Applications/[company]/` | Lead, posting, package, review, and follow-up |
-| Google Drive `Job-Application-Tracker` | Live application dashboard |
-| GitHub repository | Versioned generic toolbox only |
+Open the checkout in Codex, VS Code, or Cursor. Run the **Local Job Package** agent or the **Generate Local Job Package** prompt from the company directory.
 
-## Standard application flow
+The workflow selects one profile category: **Senior SRE Engineer**, **AWS Solutions Architect**, or **Engineering Manager**. It uses only supported facts from `AboutMe.md`; it never submits applications or sends email.
 
-1. Capture a lead and original source.
-2. Create `Job-Applications/[company]/` in Drive and add `job.txt`.
-3. Use the reusable GitHub toolbox to create the package in that Drive folder.
-4. Review the package in Drive.
-5. Submit manually only when the user is satisfied.
-6. After confirmation, update `status.md` and the Job-Application-Tracker.
+## Privacy
 
-## Boundaries
-
-- The user alone confirms submission and permanent deletion.
-- Archive superseded material before removal.
-- Git history is the change record; a separate changelog file is intentionally not kept.
-- `AGENTS.md` remains as the machine-readable operating contract for the reusable agents.
+`AboutMe.md` and `Job-Applications/` are intentionally ignored by Git. A Drive, S3, or other private-storage link may be used only when the local workspace can read it; generated outputs still remain local and ignored.
