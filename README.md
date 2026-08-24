@@ -2,6 +2,8 @@
 
 This repository stores reusable agents, prompts, skills, and templates. It supports a local private workspace in a checkout, but private inputs and generated packages are ignored and must never be committed.
 
+The root stays intentionally small: this guide, `AGENTS.md`, and `.gitignore`. The reusable supporting material lives in hidden `.github/` and `.job-search/` directories; preserved historical material is in `.archive/`.
+
 ## Local private workflow
 
 ```text

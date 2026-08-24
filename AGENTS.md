@@ -2,6 +2,8 @@
 
 This repository is a generic toolbox. Private candidate material and generated job packages stay local and are ignored by Git.
 
+Detailed reusable skills, templates, and portal research are under `.job-search/`; reusable agents and prompts are under `.github/`.
+
 ## Required private inputs
 
 - `AboutMe.md` — the single private source of truth for candidate information.
