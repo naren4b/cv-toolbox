@@ -18,7 +18,7 @@ Choose one: Senior SRE Engineer, AWS Solutions Architect, or Engineering Manager
 
 ## Private tracker
 
-After package artifacts exist, maintain `Job-Applications/Tracker.csv` in the private workspace:
+After package artifacts exist, maintain `Job-tracker.csv` in the private workspace:
 
 - Add one row for a previously untracked company with `Prepared — review required`, role brief, current date, and package path.
 - Preserve existing user-managed status values; update only package metadata when artifacts change.
