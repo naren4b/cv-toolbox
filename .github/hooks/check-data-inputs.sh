@@ -6,7 +6,7 @@ if ! echo "$payload" | grep -qi '"hookEventName"[[:space:]]*:[[:space:]]*"PreToo
   exit 0
 fi
 
-required_file="data/about.md"
+required_file="AboutMe.md"
 if [[ -f "$required_file" ]]; then
   exit 0
 fi

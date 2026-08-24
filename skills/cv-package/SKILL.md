@@ -7,7 +7,7 @@ Create accurate, role-specific application material from the candidate informati
 ## Inputs
 
 - Google Drive `data/` profile files.
-- Google Drive `jobs/[company]/job.txt`.
+- Google Drive `Job-Applications/[company]/job.txt`.
 - Any documented recruiter message or referral context.
 
 ## Rules

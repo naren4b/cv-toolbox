@@ -4,7 +4,7 @@
 build/
 # # Runtime candidate data (local only)
 # /data/
-# /jobs/
+# /Job-Applications/
 /code/inputs/user/
 
 # OS/editor noise
@@ -22,4 +22,4 @@ Thumbs.db
 data/personal.txt
 
 # Private candidate master file
-data/about.md
+AboutMe.md

@@ -11,7 +11,7 @@ Use this as the single entry point for a new job application.
 
 ## Location
 
-All active work happens in Google Drive, not in this GitHub repository. The user creates `jobs/[company]/` in Google Drive and adds `job.txt`, including the job description and its original source link.
+All active work happens in Google Drive, not in this GitHub repository. The user creates `Job-Applications/[company]/` in Google Drive and adds `job.txt`, including the job description and its original source link.
 
 Read the approved Drive `data/` files before creating output. Use the reusable skills and templates in this repository only as guidance.
 

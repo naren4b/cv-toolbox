@@ -12,6 +12,6 @@ For a requested country, target role, or search strategy:
 2. Suggest general, country-specific, company-career, visa-sponsorship, and relocation-oriented sources.
 3. Distinguish verified facts from leads that require checking.
 4. Record recommended portals, filters, and alerts in the research output.
-5. When the user selects a real opportunity, direct it into the private Drive `jobs/[company]/job.txt` workflow.
+5. When the user selects a real opportunity, direct it into the private Drive `Job-Applications/[company]/job.txt` workflow.
 
-Do not create an application package, change the Master Tracker, send messages, or claim visa eligibility. The user alone decides which lead becomes an application.
+Do not create an application package, change the Job-Application-Tracker, send messages, or claim visa eligibility. The user alone decides which lead becomes an application.

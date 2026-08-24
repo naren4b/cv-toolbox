@@ -9,8 +9,8 @@ Draft a professional email reply based on the recruiter message or scenario prov
 
 ## Steps
 
-1. **Read** the approved private Drive `data/about.md` master file and the recruiter message before drafting
-2. **Read** the approved private Drive `data/about.md` master file for runtime candidate details
+1. **Read** the approved private Drive `AboutMe.md` master file and the recruiter message before drafting
+2. **Read** the approved private Drive `AboutMe.md` master file for runtime candidate details
 3. **Identify the scenario** from the user's input and match to the correct template:
    - Template 1: Cold inbound from recruiter
    - Template 2: Applying to a job posting
@@ -19,16 +19,16 @@ Draft a professional email reply based on the recruiter message or scenario prov
    - Template 5: Post-interview thank you
    - Template 6: Declining an opportunity
 4. **Personalise** the template using the recruiter's name, company, role title, and candidate details from `data/`
-5. If a tailored CV exists in `jobs/[company]/`, reference its key points in the reply
-6. **Read** the recruiter email from `jobs/[company]/email.txt` if provided
-7. **Write** the reply to `jobs/[company]/email-reply.md`
+5. If a tailored CV exists in `Job-Applications/[company]/`, reference its key points in the reply
+6. **Read** the recruiter email from `Job-Applications/[company]/email.txt` if provided
+7. **Write** the reply to `Job-Applications/[company]/email-reply.md`
 
 ## Rules
 
 - Keep recruiter replies under **150 words**
 - Mirror 2–3 keywords from the recruiter's message or JD
-- Read approved compensation, notice-period, and personal details only from private Drive `data/about.md`
-- **Retention reward** — read the amount and vesting date from private Drive `data/about.md`; mention it only when relevant.
+- Read approved compensation, notice-period, and personal details only from private Drive `AboutMe.md`
+- **Retention reward** — read the amount and vesting date from private Drive `AboutMe.md`; mention it only when relevant.
 - CTC and salary expectations must use a **range**, never a single number
 - "Reason for change" must be positive and forward-looking — use one of the 4 ready options from the guide
 - For international roles, mention **Canadian PR** status

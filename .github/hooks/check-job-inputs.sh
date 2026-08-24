@@ -3,14 +3,14 @@ set -euo pipefail
 
 payload="$(cat)"
 if ! echo "$payload" | grep -qi '"hookEventName"[[:space:]]*:[[:space:]]*"PreToolUse"'; then exit 0; fi
-job_path="$(echo "$payload" | grep -Eo '(/[^"[:space:]]*)?jobs/[^"[:space:]]+' | head -n1 || true)"
+job_path="$(echo "$payload" | grep -Eo '(/[^"[:space:]]*)?Job-Applications/[^"[:space:]]+' | head -n1 || true)"
 [[ -n "$job_path" ]] || exit 0
-company="$(echo "$job_path" | sed -E 's#.*jobs/([^/]+)/.*#\1#')"
+company="$(echo "$job_path" | sed -E 's#.*Job-Applications/([^/]+)/.*#\1#')"
 target_file="$(basename "$job_path")"
 [[ -n "$company" && "$company" != "$job_path" ]] || exit 0
 
-job_file="jobs/${company}/job.txt"
-email_file="jobs/${company}/email.txt"
+job_file="Job-Applications/${company}/job.txt"
+email_file="Job-Applications/${company}/email.txt"
 missing=()
 case "$target_file" in
   cv-*.md|prep.md|cover-letter.md|analysis.md|company-info.md|status.md) [[ -f "$job_file" ]] || missing+=("$job_file") ;;
