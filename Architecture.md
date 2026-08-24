@@ -4,6 +4,28 @@
 
 This is a reusable public-safe toolbox. Private candidate information and application packages exist only in the local checkout (or an accessible private store), never in Git.
 
+## Workflow design
+
+```mermaid
+flowchart TD
+    A[Clone naren4b/my-cv locally] --> B[Add private AboutMe.md]
+    B --> C[Create one or more Job-Applications/company/job.txt files]
+    C --> D[Run Local Job Package agent or prompt]
+    D --> E{For each company}
+    E --> F[Read AboutMe.md and job.txt]
+    F --> G[Select profile category: SRE, AWS Architect, or Engineering Manager]
+    G --> H[Create local cv.md, prep.md, thinking.md]
+    H --> I[Create email.md or cover-letter.md when relevant]
+    I --> J[User reviews package]
+    J --> K[User manually sends or submits]
+
+    B -. ignored by Git .-> L[Private local workspace]
+    C -. ignored by Git .-> L
+    H -. ignored by Git .-> L
+    I -. ignored by Git .-> L
+    D -. reusable tracked workflow .-> M[Public-safe Git repository]
+```
+
 ## Private local contract
 
 ```text
