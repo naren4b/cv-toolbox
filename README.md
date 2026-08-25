@@ -22,7 +22,7 @@ mkdir -p toolbox
 curl -fsSL https://github.com/naren4b/cv-toolbox/archive/refs/heads/main.tar.gz \
   | tar -xz --strip-components=1 -C toolbox
 
-or 
+or
 
 VERSION=v0.0.5 # Change it to get the latest
 curl -fsSL https://github.com/naren4b/cv-toolbox/archive/refs/tags/$VERSION.tar.gz \
@@ -36,7 +36,7 @@ curl -fsSL https://github.com/naren4b/cv-toolbox/archive/refs/tags/$VERSION.tar.
 In the private workspace, type:
 
 ```text
-Read toolbox/AGENTS.md and toolbox/Architecture.md. Generate the job package for Job-Applications/[company] using AboutMe.md and that company’s job.txt. Create cv.md, prep.md, thinking.md, and email.md or cover-letter.md. Do not submit or send anything.
+Read toolbox/AGENTS.md and toolbox/Architecture.md. Generate the job package for Job-Applications/[company] using AboutMe.md and that company’s job.txt. Create cv.md, cv.html, prep.md, thinking.md, and email.md or cover-letter.md. Do not submit or send anything.
 ```
 
 Commit generated files to the private workspace repository only.

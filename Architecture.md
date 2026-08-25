@@ -10,7 +10,7 @@ flowchart TD
     B --> C[Private my-cv workspace]
     C --> D[AboutMe.md and Job-Applications/company/job.txt]
     D --> E[Run local agent]
-    E --> F[Create private cv, prep, thinking and email or cover-letter]
+    E --> F[Create private cv.md, cv.html, prep, thinking and email or cover-letter]
     F --> G[Update README.md tracker table]
     G --> H[User reviews, commits and manually submits]
 ```
@@ -38,7 +38,7 @@ curl -fsSL https://github.com/naren4b/cv-toolbox/archive/refs/tags/$VERSION.tar.
 3. Run this prompt in Codex, VS Code, or Cursor:
 
    ```text
-   Read toolbox/AGENTS.md and toolbox/Architecture.md. Generate the job package for Job-Applications/[company] using AboutMe.md and that company’s job.txt. Create cv.md, prep.md, thinking.md, and email.md or cover-letter.md. Do not submit or send anything.
+   Read toolbox/AGENTS.md and toolbox/Architecture.md. Generate the job package for Job-Applications/[company] using AboutMe.md and that company’s job.txt. Create cv.md, cv.html, prep.md, thinking.md, and email.md or cover-letter.md. Do not submit or send anything.
    ```
 
 4. Review generated files. The user alone sends email or submits applications.

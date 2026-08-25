@@ -12,6 +12,7 @@ Choose one: Senior SRE Engineer, AWS Solutions Architect, or Engineering Manager
 ## Outputs
 
 - `cv.md`: role-specific CV using supported facts only.
+- `cv.html`: printable HTML rendering of `cv.md`.
 - `prep.md`: requirement mapping, genuine gaps, mitigation, likely questions, and preparation checklist.
 - `thinking.md`: concise decision record; no hidden reasoning.
 - `email.md` or `cover-letter.md`: role-specific communication when applicable.
@@ -30,7 +31,7 @@ Choose one: Senior SRE Engineer, AWS Solutions Architect, or Engineering Manager
 
 - Before generating, verify that `AboutMe.md` and `job.txt` are present. If either is missing or unclear, stop and ask for it.
 - Separate facts from requirements: `AboutMe.md` establishes what the candidate has done; `job.txt` establishes what the role asks for. A job requirement never becomes a candidate claim by itself.
-- Do not modify an existing generated output (`cv.md`, `prep.md`, `thinking.md`, `email.md`, or `cover-letter.md`) unless the user explicitly names that file and asks for a change. Create only missing outputs.
+- Do not modify an existing generated output (`cv.md`, `cv.html`, `prep.md`, `thinking.md`, `email.md`, or `cover-letter.md`) unless the user explicitly names that file and asks for a change. Create only missing outputs.
 - Calculate readiness from evidence against must-have and major requirements. State the percentage as an estimate, list the material gaps that lower it, and never present it as a hiring probability.
 - Before finalizing a new CV, check its headline, employer titles, dates, metrics, qualifications, and certifications against `AboutMe.md`. Omit any unsupported item.
 
@@ -46,3 +47,12 @@ After package artifacts exist, maintain the application-tracker table in root `R
 
 - Preserve `job.txt` unchanged.
 - Do not submit or send external communications.
+
+
+## CV output quality
+
+- Keep the CV focused: select job-relevant evidence with the strongest supported outcomes; omit unrelated detail rather than padding with generic claims.
+- Preserve employer names, official job titles, dates, qualifications, and certification names exactly as supported. The target role may be named only in an explicitly labelled target-role context, never as the candidate title.
+- Use separate Markdown tables for **Education & Certifications** and **Awards & Recognition**. Every row must be supported by `AboutMe.md`; do not manufacture dates, issuers, rankings, or descriptions.
+- Create `cv.html` whenever creating `cv.md`. It must contain the same factual content in the same order, load Roboto from Google Fonts, include responsive and print CSS, and render cleanly on A4 paper. Do not add images, trackers, analytics, JavaScript, or external assets other than the Roboto font stylesheet.
+- Before finalizing, verify the Markdown headline, titles, dates, metrics, qualifications, education table, and awards table against `AboutMe.md`; then compare `cv.html` with `cv.md` so their factual content matches.

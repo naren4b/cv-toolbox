@@ -6,4 +6,4 @@ When working from that private workspace, read `AboutMe.md` and `Job-Application
 
 When a package is created, add a missing tracker row with status `Prepared — review required`. Never overwrite an existing status; the user alone updates the application status, sends messages, submits applications, and commits files to the private workspace `origin`.
 
-Reliability contract: treat `AboutMe.md` as the factual source of truth and `job.txt` as requirements, not candidate facts. Do not alter any existing generated package output unless the user explicitly requests that exact file be changed. When evidence is missing, record a gap rather than making a claim.
+Reliability contract: treat `AboutMe.md` as the factual source of truth and `job.txt` as requirements, not candidate facts. Do not alter any existing generated package output unless the user explicitly requests that exact file be changed. When evidence is missing, record a gap rather than making a claim. New packages include matching `cv.md` and `cv.html`; the HTML is a printable rendering of the Markdown CV, not an additional source of facts.
