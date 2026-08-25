@@ -87,3 +87,5 @@ Do not recommend presenting the candidate with the target title. The readiness p
 ### Preflight
 
 Do not finalize a package until every item passes: (1) candidate headline uses an official title from `AboutMe.md`, (2) no unsupported people-management verb is used, (3) both required Markdown tables exist, (4) `cv.html` includes Roboto Google Fonts and matching HTML tables, and (5) `thinking.md` contains the exact decision fields. If an input cannot support a required claim, remove the claim and list the gap instead.
+
+After creating all missing artifacts, run `bash toolbox/scripts/check-package.sh Job-Applications/[company]` from the private workspace root. Fix structural failures before reporting completion. The checker does not replace the factual comparison with `AboutMe.md`.

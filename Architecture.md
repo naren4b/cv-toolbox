@@ -26,7 +26,7 @@ printf '/toolbox/\n' >> .gitignore
 git add .gitignore
 git commit -m "Ignore local toolbox"
 git push origin main
-VERSION=v0.0.2 # Change it to get the latest
+VERSION=v0.0.11 # Choose the release deliberately
 mkdir -p toolbox
 curl -fsSL https://github.com/naren4b/cv-toolbox/archive/refs/tags/$VERSION.tar.gz \
   | tar -xz --strip-components=1 -C toolbox
@@ -41,8 +41,9 @@ curl -fsSL https://github.com/naren4b/cv-toolbox/archive/refs/tags/$VERSION.tar.
    Read toolbox/AGENTS.md and toolbox/Architecture.md. Generate the job package for Job-Applications/[company] using AboutMe.md and that company’s job.txt. Create cv.md, cv.html, prep.md, thinking.md, and email.md or cover-letter.md. Do not submit or send anything.
    ```
 
-4. Review generated files. The user alone sends email or submits applications.
-5. Commit only private data and package files to `origin`.
+4. Run `bash toolbox/scripts/check-package.sh Job-Applications/[company]`, then review the generated files and verify every candidate claim against `AboutMe.md`.
+5. The user alone sends email or submits applications.
+6. Commit only private data and package files to `origin`.
 
 ## Upgrade the toolbox
 
