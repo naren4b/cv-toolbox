@@ -7,13 +7,28 @@
 
 ## Profile selection
 
-Choose one: Senior SRE Engineer, AWS Solutions Architect, or Engineering Manager.
+Choose exactly one stable profile lens:
+
+1. **Senior SRE Engineer** — hands-on reliability, Kubernetes, observability, SLI/SLO, incident response, automation, IaC, GitOps, and troubleshooting.
+2. **SRE / AWS Solution Architect** — AWS/EKS and hybrid-cloud architecture, modernization, availability, disaster recovery, security, observability, FinOps, migrations, and technical trade-offs.
+3. **DevOps & Platform Engineering Leader** — platform strategy, shared DevOps capabilities, internal developer platforms, self-service CI/CD, developer experience, SRE transformation, engineering standards, FinOps, stakeholder alignment, and supported team leadership.
+
+The profile is a selection and ordering lens, not a source of facts or an earned title. Map Director, Head, Lead, and Manager target roles to the leadership lens only when the documented scope supports it; never inherit the target seniority from the job description.
+
+## Processing workflow
+
+1. Read the complete `AboutMe.md` and `job.txt` before drafting.
+2. Extract the target outcomes, seniority, must-have requirements, preferred requirements, domain, delivery scope, and leadership expectations from `job.txt`.
+3. Build an evidence map from each material requirement to explicit facts in `AboutMe.md`; mark unmatched requirements as gaps. Do not turn requirements into candidate claims.
+4. Compare all three profile lenses against the evidence map and select the closest one. Record the selected profile and why in `thinking.md`; do not blend profiles merely to match more keywords.
+5. Use the selected lens to choose the summary emphasis, competency order, achievements, interview introduction, and question bank. Preserve one underlying factual career history.
+6. Generate the artifacts, run the claim and parity audits, then run the package checker.
 
 ## Outputs
 
 - `cv.md`: role-specific CV using supported facts only.
 - `cv.html`: printable HTML rendering of `cv.md`.
-- `prep.md`: requirement mapping, genuine gaps, mitigation, likely questions, and preparation checklist.
+- `prep.md`: requirement mapping, genuine gaps, a supported 90-second introduction, company/role motivation, story bank, likely questions, questions for the employer, and preparation checklist. Add a 30/60/90-day outline when the target scope is genuinely leadership-oriented.
 - `thinking.md`: concise decision record; no hidden reasoning.
 - `email.md` or `cover-letter.md`: role-specific communication when applicable.
 
@@ -31,6 +46,7 @@ Choose one: Senior SRE Engineer, AWS Solutions Architect, or Engineering Manager
 
 - Before generating, verify that `AboutMe.md` and `job.txt` are present. If either is missing or unclear, stop and ask for it.
 - Separate facts from requirements: `AboutMe.md` establishes what the candidate has done; `job.txt` establishes what the role asks for. A job requirement never becomes a candidate claim by itself.
+- Keep `AboutMe.md` stable. Derive profile and application artifacts from it; never write tailored positioning back into the factual master unless the user explicitly requests that exact change.
 - Do not modify an existing generated output (`cv.md`, `cv.html`, `prep.md`, `thinking.md`, `email.md`, or `cover-letter.md`) unless the user explicitly names that file and asks for a change. Create only missing outputs.
 - Calculate readiness from evidence against must-have and major requirements. State the percentage as an estimate, list the material gaps that lower it, and never present it as a hiring probability.
 - Before finalizing a new CV, check its headline, employer titles, dates, metrics, qualifications, and certifications against `AboutMe.md`. Omit any unsupported item.
@@ -86,6 +102,8 @@ Begin with this exact decision block before analysis:
 ```
 
 Do not recommend presenting the candidate with the target title. The readiness percentage is a requirement-match estimate, not a hiring probability.
+
+After the decision block, name the selected stable profile, list the strongest requirement-to-evidence matches, and list material gaps. For leadership targets, distinguish technical leadership, team direction, mentorship, formal people management, recruiting, budget ownership, and organization design rather than treating them as interchangeable.
 
 ### Preflight
 
