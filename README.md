@@ -3,6 +3,8 @@
 
 # Job Search Toolbox
 
+**Current version:** `v0.0.8`
+
 **Objective:** provide reusable AI instructions, prompts, agents, and skills for creating tailored job-application packages while keeping all personal data in a private repository.
 
 This public repository is the toolbox. Download a tagged release into your private workspace as `toolbox/`; do not add private files here.
