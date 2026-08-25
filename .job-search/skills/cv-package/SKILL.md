@@ -56,3 +56,34 @@ After package artifacts exist, maintain the application-tracker table in root `R
 - Use separate Markdown tables for **Education & Certifications** and **Awards & Recognition**. Every row must be supported by `AboutMe.md`; do not manufacture dates, issuers, rankings, or descriptions.
 - Create `cv.html` whenever creating `cv.md`. It must contain the same factual content in the same order, load Roboto from Google Fonts, include responsive and print CSS, and render cleanly on A4 paper. Do not add images, trackers, analytics, JavaScript, or external assets other than the Roboto font stylesheet.
 - Before finalizing, verify the Markdown headline, titles, dates, metrics, qualifications, education table, and awards table against `AboutMe.md`; then compare `cv.html` with `cv.md` so their factual content matches.
+
+
+## Required output schema and acceptance checks
+
+### `cv.md`
+
+- The first line is the candidate name. The next line starts with an exact official title from `AboutMe.md`, followed only by factual specialties. Never use the target title in this headline. If helpful, place the job title later as `Target role: [job title]`; it must be visibly labelled as a target.
+- Do not convert technical leadership into people management. When the evidence says technical leadership, mentoring, or roadmap influence, use those words. Do not substitute `direct`, `manage`, `own`, `hire`, or `scale a team` unless `AboutMe.md` explicitly supports that responsibility.
+- Include exactly these tabular sections when source evidence exists: `## Education & Certifications` and `## Awards & Recognition`. Use a Markdown pipe table with descriptive columns. Do not omit supported certifications merely because they are less relevant to the target role.
+
+### `cv.html`
+
+- Start with a valid HTML document and include the Google Fonts stylesheet for Roboto: `https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap`. The body font stack must begin with `Roboto`.
+- Render the Education & Certifications and Awards & Recognition sections as HTML tables. The HTML must have the same headings, dates, facts, and claim order as `cv.md`.
+
+### `thinking.md`
+
+Begin with this exact decision block before analysis:
+
+```markdown
+## Decision
+- Recommendation: Apply | Apply with caution | Do not apply
+- Job readiness: NN%
+- AI recommendation: [specific next action]
+```
+
+Do not recommend presenting the candidate with the target title. The readiness percentage is a requirement-match estimate, not a hiring probability.
+
+### Preflight
+
+Do not finalize a package until every item passes: (1) candidate headline uses an official title from `AboutMe.md`, (2) no unsupported people-management verb is used, (3) both required Markdown tables exist, (4) `cv.html` includes Roboto Google Fonts and matching HTML tables, and (5) `thinking.md` contains the exact decision fields. If an input cannot support a required claim, remove the claim and list the gap instead.

@@ -3,7 +3,7 @@
 
 # Job Search Toolbox
 
-**Current version:** `v0.0.8`
+**Current version:** `v0.0.10`
 
 **Objective:** provide reusable AI instructions, prompts, agents, and skills for creating tailored job-application packages while keeping all personal data in a private repository.
 
