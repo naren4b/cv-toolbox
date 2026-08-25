@@ -15,3 +15,5 @@ For real work, download a tagged release of this repository into the ignored loc
 When working in that private workspace, read private inputs from its root and reusable instructions from `toolbox/`. Commit generated files only to the private workspace `origin`, never to this public toolbox repository.
 
 Use supported facts only; never fabricate experience, contact details, compensation, or submission status. The user alone submits applications and sends messages.
+
+The cv getting generated must be minimum 2 pages and maximum to 3 pages 
