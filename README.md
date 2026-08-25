@@ -13,8 +13,16 @@ This public repository is the toolbox. Download a tagged release into your priva
 2. Download `cv-toolbox` into the local, ignored `toolbox/` directory using the release steps in [Architecture.md](Architecture.md).
 ```bash
 # printf '/toolbox/\n' >> .gitignore
-VERSION=v0.0.4 # Change it to get the latest
+
+rm -rf toolbox
 mkdir -p toolbox
+
+curl -fsSL https://github.com/naren4b/cv-toolbox/archive/refs/heads/main.tar.gz \
+  | tar -xz --strip-components=1 -C toolbox
+
+or 
+
+VERSION=v0.0.5 # Change it to get the latest
 curl -fsSL https://github.com/naren4b/cv-toolbox/archive/refs/tags/$VERSION.tar.gz \
   | tar -xz --strip-components=1 -C toolbox
 
