@@ -26,7 +26,7 @@ printf '/toolbox/\n' >> .gitignore
 git add .gitignore
 git commit -m "Ignore local toolbox"
 git push origin main
-VERSION=v0.0.13 # Choose the release deliberately
+VERSION=v1.1 # Choose the release deliberately
 mkdir -p toolbox
 curl -fsSL https://github.com/naren4b/cv-toolbox/archive/refs/tags/$VERSION.tar.gz \
   | tar -xz --strip-components=1 -C toolbox
