@@ -103,8 +103,8 @@ else
       fail "cv.html Education & Certifications section must contain an HTML table"
     html_section_has_table "$package_dir/cv.html" 'Awards &amp; Recognition' || \
       fail "cv.html Awards & Recognition section must contain an HTML table"
-    require_match "$package_dir/cv.html" '@media[[:space:]]+print' \
-      "cv.html is missing print CSS"
+    require_match "$package_dir/cv.html" '<div class="contact">' \
+      "cv.html is missing <div class=\"contact\"> for the header contact line"
   fi
 
   if [[ -s "$package_dir/cv.md" && -s "$package_dir/cv.html" ]]; then

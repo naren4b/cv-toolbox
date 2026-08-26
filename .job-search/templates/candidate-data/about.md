@@ -6,7 +6,8 @@
 
 - Name: [Full name]
 - Headline: [Target professional headline]
-- Contact: [Phone] | [Email] | [Location]
+- Contact: [Phone] | [Email]
+- Short address: [City, Country]
 - Links: [LinkedIn] | [Portfolio]
 
 ## Career profile

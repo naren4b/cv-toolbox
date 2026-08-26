@@ -84,10 +84,12 @@ Before writing the headline:
 
 When `cv.md` changes, update `cv.html` in the same operation unless the user explicitly excludes `cv.html`. The visible wording, claims, dates, titles, metrics, and section order must remain consistent between both versions. Target a printable CV of 2–3 pages.
 
+Immediately after the headline, include a header contact line with supported phone, email, and a short address (`City, Country` or `City, Region, Country`) from `AboutMe.md`. Never use a street, house number, or postal code. If no location is documented, omit the address and record the gap in `prep.md`. In `cv.html`, render that line in `<div class="contact">`.
+
 Place the same canonical headline marker in both files:
 
 ```html
 <!-- cv-headline: Evidence-supported headline | Functional keywords -->
 ```
 
-Before finalizing, audit the current official job title, target job title, headline, leadership level, certifications, years of experience, metrics, employer and product relationships, and Markdown/HTML parity. Then run the package checker and fix structural failures before reporting completion.
+Before finalizing, audit the current official job title, target job title, headline, short address, leadership level, certifications, years of experience, metrics, employer and product relationships, and Markdown/HTML parity. Then run the package checker and fix structural failures before reporting completion.

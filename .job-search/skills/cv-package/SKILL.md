@@ -49,7 +49,7 @@ The profile is a selection and ordering lens, not a source of facts or an earned
 - Keep `AboutMe.md` stable. Derive profile and application artifacts from it; never write tailored positioning back into the factual master unless the user explicitly requests that exact change.
 - Do not modify an existing generated output (`cv.md`, `cv.html`, `prep.md`, `thinking.md`, `email.md`, or `cover-letter.md`) unless the user explicitly names that file and asks for a change. Create only missing outputs.
 - Calculate readiness from evidence against must-have and major requirements. State the percentage as an estimate, list the material gaps that lower it, and never present it as a hiring probability.
-- Before finalizing a new CV, check its headline, employer titles, dates, metrics, qualifications, and certifications against `AboutMe.md`. Omit any unsupported item.
+- Before finalizing a new CV, check its headline, short address, employer titles, dates, metrics, qualifications, and certifications against `AboutMe.md`. Omit any unsupported item.
 
 ## Private tracker
 
@@ -69,9 +69,10 @@ After package artifacts exist, maintain the application-tracker table in root `R
 
 - Keep the CV focused: select job-relevant evidence with the strongest supported outcomes; omit unrelated detail rather than padding with generic claims.
 - Preserve employer names, official job titles, dates, qualifications, and certification names exactly as supported. The target role may be named only in an explicitly labelled target-role context, never as the candidate title.
+- After the name and headline, include one header contact line with supported phone, email, and a **short address**. The short address is city and country only (optionally a region), taken from `AboutMe.md`. Do not include street, house number, apartment, or postal code. Do not invent a location. If `AboutMe.md` has no location, omit the address and record the gap in `prep.md`.
 - Use separate Markdown tables for **Education & Certifications** and **Awards & Recognition**. Every row must be supported by `AboutMe.md`; do not manufacture dates, issuers, rankings, or descriptions.
 - Create `cv.html` whenever creating `cv.md`. It must contain the same factual content in the same order, load Roboto from Google Fonts, include responsive and print CSS, and render cleanly on A4 paper. Do not add images, trackers, analytics, JavaScript, or external assets other than the Roboto font stylesheet.
-- Before finalizing, verify the Markdown headline, titles, dates, metrics, qualifications, education table, and awards table against `AboutMe.md`; then compare `cv.html` with `cv.md` so their factual content matches.
+- Before finalizing, verify the Markdown headline, short address, titles, dates, metrics, qualifications, education table, and awards table against `AboutMe.md`; then compare `cv.html` with `cv.md` so their factual content matches.
 
 
 ## Required output schema and acceptance checks
@@ -79,6 +80,7 @@ After package artifacts exist, maintain the application-tracker table in root `R
 ### `cv.md`
 
 - The first line is the candidate name. The next visible line uses an evidence-supported professional identity and factual specialties. It may use an official title or a neutral functional identity supported by `AboutMe.md`; never copy a higher or different target title into the headline.
+- Immediately after the headline, add one contact line: `Phone | Email | City, Country`. Use only values supported by `AboutMe.md`. The location must be a short address (`City, Country` or `City, Region, Country`), never a full postal address.
 - Before writing the headline, compare the official current title from `AboutMe.md` with the target title from `job.txt`. If level or function differs, use a supported functional identity and keep the target role only in `thinking.md`, `prep.md`, and the communication document.
 - Add `<!-- cv-headline: [exact visible headline] -->` to both `cv.md` and `cv.html`; the marker values must match exactly.
 - Do not convert technical leadership into people management. When the evidence says technical leadership, mentoring, or roadmap influence, use those words. Do not substitute `direct`, `manage`, `own`, `hire`, or `scale a team` unless `AboutMe.md` explicitly supports that responsibility.
@@ -87,6 +89,7 @@ After package artifacts exist, maintain the application-tracker table in root `R
 ### `cv.html`
 
 - Start with a valid HTML document and include the Google Fonts stylesheet for Roboto: `https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap`. The body font stack must begin with `Roboto`.
+- Render the header contact line in `<div class="contact">` with the same phone, email, and short address as `cv.md`.
 - Render the Education & Certifications and Awards & Recognition sections as HTML tables. The HTML must have the same headings, dates, facts, and claim order as `cv.md`.
 - Whenever `cv.md` changes, update `cv.html` in the same operation unless the user explicitly excludes it. Keep visible wording, claims, dates, titles, metrics, and section order consistent.
 
@@ -107,6 +110,6 @@ After the decision block, name the selected stable profile, list the strongest r
 
 ### Preflight
 
-Do not finalize a package until every item passes: (1) candidate headline uses an evidence-supported professional identity rather than an unsupported target title, (2) no unsupported people-management verb is used, (3) both required Markdown tables exist, (4) `cv.html` includes Roboto Google Fonts and matching HTML tables, (5) both CV files contain the same `cv-headline` marker, and (6) `thinking.md` contains the exact decision fields. Audit the current official title, target title, headline, leadership level, certifications, years of experience, metrics, employer and product relationships, and Markdown/HTML parity. If an input cannot support a required claim, remove the claim and list the gap instead.
+Do not finalize a package until every item passes: (1) candidate headline uses an evidence-supported professional identity rather than an unsupported target title, (2) no unsupported people-management verb is used, (3) both required Markdown tables exist, (4) `cv.html` includes Roboto Google Fonts and matching HTML tables, (5) both CV files contain the same `cv-headline` marker, (6) `thinking.md` contains the exact decision fields, and (7) the header contact line includes a short address from `AboutMe.md` when a location is documented. Audit the current official title, target title, headline, short address, leadership level, certifications, years of experience, metrics, employer and product relationships, and Markdown/HTML parity. If an input cannot support a required claim, remove the claim and list the gap instead.
 
 After creating all missing artifacts, run `bash toolbox/scripts/check-package.sh Job-Applications/[company]` from the private workspace root. Fix structural failures before reporting completion. The checker does not replace the factual comparison with `AboutMe.md`.
