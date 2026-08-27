@@ -3,7 +3,7 @@
 
 # Job Search Toolbox
 
-**Current version:** `v1.1`
+**Current version:** `v1.2`
 
 **Objective:** provide reusable AI instructions, prompts, agents, and skills for creating tailored job-application packages while keeping all personal data in a private repository.
 
@@ -15,7 +15,7 @@ This public repository is the toolbox. Download a tagged release into your priva
 2. Download `cv-toolbox` into the local, ignored `toolbox/` directory using the release steps in [Architecture.md](Architecture.md).
 ```bash
 printf '/toolbox/\n' >> .gitignore
-VERSION=v1.1 # Choose the release deliberately
+VERSION=v1.2 # Choose the release deliberately
 mkdir -p toolbox
 curl -fsSL https://github.com/naren4b/cv-toolbox/archive/refs/tags/$VERSION.tar.gz \
   | tar -xz --strip-components=1 -C toolbox
