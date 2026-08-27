@@ -11,6 +11,7 @@ For real work, download a tagged release of this repository into the ignored loc
 - `AboutMe.md`
 - `Job-Applications/[company]/job.txt`
 - generated `cv.md`, `cv.html`, `prep.md`, `thinking.md`, `email.md`, and `cover-letter.md`
+- generated `Master-CV/cv.md` and `Master-CV/cv.html`
 
 When working in that private workspace, read private inputs from its root and reusable instructions from `toolbox/`. Commit generated files only to the private workspace `origin`, never to this public toolbox repository.
 

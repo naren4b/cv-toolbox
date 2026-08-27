@@ -41,9 +41,10 @@ curl -fsSL https://github.com/naren4b/cv-toolbox/archive/refs/tags/$VERSION.tar.
    Read toolbox/AGENTS.md and toolbox/Architecture.md. Generate the job package for Job-Applications/[company] using AboutMe.md and that company’s job.txt. Create cv.md, cv.html, prep.md, thinking.md, and email.md or cover-letter.md. Do not submit or send anything.
    ```
 
-4. Run `bash toolbox/scripts/check-package.sh Job-Applications/[company]`, then review the generated files and verify every candidate claim against `AboutMe.md`.
-5. The user alone sends email or submits applications.
-6. Commit only private data and package files to `origin`.
+4. For a complete generic CV, run: `Read toolbox/.job-search/skills/generic-cv/SKILL.md. Generate or refresh Master-CV/cv.md and Master-CV/cv.html from AboutMe.md.` Refresh when `AboutMe.md` or profile-lens instructions change (hash-stamped in both CV files).
+5. Run `bash toolbox/scripts/check-package.sh Job-Applications/[company]`, then review the generated files and verify every candidate claim against `AboutMe.md`.
+6. The user alone sends email or submits applications.
+7. Commit only private data and package files to `origin`.
 
 ## Upgrade the toolbox
 
@@ -63,7 +64,7 @@ After verification, remove `toolbox.previous` manually. Do not commit either dir
 | Location | Contains | Must not contain |
 | --- | --- | --- |
 | Public `naren4b/cv-toolbox` | Generic AI artifacts and documentation | Candidate data, job packages, recruiter correspondence, application history |
-| Private `naren4b/my-cv` | `AboutMe.md`, root tracker table, `Job-Applications/`, generated outputs and history | Public toolbox files |
+| Private `naren4b/my-cv` | `AboutMe.md`, root tracker table, `Job-Applications/`, `Master-CV/`, generated outputs and history | Public toolbox files |
 | Local `toolbox/` | Downloaded public release | Private data or Git-tracked files |
 
 ## Safeguards

@@ -30,6 +30,12 @@ In the private workspace, type:
 Read toolbox/AGENTS.md and toolbox/Architecture.md. Generate the job package for Job-Applications/[company] using AboutMe.md and that company’s job.txt. Create cv.md, cv.html, prep.md, thinking.md, and email.md or cover-letter.md. Do not submit or send anything.
 ```
 
+For a complete generic CV (not tailored to a vacancy):
+
+```text
+Read toolbox/.job-search/skills/generic-cv/SKILL.md. Generate or refresh Master-CV/cv.md and Master-CV/cv.html from AboutMe.md. Do not submit or send anything.
+```
+
 Commit generated files to the private workspace repository only.
 
 Before reviewing a newly generated package, run its structural quality checks:

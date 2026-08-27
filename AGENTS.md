@@ -4,11 +4,12 @@ This repository is a public, generic AI toolbox. Candidate facts and generated j
 
 - Humans: `README.md` for setup. Architecture: `Architecture.md`.
 - Package generation details: `.job-search/skills/cv-package/SKILL.md`.
+- Generic (non-job) CV: `.job-search/skills/generic-cv/SKILL.md`.
 - Do not copy private material into this public repository.
 
 ## Choose the workspace
 
-**This public repository.** Improve generic docs, skills, agents, prompts, templates, and `scripts/check-package.sh`. Never add `AboutMe.md`, job descriptions, generated CVs, recruiter correspondence, compensation, or application status.
+**This public repository.** Improve generic docs, skills, agents, prompts, templates, and `scripts/check-package.sh`. Never add `AboutMe.md`, `Master-CV/`, job descriptions, generated CVs, recruiter correspondence, compensation, or application status.
 
 **Private workspace (this repo imported as `toolbox/`).** Follow the [Private workspace contract](#private-workspace-contract). Read `AboutMe.md` and `Job-Applications/[company]/job.txt` from the private workspace root. Write package files into that company folder. Commit only to the private origin.
 
@@ -20,7 +21,7 @@ This repository is a public, generic AI toolbox. Candidate facts and generated j
 | `Architecture.md` | Public vs private split, install, upgrade |
 | `scripts/check-package.sh` | Structural checker for a company package |
 | `tests/check-package.test.sh` | Checker fixtures (valid, invalid, parity) |
-| `.job-search/skills/` | `cv-package`, `email-reply`, `linkedin` |
+| `.job-search/skills/` | `cv-package`, `generic-cv`, `email-reply`, `linkedin` |
 | `.job-search/templates/candidate-data/` | Blank private master (`about.md`); do not fill with real data here |
 | `.github/agents/` | Copilot custom agents |
 | `.github/prompts/` | Copilot slash prompts |
@@ -28,7 +29,7 @@ This repository is a public, generic AI toolbox. Candidate facts and generated j
 | `.github/hooks/` | Block generation without `AboutMe.md`; block committing private paths |
 | `.archive/` | Superseded major versions only |
 
-When package rules change, keep this file, `.job-search/skills/cv-package/SKILL.md`, `.github/agents/job-package.agent.md`, `.github/agents/cv-tailor.agent.md`, and `.github/prompts/generate-local-job-package.prompt.md` aligned. Prefer pointing at the skill over duplicating it.
+When package rules change, keep this file, `.job-search/skills/cv-package/SKILL.md`, `.github/agents/job-package.agent.md`, `.github/agents/cv-tailor.agent.md`, and `.github/prompts/generate-local-job-package.prompt.md` aligned. When generic-CV rules change, keep `.job-search/skills/generic-cv/SKILL.md` and `.github/prompts/generate-generic-cv.prompt.md` aligned. Prefer pointing at the skill over duplicating it.
 
 ## Commands
 
@@ -58,7 +59,7 @@ If you change `scripts/check-package.sh`, update `tests/check-package.test.sh` a
 
 ## Private workspace contract
 
-When working from a private workspace, read `AboutMe.md` and `Job-Applications/[company]/job.txt` from that workspace root. Follow `toolbox/Architecture.md`, create private package outputs in the company folder, and maintain the application-tracker table in root `README.md`.
+When working from a private workspace, read `AboutMe.md` and `Job-Applications/[company]/job.txt` from that workspace root. Follow `toolbox/Architecture.md`, create private package outputs in the company folder, and maintain the application-tracker table in root `README.md`. For a complete non-job CV, follow `.job-search/skills/generic-cv/SKILL.md` and write `Master-CV/cv.md` plus `Master-CV/cv.html`. Refresh those files when the `cv-source` hashes for `AboutMe.md` or the profile skill change.
 
 When a package is created, add a missing tracker row with status `Prepared — review required`. Never overwrite an existing status.
 
